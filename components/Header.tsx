@@ -27,7 +27,7 @@ export default function Header({ locale, messages }: { locale: Locale; messages:
     <header className="site-header">
       <div className="site-header__inner">
         <Link href={`/${locale}`} className="brand">
-          <span className="brand__name">{messages.brand.name}</span>
+          <img src="/images/logo.png" alt={messages.brand.name} className="brand__mark" />
           <span className="brand__tag">{messages.brand.tagline}</span>
         </Link>
         <nav className="main-nav">

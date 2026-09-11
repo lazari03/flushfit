@@ -115,6 +115,11 @@ p {
   color: inherit;
 }
 
+.brand__mark {
+  height: 30px;
+  width: auto;
+}
+
 .brand__name {
   font-size: 19px;
   font-weight: 600;

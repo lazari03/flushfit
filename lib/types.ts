@@ -65,8 +65,6 @@ export type Messages = {
   product: {
     breadcrumbHome: string;
     mainImageCaption: string;
-    altImage1Caption: string;
-    altImage2Caption: string;
     quotationNote: string;
     shippingLabel: string;
     shippingValue: string;
@@ -88,7 +86,6 @@ export type Messages = {
     subscribe: string;
     thanks: string;
     copyright: string;
-    legalLine: string;
   };
   whatsapp: {
     headerMessage: string;

@@ -137,8 +137,6 @@
   "product": {
     "breadcrumbHome": "Home",
     "mainImageCaption": "Foto del prodotto su sfondo neutro",
-    "altImage1Caption": "Dettaglio installato",
-    "altImage2Caption": "Disegno in sezione",
     "quotationNote": "Preventivo rilasciato per progetto · disegni inclusi",
     "shippingLabel": "Spedizione",
     "shippingValue": "Spedizione in 48 h dal nostro magazzino di Tirana",
@@ -162,8 +160,7 @@
     "emailPlaceholder": "Indirizzo email",
     "subscribe": "Iscriviti",
     "thanks": "Grazie ✓",
-    "copyright": "© 2026 Flush Fit BV",
-    "legalLine": "NIPT L00000000A · Rruga e Kavajës 132, Tiranë"
+    "copyright": "© 2026 Flush Fit BV"
   },
   "whatsapp": {
     "headerMessage": "Ciao, vorrei chiedere informazioni sui vostri accessori da bagno a scomparsa.",

@@ -24,6 +24,14 @@ export const CATEGORY_IMAGES: Record<CategoryId, string> = {
 };
 export const HERO_IMAGE = "/images/hero.jpg";
 
+// One representative category photo per "how it works" item.
+export const HOW_IT_WORKS_IMAGES: Record<HowItWorksId, string> = {
+  "how-flush": CATEGORY_IMAGES["flush-plates"],
+  "how-electro": CATEGORY_IMAGES["recessed-sockets"],
+  "how-holders": CATEGORY_IMAGES["paper-holders"],
+  "how-cabinet": CATEGORY_IMAGES["manifold-cabinets"],
+};
+
 // One SKU per category — one real product photo exists per category, so
 // the numbered size/finish variants (which shared that one photo and read
 // as duplicates in the catalogue) were dropped rather than faked.

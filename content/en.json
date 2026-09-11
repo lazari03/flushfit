@@ -137,8 +137,6 @@
   "product": {
     "breadcrumbHome": "Home",
     "mainImageCaption": "Product photo on neutral ground",
-    "altImage1Caption": "Installed detail",
-    "altImage2Caption": "Section drawing",
     "quotationNote": "Quotation issued per project · drawings included",
     "shippingLabel": "Shipping",
     "shippingValue": "48 h dispatch from our Tirana warehouse",
@@ -162,8 +160,7 @@
     "emailPlaceholder": "Email address",
     "subscribe": "Subscribe",
     "thanks": "Thanks ✓",
-    "copyright": "© 2026 Flush Fit BV",
-    "legalLine": "NIPT L00000000A · Rruga e Kavajës 132, Tiranë"
+    "copyright": "© 2026 Flush Fit BV"
   },
   "whatsapp": {
     "headerMessage": "Hi, I'd like to ask about your recessed bathroom hardware.",

@@ -4,7 +4,7 @@ import CategoryTile from "@/components/CategoryTile";
 import ProductCard from "@/components/ProductCard";
 import Emphasis from "@/components/Emphasis";
 import FeatureIcon from "@/components/FeatureIcon";
-import { CATEGORY_ORDER, FEATURED_CODES, HERO_IMAGE, HOW_IT_WORKS_ORDER, findProductMeta } from "@/lib/data";
+import { CATEGORY_IMAGES, CATEGORY_ORDER, FEATURED_CODES, HERO_IMAGE, HOW_IT_WORKS_IMAGES, HOW_IT_WORKS_ORDER, findProductMeta } from "@/lib/data";
 import { LOCALES, Locale, getMessages } from "@/lib/i18n";
 import { whatsappLink } from "@/lib/whatsapp";
 
@@ -114,7 +114,7 @@ export default async function HomePage({ params }: { params: Promise<{ locale: L
       <section className="container" style={{ padding: "84px 24px" }}>
         <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fit, minmax(300px, 1fr))", gap: 56, alignItems: "center" }}>
           <div style={{ position: "relative", aspectRatio: "3/2" }}>
-            <ImagePlaceholder caption={messages.home.specImageCaption} aspectRatio="3/2" />
+            <ImagePlaceholder caption={messages.home.specImageCaption} src={CATEGORY_IMAGES["recessed-sockets"]} aspectRatio="3/2" />
           </div>
           <div>
             <p className="eyebrow eyebrow--accent" style={{ marginBottom: 22 }}>
@@ -154,7 +154,7 @@ export default async function HomePage({ params }: { params: Promise<{ locale: L
               return (
                 <div key={id} style={{ background: "var(--bg)", display: "flex", flexWrap: "wrap", alignItems: "stretch" }}>
                   <div style={{ position: "relative", flex: "1 1 min(100%, 320px)", minHeight: 220 }}>
-                    <ImagePlaceholder caption={`${h.title} — install photo`} />
+                    <ImagePlaceholder caption={`${h.title} — install photo`} src={HOW_IT_WORKS_IMAGES[id]} />
                   </div>
                   <div style={{ flex: "1 1 min(100%, 420px)", minWidth: 0, padding: 30, display: "flex", flexDirection: "column", justifyContent: "center" }}>
                     <div style={{ fontSize: 19, marginBottom: 12 }}>{h.title}</div>

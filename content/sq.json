@@ -137,8 +137,6 @@
   "product": {
     "breadcrumbHome": "Kryefaqja",
     "mainImageCaption": "Foto e produktit në sfond neutral",
-    "altImage1Caption": "Detaj i montuar",
-    "altImage2Caption": "Vizatim seksioni",
     "quotationNote": "Oferta lëshohet për çdo projekt · vizatimet përfshihen",
     "shippingLabel": "Dërgesa",
     "shippingValue": "Dërgohet brenda 48 orëve nga magazina jonë në Tiranë",
@@ -162,8 +160,7 @@
     "emailPlaceholder": "Adresa e emailit",
     "subscribe": "Regjistrohu",
     "thanks": "Faleminderit ✓",
-    "copyright": "© 2026 Flush Fit BV",
-    "legalLine": "NIPT L00000000A · Rruga e Kavajës 132, Tiranë"
+    "copyright": "© 2026 Flush Fit BV"
   },
   "whatsapp": {
     "headerMessage": "Përshëndetje, dua të pyes për pajisjet tuaja të fshehura të banjos.",

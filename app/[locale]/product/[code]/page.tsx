@@ -45,18 +45,8 @@ export default async function ProductPage({ params }: Props) {
       </div>
 
       <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fit, minmax(320px, 1fr))", gap: 56, alignItems: "start" }}>
-        <div style={{ display: "grid", gap: 1, background: "var(--border)", border: "1px solid var(--border)" }}>
-          <div style={{ position: "relative", aspectRatio: "1/1", background: "var(--bg)" }}>
-            <ImagePlaceholder caption={messages.product.mainImageCaption} src={CATEGORY_IMAGES[meta.categoryId]} aspectRatio="1/1" />
-          </div>
-          <div style={{ display: "grid", gridTemplateColumns: "1fr 1fr", gap: 1 }}>
-            <div style={{ position: "relative", aspectRatio: "1/1", background: "var(--bg)" }}>
-              <ImagePlaceholder caption={messages.product.altImage1Caption} aspectRatio="1/1" />
-            </div>
-            <div style={{ position: "relative", aspectRatio: "1/1", background: "var(--bg)" }}>
-              <ImagePlaceholder caption={messages.product.altImage2Caption} aspectRatio="1/1" />
-            </div>
-          </div>
+        <div style={{ position: "relative", aspectRatio: "1/1", background: "var(--bg)", border: "1px solid var(--border)" }}>
+          <ImagePlaceholder caption={messages.product.mainImageCaption} src={CATEGORY_IMAGES[meta.categoryId]} aspectRatio="1/1" />
         </div>
 
         <div>

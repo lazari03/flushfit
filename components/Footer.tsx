@@ -64,7 +64,6 @@ export default function Footer({ messages }: { messages: Messages }) {
       <div className="footer-bottom">
         <div className="footer-bottom__inner">
           <span>{f.copyright}</span>
-          <span>{f.legalLine}</span>
         </div>
       </div>
     </footer>

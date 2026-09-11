@@ -1,0 +1,782 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="" />
+<link href="https://fonts.googleapis.com/css2?family=Jost:wght@300;400;500;600&display=swap" rel="stylesheet" />
+<script src="./image-slot.js"></script>
+<style>
+  html, body { margin: 0; padding: 0; background: #F7F8FA; }
+  body { font-family: "Jost", system-ui, sans-serif; color: #132A45; -webkit-font-smoothing: antialiased; }
+  * { box-sizing: border-box; }
+  a { color: #1F4E8C; text-decoration: none; }
+  a:hover { color: #12325C; }
+  button { font: inherit; }
+  input, textarea, select { font: inherit; color: inherit; }
+</style>
+</helmet>
+
+<div style="min-height:100vh;background:#F7F8FA">
+
+  <div style="background:#132A45;color:#F7F8FA;font-size:11.5px;letter-spacing:.1em;text-transform:uppercase;padding:10px 24px;display:flex;justify-content:center;gap:30px;flex-wrap:wrap">
+    <span>Project pricing on request</span>
+    <span style="opacity:.5">Free delivery in Albania over €490</span>
+    <span style="opacity:.5">DWG drawings for every article</span>
+  </div>
+
+  <header style="position:sticky;top:0;z-index:20;background:rgba(247,248,250,.93);backdrop-filter:blur(12px);border-bottom:1px solid #DCE1E8">
+    <div style="max-width:1320px;margin:0 auto;padding:0 24px;height:76px;display:flex;align-items:center;gap:28px">
+      <button onClick="{{ goHome }}" style="background:none;border:0;padding:0;cursor:pointer;text-align:left;display:flex;flex-direction:column;line-height:1">
+        <span style="font-size:19px;font-weight:600;letter-spacing:.18em">FLUSH FIT</span>
+        <span style="font-size:9.5px;letter-spacing:.22em;text-transform:uppercase;color:#68737F;margin-top:6px">Recessed bathroom hardware</span>
+      </button>
+      <nav style="display:flex;gap:24px;margin-left:auto;flex-wrap:wrap">
+        <sc-for list="{{ nav }}" as="item" hint-placeholder-count="4">
+          <button onClick="{{ item.go }}" style="background:none;border:0;padding:5px 0;cursor:pointer;font-size:13.5px;color:#132A45;border-bottom:1px solid transparent" style-hover="border-bottom-color:#1F4E8C">{{ item.label }}</button>
+        </sc-for>
+      </nav>
+      <div style="display:flex;align-items:center;gap:14px">
+        <div style="display:flex;gap:8px;font-size:12px;letter-spacing:.08em;text-transform:uppercase;color:#68737F"><span style="color:#132A45">EN</span><span>SQ</span><span>IT</span></div>
+        <button onClick="{{ goQuote }}" style="border:1px solid #132A45;background:#132A45;color:#F7F8FA;padding:11px 18px;border-radius:2px;font-size:13px;cursor:pointer;white-space:nowrap" style-hover="background:#1F4E8C;border-color:#1F4E8C">Request list · {{ quoteCount }}</button>
+      </div>
+    </div>
+  </header>
+
+  <!-- HOME -->
+  <sc-if value="{{ isHome }}" hint-placeholder-val="{{ true }}">
+  <main>
+    <section style="max-width:1320px;margin:0 auto;padding:0 24px;display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:56px;align-items:center;min-height:610px">
+      <div style="padding:72px 0">
+        <p style="font-size:11px;letter-spacing:.24em;text-transform:uppercase;color:#1F4E8C;margin:0 0 26px">The invisible fit</p>
+        <h1 style="font-family:'Jost',sans-serif;font-weight:300;font-size:clamp(44px,5.4vw,78px);line-height:.98;letter-spacing:-.02em;margin:0 0 26px;text-wrap:pretty">Hardware that sits <em style="color:#1F4E8C">inside</em> the wall.</h1>
+        <p style="font-size:16.5px;line-height:1.62;color:#414E5D;max-width:46ch;margin:0 0 36px;text-wrap:pretty">Flush plates, sockets, switches, paper holders and towel bars built into the surface instead of onto it. One recess depth, one finish family, no visible fixings.</p>
+        <div style="display:flex;gap:12px;flex-wrap:wrap">
+          <button onClick="{{ goShop }}" style="background:#132A45;color:#F7F8FA;border:0;padding:15px 26px;border-radius:2px;font-size:14px;cursor:pointer" style-hover="background:#1F4E8C">Browse the catalogue</button>
+          <button onClick="{{ goContact }}" style="background:none;color:#132A45;border:1px solid #C3CAD4;padding:15px 26px;border-radius:2px;font-size:14px;cursor:pointer" style-hover="border-color:#132A45">Talk to a specifier</button>
+        </div>
+      </div>
+      <div style="position:relative;aspect-ratio:4/5;min-height:430px">
+        <image-slot id="home-hero" shape="rect" placeholder="Lifestyle shot — flush plate installed in a tiled wall"></image-slot>
+      </div>
+    </section>
+
+    <section style="border-top:1px solid #DCE1E8;border-bottom:1px solid #DCE1E8;background:#EBEEF2">
+      <div style="max-width:1320px;margin:0 auto;padding:0 24px;display:grid;grid-template-columns:repeat(auto-fit,minmax(215px,1fr))">
+        <sc-for list="{{ proofs }}" as="p" hint-placeholder-count="4">
+          <div style="padding:34px 28px 34px 0">
+            <div style="font-family:'Jost',sans-serif;font-size:34px;line-height:1;margin-bottom:10px">{{ p.value }}</div>
+            <div style="font-size:13px;line-height:1.5;color:#68737F">{{ p.label }}</div>
+          </div>
+        </sc-for>
+      </div>
+    </section>
+
+    <section style="max-width:1320px;margin:0 auto;padding:84px 24px 0">
+      <div style="display:flex;align-items:baseline;justify-content:space-between;gap:24px;flex-wrap:wrap;margin-bottom:32px">
+        <div>
+          <p style="font-size:11px;letter-spacing:.24em;text-transform:uppercase;color:#68737F;margin:0 0 12px">Systems</p>
+          <h2 style="font-family:'Jost',sans-serif;font-weight:300;font-size:36px;margin:0;letter-spacing:-.01em">Six systems, one recess depth</h2>
+        </div>
+        <button onClick="{{ goShop }}" style="background:none;border:0;padding:0;cursor:pointer;font-size:13.5px;color:#1F4E8C">All articles →</button>
+      </div>
+      <div style="display:grid;grid-template-columns:repeat(auto-fill,minmax(min(240px,100%),1fr));gap:1px;background:#DCE1E8;border:1px solid #DCE1E8">
+        <sc-for list="{{ categories }}" as="c" hint-placeholder-count="6">
+          <button onClick="{{ c.go }}" style="background:#F7F8FA;border:0;padding:0;cursor:pointer;text-align:left;display:block" style-hover="background:#FFFFFF">
+            <div style="position:relative;aspect-ratio:1/1">
+              <image-slot id="{{ c.slotId }}" shape="rect" placeholder="{{ c.hint }}"></image-slot>
+            </div>
+            <div style="padding:20px 22px 26px">
+              <div style="font-size:16px;font-weight:500;margin-bottom:7px">{{ c.name }}</div>
+              <div style="font-size:13px;line-height:1.5;color:#68737F">{{ c.blurb }}</div>
+            </div>
+          </button>
+        </sc-for>
+      </div>
+    </section>
+
+    <section style="max-width:1320px;margin:0 auto;padding:84px 24px 0">
+      <div style="display:flex;align-items:baseline;justify-content:space-between;gap:24px;flex-wrap:wrap;margin-bottom:32px">
+        <div>
+          <p style="font-size:11px;letter-spacing:.24em;text-transform:uppercase;color:#68737F;margin:0 0 12px">Featured</p>
+          <h2 style="font-family:'Jost',sans-serif;font-weight:300;font-size:36px;margin:0;letter-spacing:-.01em">Specified most often</h2>
+        </div>
+        <button onClick="{{ goShop }}" style="background:none;border:0;padding:0;cursor:pointer;font-size:13.5px;color:#1F4E8C">View all →</button>
+      </div>
+      <div style="display:grid;grid-template-columns:repeat(auto-fill,minmax(min(210px,100%),1fr));gap:1px;background:#DCE1E8;border:1px solid #DCE1E8">
+        <sc-for list="{{ featured }}" as="p" hint-placeholder-count="4">
+          <div style="background:#F7F8FA;display:flex;flex-direction:column" style-hover="background:#FFFFFF">
+            <button onClick="{{ p.open }}" style="background:none;border:0;padding:0;cursor:pointer;text-align:left;display:block">
+              <div style="position:relative;aspect-ratio:1/1">
+                <image-slot id="{{ p.featSlotId }}" shape="rect" placeholder="{{ p.name }}"></image-slot>
+              </div>
+              <div style="padding:18px 20px 8px">
+                <div style="font-size:11px;letter-spacing:.14em;text-transform:uppercase;color:#68737F;margin-bottom:9px">{{ p.category }}</div>
+                <div style="font-size:15.5px;font-weight:500;margin-bottom:6px">{{ p.name }}</div>
+                <div style="font-size:13px;color:#68737F;line-height:1.45">{{ p.meta }}</div>
+              </div>
+            </button>
+            <div style="padding:14px 20px 20px;margin-top:auto">
+              <button onClick="{{ p.add }}" style="width:100%;background:none;border:1px solid #C3CAD4;padding:11px;border-radius:2px;font-size:13px;cursor:pointer" style-hover="border-color:#132A45;background:#132A45;color:#F7F8FA">Add to request list</button>
+            </div>
+          </div>
+        </sc-for>
+      </div>
+    </section>
+
+    <section style="max-width:1320px;margin:0 auto;padding:84px 24px">
+      <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:56px;align-items:center">
+        <div style="position:relative;aspect-ratio:3/2">
+          <image-slot id="home-detail" shape="rect" placeholder="Detail shot — recessed socket, flush with plaster"></image-slot>
+        </div>
+        <div>
+          <p style="font-size:11px;letter-spacing:.24em;text-transform:uppercase;color:#1F4E8C;margin:0 0 22px">Specification</p>
+          <h2 style="font-family:'Jost',sans-serif;font-weight:300;font-size:34px;line-height:1.12;margin:0 0 20px;letter-spacing:-.01em">Drawn for the installer, invisible to the client</h2>
+          <p style="font-size:15.5px;line-height:1.65;color:#414E5D;margin:0 0 28px;max-width:48ch;text-wrap:pretty">Every article ships with a steel mounting box, a plaster-in frame and a DWG drawing. Recess depths are standardised at 45 mm so electrics, sanitary and joinery are coordinated once.</p>
+          <div style="border-top:1px solid #DCE1E8">
+            <sc-for list="{{ specPoints }}" as="s" hint-placeholder-count="4">
+              <div style="display:flex;gap:18px;padding:15px 0;font-size:14px;border-bottom:1px solid #DCE1E8">
+                <span style="color:#1F4E8C;min-width:28px">{{ s.num }}</span>
+                <span style="color:#414E5D;line-height:1.5">{{ s.text }}</span>
+              </div>
+            </sc-for>
+          </div>
+        </div>
+      </div>
+    </section>
+
+
+    <section style="border-top:1px solid #DCE1E8;background:#EBEEF2">
+      <div style="max-width:1320px;margin:0 auto;padding:84px 24px">
+        <p style="font-size:11px;letter-spacing:.24em;text-transform:uppercase;color:#68737F;margin:0 0 12px">Installation</p>
+        <h2 style="font-family:'Jost',sans-serif;font-weight:300;font-size:36px;margin:0 0 12px;letter-spacing:-.01em">How it works</h2>
+        <p style="font-size:15.5px;line-height:1.6;color:#414E5D;margin:0 0 40px;max-width:54ch">Four systems, four sequences. Each article ships as a full kit — box, frame, fixings and drawing — so the wall is cut once.</p>
+        <div style="display:grid;gap:1px;background:#DCE1E8;border:1px solid #DCE1E8">
+          <sc-for list="{{ howItWorks }}" as="h" hint-placeholder-count="4">
+            <div style="background:#F7F8FA;display:flex;gap:0;padding:0;flex-wrap:wrap;align-items:stretch">
+              <div style="position:relative;flex:1 1 min(100%,320px);min-height:220px">
+                <image-slot id="{{ h.slot }}" shape="rect" placeholder="{{ h.title }} — install photo"></image-slot>
+              </div>
+              <div style="flex:1 1 min(100%,420px);min-width:0;padding:30px;display:flex;flex-direction:column;justify-content:center">
+                <div style="font-size:19px;margin-bottom:12px">{{ h.title }}</div>
+                <p style="font-size:14.5px;line-height:1.65;color:#414E5D;margin:0;max-width:52ch">{{ h.text }}</p>
+              </div>
+            </div>
+          </sc-for>
+        </div>
+      </div>
+    </section>
+    <section style="background:#132A45;color:#F7F8FA">
+      <div style="max-width:1320px;margin:0 auto;padding:72px 24px;display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:48px;align-items:center">
+        <div>
+          <h2 style="font-family:'Jost',sans-serif;font-weight:300;font-size:34px;line-height:1.12;margin:0 0 14px">Working on a project?</h2>
+          <p style="font-size:15.5px;line-height:1.6;color:#A6B4C6;margin:0;max-width:44ch">Build a request list as you browse. Send it once and receive article pricing, lead times and drawings within one working day.</p>
+        </div>
+        <div style="display:flex;gap:12px;flex-wrap:wrap;justify-content:flex-end">
+          <button onClick="{{ goShop }}" style="background:#F7F8FA;color:#132A45;border:0;padding:15px 26px;border-radius:2px;font-size:14px;cursor:pointer" style-hover="background:#1F4E8C;color:#FFFFFF">Start a list</button>
+          <button onClick="{{ goContact }}" style="background:none;color:#F7F8FA;border:1px solid #414E5D;padding:15px 26px;border-radius:2px;font-size:14px;cursor:pointer" style-hover="border-color:#F7F8FA">Find a dealer</button>
+        </div>
+      </div>
+    </section>
+  </main>
+  </sc-if>
+
+  <!-- CATALOGUE -->
+  <sc-if value="{{ isShop }}" hint-placeholder-val="{{ false }}">
+  <main style="max-width:1320px;margin:0 auto;padding:0 24px 96px">
+    <div style="padding:40px 0 30px;border-bottom:1px solid #DCE1E8">
+      <p style="font-size:11px;letter-spacing:.24em;text-transform:uppercase;color:#68737F;margin:0 0 16px">Catalogue</p>
+      <h1 style="font-family:'Jost',sans-serif;font-weight:300;font-size:clamp(34px,4.4vw,52px);margin:0 0 14px;letter-spacing:-.015em">{{ activeCategory }}</h1>
+      <p style="font-size:15.5px;line-height:1.6;color:#414E5D;max-width:56ch;margin:0">{{ activeBlurb }}</p>
+    </div>
+
+    <div style="display:flex;flex-wrap:wrap;gap:48px;align-items:flex-start;padding-top:36px">
+      <aside style="display:grid;gap:34px;flex:1 1 220px;max-width:260px">
+        <div>
+          <div style="font-size:11px;letter-spacing:.18em;text-transform:uppercase;color:#68737F;margin-bottom:14px">Systems</div>
+          <div style="display:grid;gap:2px">
+            <sc-for list="{{ filterCats }}" as="c" hint-placeholder-count="7">
+              <button onClick="{{ c.go }}" style="background:none;border:0;padding:7px 0;cursor:pointer;text-align:left;font-size:14px;color:{{ c.color }}" style-hover="color:#1F4E8C">{{ c.name }}</button>
+            </sc-for>
+          </div>
+        </div>
+        <div>
+          <div style="font-size:11px;letter-spacing:.18em;text-transform:uppercase;color:#68737F;margin-bottom:14px">Finish</div>
+          <div style="display:grid;gap:11px">
+            <sc-for list="{{ finishes }}" as="f" hint-placeholder-count="6">
+              <button onClick="{{ f.pick }}" style="display:flex;align-items:center;gap:11px;font-size:14px;background:none;border:0;padding:2px 0;cursor:pointer;text-align:left;color:{{ f.color }}" style-hover="color:#1F4E8C">
+                <span style="width:16px;height:16px;border-radius:50%;border:1px solid #C3CAD4;background:{{ f.hex }};outline:{{ f.ring }};outline-offset:2px;flex:none"></span>
+                {{ f.name }}
+              </button>
+            </sc-for>
+          </div>
+        </div>
+        <div style="border-top:1px solid #DCE1E8;padding-top:22px;font-size:13px;line-height:1.55;color:#68737F">Prices are issued per project. Add articles to your request list for a quotation.</div>
+      </aside>
+
+      <div style="flex:1 1 min(100%,520px);min-width:0">
+        <div style="display:flex;justify-content:space-between;align-items:baseline;margin-bottom:18px;font-size:13px;color:#68737F;flex-wrap:wrap;gap:12px">
+          <span>{{ productCount }} articles · shown in {{ selectedFinish }}</span>
+          <span>45 mm standard recess depth</span>
+        </div>
+        <div style="display:grid;grid-template-columns:repeat(auto-fill,minmax(min(210px,100%),1fr));gap:1px;background:#DCE1E8;border:1px solid #DCE1E8">
+          <sc-for list="{{ products }}" as="p" hint-placeholder-count="8">
+            <div style="background:#F7F8FA;display:flex;flex-direction:column" style-hover="background:#FFFFFF">
+              <button onClick="{{ p.open }}" style="background:none;border:0;padding:0;cursor:pointer;text-align:left;display:block">
+                <div style="position:relative;aspect-ratio:1/1">
+                  <image-slot id="{{ p.slotId }}" shape="rect" placeholder="{{ p.name }}"></image-slot>
+                </div>
+                <div style="padding:18px 20px 8px">
+                  <div style="font-size:11px;letter-spacing:.14em;text-transform:uppercase;color:#68737F;margin-bottom:9px">{{ p.category }}</div>
+                  <div style="font-size:15.5px;font-weight:500;margin-bottom:6px">{{ p.name }}</div>
+                  <div style="font-size:13px;color:#68737F;line-height:1.45">{{ p.meta }}</div>
+                </div>
+              </button>
+              <div style="padding:14px 20px 20px;margin-top:auto">
+                <button onClick="{{ p.add }}" style="width:100%;background:none;border:1px solid #C3CAD4;padding:11px;border-radius:2px;font-size:13px;cursor:pointer" style-hover="border-color:#132A45;background:#132A45;color:#F7F8FA">Add to request list</button>
+              </div>
+            </div>
+          </sc-for>
+        </div>
+      </div>
+    </div>
+  </main>
+  </sc-if>
+
+  <!-- PRODUCT -->
+  <sc-if value="{{ isProduct }}" hint-placeholder-val="{{ false }}">
+  <main style="max-width:1320px;margin:0 auto;padding:0 24px 96px">
+    <div style="padding:26px 0;font-size:12.5px;color:#68737F;display:flex;gap:8px;flex-wrap:wrap;align-items:center">
+      <button onClick="{{ goHome }}" style="background:none;border:0;padding:0;cursor:pointer;color:#68737F;font-size:12.5px">Home</button>
+      <span>/</span>
+      <button onClick="{{ goShop }}" style="background:none;border:0;padding:0;cursor:pointer;color:#68737F;font-size:12.5px">{{ current.category }}</button>
+      <span>/</span>
+      <span style="color:#132A45">{{ current.name }}</span>
+    </div>
+
+    <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(320px,1fr));gap:56px;align-items:start">
+      <div style="display:grid;gap:1px;background:#DCE1E8;border:1px solid #DCE1E8">
+        <div style="position:relative;aspect-ratio:1/1;background:#F7F8FA">
+          <image-slot id="pdp-main" shape="rect" placeholder="Product photo on neutral ground"></image-slot>
+        </div>
+        <div style="display:grid;grid-template-columns:1fr 1fr;gap:1px">
+          <div style="position:relative;aspect-ratio:1/1;background:#F7F8FA">
+            <image-slot id="pdp-alt-1" shape="rect" placeholder="Installed detail"></image-slot>
+          </div>
+          <div style="position:relative;aspect-ratio:1/1;background:#F7F8FA">
+            <image-slot id="pdp-alt-2" shape="rect" placeholder="Section drawing"></image-slot>
+          </div>
+        </div>
+      </div>
+
+      <div>
+        <div style="font-size:11px;letter-spacing:.14em;color:#68737F;margin-bottom:14px">{{ current.code }} · {{ current.category }}</div>
+        <h1 style="font-family:'Jost',sans-serif;font-weight:300;font-size:clamp(32px,3.6vw,46px);line-height:1.04;margin:0 0 18px;letter-spacing:-.015em">{{ current.name }}</h1>
+        <p style="font-size:16px;line-height:1.62;color:#414E5D;margin:0 0 32px;max-width:48ch;text-wrap:pretty">{{ current.description }}</p>
+
+        <div style="font-size:11px;letter-spacing:.18em;text-transform:uppercase;color:#68737F;margin-bottom:12px">Finish — {{ selectedFinish }}</div>
+        <div style="display:flex;gap:10px;margin-bottom:32px;flex-wrap:wrap">
+          <sc-for list="{{ finishSwatches }}" as="f" hint-placeholder-count="5">
+            <button onClick="{{ f.pick }}" title="{{ f.name }}" style="width:40px;height:40px;border-radius:50%;cursor:pointer;background:{{ f.hex }};border:1px solid #C3CAD4;outline:{{ f.ring }};outline-offset:3px"></button>
+          </sc-for>
+        </div>
+
+        <div style="display:flex;gap:12px;align-items:stretch;margin-bottom:14px;flex-wrap:wrap">
+          <div style="display:flex;align-items:center;border:1px solid #C3CAD4;border-radius:2px">
+            <button onClick="{{ decQty }}" style="background:none;border:0;padding:0 16px;height:50px;cursor:pointer;font-size:17px;color:#68737F">−</button>
+            <span style="min-width:34px;text-align:center;font-size:15px">{{ qty }}</span>
+            <button onClick="{{ incQty }}" style="background:none;border:0;padding:0 16px;height:50px;cursor:pointer;font-size:17px;color:#68737F">+</button>
+          </div>
+          <button onClick="{{ addCurrent }}" style="flex:1;min-width:190px;background:#132A45;color:#F7F8FA;border:0;border-radius:2px;padding:0 26px;height:50px;font-size:14px;cursor:pointer" style-hover="background:#1F4E8C">{{ pdpButtonLabel }}</button>
+        </div>
+        <div style="font-size:13px;color:#68737F;margin-bottom:34px">Quotation issued per project · drawings included</div>
+
+        <div style="border-top:1px solid #DCE1E8">
+          <sc-for list="{{ current.specs }}" as="s" hint-placeholder-count="6">
+            <div style="display:flex;justify-content:space-between;gap:24px;padding:13px 0;border-bottom:1px solid #DCE1E8;font-size:14px">
+              <span style="color:#68737F">{{ s.k }}</span>
+              <span style="text-align:right">{{ s.v }}</span>
+            </div>
+          </sc-for>
+        </div>
+
+        <sc-if value="{{ hasCompat }}" hint-placeholder-val="{{ true }}">
+          <div style="margin-top:28px;border:1px solid #DCE1E8;background:#EBEEF2;padding:22px">
+            <div style="font-size:11px;letter-spacing:.18em;text-transform:uppercase;color:#68737F;margin-bottom:14px">Compatible with</div>
+            <div style="display:flex;flex-wrap:wrap;gap:8px">
+              <sc-for list="{{ compatList }}" as="c" hint-placeholder-count="8">
+                <span style="border:1px solid #C3CAD4;background:#F7F8FA;padding:7px 12px;border-radius:2px;font-size:13px;color:#414E5D">{{ c }}</span>
+              </sc-for>
+            </div>
+            <p style="font-size:12.5px;line-height:1.55;color:#68737F;margin:16px 0 0">Not on the list? Send the cistern or box model with your request and we confirm the fit.</p>
+          </div>
+        </sc-if>
+        <div style="display:flex;gap:22px;margin-top:24px;font-size:13.5px;flex-wrap:wrap">
+          <a href="#">Download DWG</a>
+          <a href="#">Installation sheet (PDF)</a>
+        </div>
+      </div>
+    </div>
+
+    <section style="margin-top:84px;border-top:1px solid #DCE1E8;padding-top:36px">
+      <h2 style="font-family:'Jost',sans-serif;font-weight:300;font-size:28px;margin:0 0 24px">Coordinates with</h2>
+      <div style="display:grid;grid-template-columns:repeat(auto-fill,minmax(min(200px,100%),1fr));gap:1px;background:#DCE1E8;border:1px solid #DCE1E8">
+        <sc-for list="{{ related }}" as="p" hint-placeholder-count="4">
+          <button onClick="{{ p.open }}" style="background:#F7F8FA;border:0;padding:0;cursor:pointer;text-align:left" style-hover="background:#FFFFFF">
+            <div style="position:relative;aspect-ratio:4/3">
+              <image-slot id="{{ p.relSlotId }}" shape="rect" placeholder="{{ p.name }}"></image-slot>
+            </div>
+            <div style="padding:16px 18px 22px">
+              <div style="font-size:11px;letter-spacing:.14em;text-transform:uppercase;color:#68737F;margin-bottom:8px">{{ p.category }}</div>
+              <div style="font-size:14.5px">{{ p.name }}</div>
+            </div>
+          </button>
+        </sc-for>
+      </div>
+    </section>
+  </main>
+  </sc-if>
+
+  <!-- REQUEST LIST -->
+  <sc-if value="{{ isQuote }}" hint-placeholder-val="{{ false }}">
+  <main style="max-width:1120px;margin:0 auto;padding:44px 24px 96px">
+    <h1 style="font-family:'Jost',sans-serif;font-weight:300;font-size:clamp(34px,4.4vw,50px);margin:0 0 12px;letter-spacing:-.015em">Your request list</h1>
+    <p style="font-size:15.5px;line-height:1.6;color:#414E5D;margin:0 0 40px;max-width:52ch">Send the list and we reply with article pricing, availability and drawings. No account needed.</p>
+
+    <sc-if value="{{ quoteEmpty }}" hint-placeholder-val="{{ false }}">
+      <div style="border:1px solid #DCE1E8;padding:56px 32px;text-align:center;background:#EBEEF2">
+        <p style="font-size:15px;color:#68737F;margin:0 0 22px">Nothing on the list yet.</p>
+        <button onClick="{{ goShop }}" style="background:#132A45;color:#F7F8FA;border:0;padding:14px 26px;border-radius:2px;font-size:14px;cursor:pointer" style-hover="background:#1F4E8C">Browse the catalogue</button>
+      </div>
+    </sc-if>
+
+    <sc-if value="{{ quoteSent }}" hint-placeholder-val="{{ false }}">
+      <div style="border:1px solid #132A45;background:#132A45;color:#F7F8FA;padding:48px 32px">
+        <div style="font-family:'Jost',sans-serif;font-size:30px;margin-bottom:12px">Request sent</div>
+        <p style="font-size:15px;line-height:1.6;color:#A6B4C6;margin:0 0 26px;max-width:46ch">A specifier will reply with pricing, lead times and drawings within one working day.</p>
+        <button onClick="{{ goHome }}" style="background:#F7F8FA;color:#132A45;border:0;padding:14px 24px;border-radius:2px;font-size:14px;cursor:pointer" style-hover="background:#1F4E8C;color:#FFFFFF">Back to home</button>
+      </div>
+    </sc-if>
+
+    <sc-if value="{{ quoteOpen }}" hint-placeholder-val="{{ true }}">
+    <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(320px,1fr));gap:48px;align-items:start">
+      <div>
+        <div style="border-top:1px solid #132A45">
+          <sc-for list="{{ quoteItems }}" as="it" hint-placeholder-count="3">
+            <div style="display:flex;gap:18px;padding:20px 0;border-bottom:1px solid #DCE1E8;align-items:center;flex-wrap:wrap">
+              <div style="position:relative;width:76px;height:76px;flex:none">
+                <image-slot id="{{ it.slotId }}" shape="rect" placeholder="{{ it.code }}"></image-slot>
+              </div>
+              <div style="flex:1;min-width:140px">
+                <div style="font-size:11px;letter-spacing:.14em;color:#68737F;margin-bottom:6px">{{ it.code }}</div>
+                <div style="font-size:15px;margin-bottom:5px">{{ it.name }}</div>
+                <div style="font-size:13px;color:#68737F">{{ it.finish }}</div>
+              </div>
+              <div style="display:flex;align-items:center;border:1px solid #DCE1E8;border-radius:2px">
+                <button onClick="{{ it.dec }}" style="background:none;border:0;padding:0 12px;height:38px;cursor:pointer;color:#68737F">−</button>
+                <span style="min-width:26px;text-align:center;font-size:14px">{{ it.qty }}</span>
+                <button onClick="{{ it.inc }}" style="background:none;border:0;padding:0 12px;height:38px;cursor:pointer;color:#68737F">+</button>
+              </div>
+              <button onClick="{{ it.remove }}" style="background:none;border:0;cursor:pointer;color:#68737F;font-size:13px;padding:0" style-hover="color:#1F4E8C">Remove</button>
+            </div>
+          </sc-for>
+        </div>
+        <div style="display:flex;justify-content:space-between;padding:20px 0;font-size:14px;gap:16px;flex-wrap:wrap">
+          <span style="color:#68737F">{{ quoteCount }} articles · {{ quoteUnits }} units</span>
+          <button onClick="{{ goShop }}" style="background:none;border:0;cursor:pointer;color:#1F4E8C;font-size:14px">Add more</button>
+        </div>
+      </div>
+
+      <form onSubmit="{{ submitQuote }}" style="background:#EBEEF2;border:1px solid #DCE1E8;padding:30px;display:grid;gap:16px">
+        <div style="font-family:'Jost',sans-serif;font-size:24px">Send for pricing</div>
+        <sc-for list="{{ quoteFields }}" as="f" hint-placeholder-count="5">
+          <label style="display:grid;gap:7px;font-size:12px;letter-spacing:.1em;text-transform:uppercase;color:#68737F">
+            {{ f.label }}
+            <input type="{{ f.type }}" placeholder="{{ f.ph }}" style="border:1px solid #C3CAD4;background:#F7F8FA;padding:12px 13px;border-radius:2px;font-size:15px;letter-spacing:0;text-transform:none" />
+          </label>
+        </sc-for>
+        <label style="display:grid;gap:7px;font-size:12px;letter-spacing:.1em;text-transform:uppercase;color:#68737F">
+          Project notes
+          <textarea rows="4" placeholder="Wall build-up, delivery window, finish preference" style="border:1px solid #C3CAD4;background:#F7F8FA;padding:12px 13px;border-radius:2px;font-size:15px;letter-spacing:0;text-transform:none;resize:vertical"></textarea>
+        </label>
+        <button type="submit" style="background:#132A45;color:#F7F8FA;border:0;padding:15px;border-radius:2px;font-size:14px;cursor:pointer;margin-top:4px" style-hover="background:#1F4E8C">Send request</button>
+        <p style="font-size:12.5px;line-height:1.55;color:#68737F;margin:0">Reply within one working day. Trade accounts receive net pricing.</p>
+      </form>
+    </div>
+    </sc-if>
+  </main>
+  </sc-if>
+
+  <!-- CONTACT -->
+  <sc-if value="{{ isContact }}" hint-placeholder-val="{{ false }}">
+  <main style="max-width:1320px;margin:0 auto;padding:44px 24px 96px">
+    <h1 style="font-family:'Jost',sans-serif;font-weight:300;font-size:clamp(34px,4.4vw,50px);margin:0 0 12px;letter-spacing:-.015em">Dealers &amp; contact</h1>
+    <p style="font-size:15.5px;line-height:1.6;color:#414E5D;margin:0 0 44px;max-width:52ch">Showrooms in Tirana, Durrës, Vlorë and Prishtina hold the full finish range. For project quantities, write to the specification desk directly.</p>
+
+    <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(320px,1fr));gap:52px;align-items:start">
+      <div>
+        <div style="font-size:11px;letter-spacing:.18em;text-transform:uppercase;color:#68737F;margin-bottom:18px">Showrooms</div>
+        <div style="border-top:1px solid #132A45">
+          <sc-for list="{{ dealers }}" as="d" hint-placeholder-count="5">
+            <div style="padding:20px 0;border-bottom:1px solid #DCE1E8;display:flex;gap:20px;justify-content:space-between;align-items:baseline;flex-wrap:wrap">
+              <div>
+                <div style="font-size:16px;margin-bottom:6px">{{ d.name }}</div>
+                <div style="font-size:13.5px;color:#68737F;line-height:1.5">{{ d.address }}</div>
+              </div>
+              <div style="font-size:13px;color:#68737F;text-align:right">{{ d.city }}<br />{{ d.phone }}</div>
+            </div>
+          </sc-for>
+        </div>
+        <div style="position:relative;aspect-ratio:16/9;margin-top:32px;border:1px solid #DCE1E8">
+          <image-slot id="dealer-map" shape="rect" placeholder="Map or showroom photo"></image-slot>
+        </div>
+      </div>
+
+      <div style="display:grid;gap:28px">
+        <div style="background:#132A45;color:#F7F8FA;padding:30px">
+          <div style="font-family:'Jost',sans-serif;font-size:24px;margin-bottom:16px">Specification desk</div>
+          <p style="font-size:14.5px;line-height:1.6;color:#A6B4C6;margin:0 0 22px">Drawings, wall build-ups and finish samples for architects and installers.</p>
+          <div style="display:grid;gap:9px;font-size:15px">
+            <a href="mailto:spec@flushfit.al" style="color:#9CC0EA">spec@flushfit.al</a>
+            <span>+355 4 000 0000</span>
+            <span style="color:#A6B4C6;font-size:13.5px">Mon–Sat, 08:30–17:00 CET</span>
+          </div>
+        </div>
+        <form onSubmit="{{ submitContact }}" style="border:1px solid #DCE1E8;padding:30px;display:grid;gap:16px">
+          <div style="font-family:'Jost',sans-serif;font-size:24px">Send a question</div>
+          <sc-for list="{{ contactFields }}" as="f" hint-placeholder-count="3">
+            <label style="display:grid;gap:7px;font-size:12px;letter-spacing:.1em;text-transform:uppercase;color:#68737F">
+              {{ f.label }}
+              <input type="{{ f.type }}" placeholder="{{ f.ph }}" style="border:1px solid #C3CAD4;background:#F7F8FA;padding:12px 13px;border-radius:2px;font-size:15px;letter-spacing:0;text-transform:none" />
+            </label>
+          </sc-for>
+          <label style="display:grid;gap:7px;font-size:12px;letter-spacing:.1em;text-transform:uppercase;color:#68737F">
+            Message
+            <textarea rows="4" placeholder="What are you specifying?" style="border:1px solid #C3CAD4;background:#F7F8FA;padding:12px 13px;border-radius:2px;font-size:15px;letter-spacing:0;text-transform:none;resize:vertical"></textarea>
+          </label>
+          <button type="submit" style="background:#132A45;color:#F7F8FA;border:0;padding:15px;border-radius:2px;font-size:14px;cursor:pointer" style-hover="background:#1F4E8C">{{ contactButtonLabel }}</button>
+        </form>
+      </div>
+    </div>
+  </main>
+  </sc-if>
+
+  <footer style="border-top:1px solid #DCE1E8;background:#EBEEF2">
+    <div style="max-width:1320px;margin:0 auto;padding:56px 24px;display:grid;grid-template-columns:repeat(auto-fit,minmax(210px,1fr));gap:40px">
+      <div>
+        <div style="font-size:17px;font-weight:600;letter-spacing:.18em;margin-bottom:12px">FLUSH FIT</div>
+        <p style="font-size:13px;line-height:1.6;color:#68737F;margin:0;max-width:30ch">Recessed bathroom hardware for tiled walls. Assembled in Tirana, shipped across the Balkans and the EU.</p>
+      </div>
+      <sc-for list="{{ footerCols }}" as="col" hint-placeholder-count="2">
+        <div>
+          <div style="font-size:11px;letter-spacing:.18em;text-transform:uppercase;color:#68737F;margin-bottom:14px">{{ col.title }}</div>
+          <div style="display:grid;gap:9px">
+            <sc-for list="{{ col.links }}" as="l" hint-placeholder-count="4">
+              <a href="#" style="font-size:13.5px;color:#414E5D">{{ l }}</a>
+            </sc-for>
+          </div>
+        </div>
+      </sc-for>
+      <div>
+        <div style="font-size:11px;letter-spacing:.18em;text-transform:uppercase;color:#68737F;margin-bottom:14px">Specifier notes</div>
+        <p style="font-size:13px;line-height:1.6;color:#68737F;margin:0 0 14px;max-width:32ch">New finishes and drawing updates, a few times a year.</p>
+        <form onSubmit="{{ submitNewsletter }}" style="display:flex;gap:8px;flex-wrap:wrap">
+          <input type="email" placeholder="Email address" style="flex:1;min-width:150px;border:1px solid #C3CAD4;background:#F7F8FA;padding:11px 12px;border-radius:2px;font-size:14px" />
+          <button type="submit" style="background:#132A45;color:#F7F8FA;border:0;padding:11px 18px;border-radius:2px;font-size:13.5px;cursor:pointer" style-hover="background:#1F4E8C">{{ newsletterLabel }}</button>
+        </form>
+      </div>
+    </div>
+    <div style="border-top:1px solid #DCE1E8">
+      <div style="max-width:1320px;margin:0 auto;padding:20px 24px;font-size:12.5px;color:#68737F;display:flex;justify-content:space-between;gap:20px;flex-wrap:wrap">
+        <span>© 2026 Flush Fit BV</span>
+        <span>NIPT L00000000A · Rruga e Kavajës 132, Tiranë</span>
+      </div>
+    </div>
+  </footer>
+</div>
+</x-dc>
+<script type="text/x-dc" data-dc-script data-props="{}">
+const CATS = [
+  { name: "Flush plates", blurb: "Frameless actuator plates for concealed cisterns.", hint: "Flush plate, tile-flush" },
+  { name: "Recessed sockets", blurb: "Power outlets that close level with the wall.", hint: "Recessed socket" },
+  { name: "Light switches", blurb: "Touch and rocker switches set into plaster.", hint: "Flush switch" },
+  { name: "Paper holders", blurb: "Incasso holders with a soft-closing flap.", hint: "Recessed paper holder" },
+  { name: "Towel systems", blurb: "Bars and niches built into the wall face.", hint: "Recessed towel bar" },
+  { name: "Manifold cabinets", blurb: "Service access without a visible frame.", hint: "Manifold cabinet door" }
+];
+
+const P = (code, name, category, meta, description, specs) => ({ code, name, category, meta, description, specs });
+
+const PRODUCTS = [
+  P("FP-01", "Plate 01 Square", "Flush plates", "Stainless 316 · 180 × 120 mm",
+    "A frameless dual-flush actuator that finishes level with the tile. The plate is cut from 3 mm stainless and set in a plaster-in frame, so the only visible line is the joint around the two touch fields.",
+    [["Material", "Stainless steel 316"], ["Dimensions", "180 × 120 × 6 mm"], ["Recess depth", "45 mm"], ["Actuation", "Dual flush, mechanical"], ["Cistern fit", "Geberit, Grohe, Tece"], ["Included", "Mounting box, frame, DWG"]]),
+  P("FP-02", "Plate 02 Round", "Flush plates", "Stainless 316 · ⌀ 150 mm",
+    "The round variant of the 01 plate, machined from a single piece with two concentric touch fields.",
+    [["Material", "Stainless steel 316"], ["Dimensions", "⌀ 150 × 6 mm"], ["Recess depth", "45 mm"], ["Actuation", "Dual flush, mechanical"]]),
+  P("FP-03", "Plate 03 Tileable", "Flush plates", "Carrier for 6–12 mm tile",
+    "A carrier plate that accepts the project tile, so the actuator disappears into the wall pattern entirely.",
+    [["Material", "Powder-coated steel carrier"], ["Tile thickness", "6–12 mm"], ["Recess depth", "45 mm"], ["Included", "Carrier, frame, cutting template"]]),
+  P("RS-01", "Socket 01 Single", "Recessed sockets", "Type F · IP44 · 45 mm",
+    "A single outlet on a spring-loaded lid that closes flush with the wall when not in use. Rated IP44 for zone 2 placement.",
+    [["Outlets", "1 × Type F"], ["Rating", "IP44 · 16 A"], ["Recess depth", "45 mm"], ["Lid", "Push-to-open, soft close"], ["Included", "Steel box, frame, DWG"]]),
+  P("RS-02", "Socket 02 Double", "Recessed sockets", "Type F · IP44 · 45 mm",
+    "Two outlets behind one flush lid, sharing a single mounting box.",
+    [["Outlets", "2 × Type F"], ["Rating", "IP44 · 16 A"], ["Recess depth", "45 mm"]]),
+  P("RS-03", "Socket 03 USB-C", "Recessed sockets", "2 × 30 W USB-C · IP44",
+    "Charging only, for mirror cabinets and vanity recesses.",
+    [["Outlets", "2 × USB-C, 30 W"], ["Rating", "IP44"], ["Recess depth", "45 mm"]]),
+  P("LS-01", "Switch 01 Touch", "Light switches", "Capacitive · 45 mm",
+    "A capacitive field flush with the plaster, marked only by a machined hairline.",
+    [["Type", "Capacitive touch"], ["Load", "Up to 300 W LED"], ["Recess depth", "45 mm"], ["Finish", "Five standard finishes"]]),
+  P("LS-02", "Switch 02 Rocker", "Light switches", "Single pole · 45 mm",
+    "A mechanical rocker recessed behind a flush bezel.",
+    [["Type", "Single pole rocker"], ["Rating", "10 A"], ["Recess depth", "45 mm"]]),
+  P("LS-03", "Switch 03 Dimmer", "Light switches", "Trailing edge · 5–150 W",
+    "Rotary dimmer with the knob set below the wall face.",
+    [["Type", "Trailing edge dimmer"], ["Load", "5–150 W"], ["Recess depth", "45 mm"]]),
+  P("PH-01", "Holder 01 Flap", "Paper holders", "Stainless 316 · 155 × 155 mm",
+    "A recessed paper holder with a soft-closing flap that sits level with the wall. The roll loads from the front and the flap doubles as a shelf when open.",
+    [["Material", "Stainless steel 316"], ["Dimensions", "155 × 155 × 45 mm"], ["Recess depth", "45 mm"], ["Capacity", "One roll, ⌀ 120 mm"], ["Included", "Box, frame, DWG"]]),
+  P("PH-02", "Holder 02 Open", "Paper holders", "Stainless 316 · 155 × 155 mm",
+    "An open niche version without a flap, sized for the spare roll.",
+    [["Material", "Stainless steel 316"], ["Dimensions", "155 × 155 × 45 mm"], ["Recess depth", "45 mm"]]),
+  P("TS-01", "Towel 01 Bar", "Towel systems", "Recessed bar · 600 mm",
+    "A bar set into a shallow niche so towels hang against the wall plane rather than off it.",
+    [["Material", "Stainless steel 316"], ["Length", "600 mm"], ["Recess depth", "45 mm"], ["Load", "Up to 12 kg"]]),
+  P("TS-02", "Towel 02 Niche", "Towel systems", "Niche · 300 × 900 mm",
+    "A full-height niche with a concealed bar at the head, for stacked and hanging towels together.",
+    [["Material", "Powder-coated steel liner"], ["Opening", "300 × 900 mm"], ["Depth", "120 mm"]]),
+  P("MC-01", "Cabinet 01 Manifold", "Manifold cabinets", "Frameless door · 500 × 500 mm",
+    "A push-to-open service door with no visible frame, giving access to the manifold behind a tiled or plastered face.",
+    [["Material", "Steel carcass, tileable door"], ["Opening", "500 × 500 mm"], ["Depth", "110 mm"], ["Opening action", "Push-to-open magnet latch"]]),
+  P("MC-02", "Cabinet 02 Tall", "Manifold cabinets", "Frameless door · 500 × 800 mm",
+    "The tall variant for vertical manifolds and filter sets.",
+    [["Material", "Steel carcass, tileable door"], ["Opening", "500 × 800 mm"], ["Depth", "110 mm"]])
+];
+
+const FINISHES = [
+  { name: "Brushed stainless", hex: "#B9B6B0" },
+  { name: "Matt white", hex: "#EDEAE4" },
+  { name: "Matt black", hex: "#22221F" },
+  { name: "Brushed brass", hex: "#A98C55" },
+  { name: "Gunmetal", hex: "#5A5A57" }
+];
+
+const COMPAT = {
+  "Flush plates": ["Geberit Sigma", "Geberit Delta", "Geberit Omega", "TECE", "Alcaplast", "Grohe", "Viega", "Oli", "Jomotech", "Cersanit", "TOTO"],
+  "Recessed sockets": ["60 mm standard box", "Type F Schuko", "35 mm deep partition wall", "Solid wall, chased"],
+  "Light switches": ["60 mm standard box", "Two-wire circuits", "LED drivers up to 300 W"],
+  "Manifold cabinets": ["Tile 6–12 mm", "Plaster finish", "Gypsum partition", "Solid brick"]
+};
+
+const HOW = [
+  { title: "Hidden flush plate", slot: "how-flush", text: "The opening is cut by hand or water jet, then the frame is plastered in level with the tile. The actuator clips to the frame last, after grouting, so the finished wall shows only the joint line. Fits the cistern brands listed on each article." },
+  { title: "Invisible sockets and switches", slot: "how-electro", text: "Both mount into a standard 60 mm box, so existing rough-in usually needs no change. The lid closes flush and the article is rated IP44 for zone 2. Suitable for new build and for retrofit into a finished wall." },
+  { title: "Recessed paper and towel holders", slot: "how-holders", text: "A steel box is set into the wall build-up and the front frame is plastered or tiled up to. The visible part is only the flap or bar, sitting level with the wall face." },
+  { title: "Manifold access cabinet", slot: "how-cabinet", text: "The carcass is fixed into the partition and the door is faced with the project tile, so access stays available without a visible frame. Push-to-open, no handle." }
+];
+
+const slug = s => s.toLowerCase().replace(/[^a-z0-9]+/g, "-");
+
+class Component extends DCLogic {
+  state = {
+    view: "home",
+    category: "All articles",
+    productCode: "PH-01",
+    finish: "Brushed stainless",
+    qty: 1,
+    list: [],
+    pdpFlash: false,
+    quoteSent: false,
+    contactSent: false,
+    subscribed: false
+  };
+
+  go(view, extra) {
+    this.setState({ view, ...(extra || {}) });
+    if (typeof window !== "undefined") window.scrollTo(0, 0);
+  }
+
+  openProduct = code => this.go("product", { productCode: code, qty: 1, pdpFlash: false });
+
+  addItem(code, finish, qty) {
+    this.setState(s => {
+      const key = code + "|" + finish;
+      const list = s.list.slice();
+      const i = list.findIndex(it => it.key === key);
+      if (i >= 0) list[i] = { ...list[i], qty: list[i].qty + qty };
+      else list.push({ key, code, finish, qty });
+      return { list };
+    });
+  }
+
+  renderVals() {
+    const { view, category, productCode, finish, qty, list } = this.state;
+    const current = PRODUCTS.find(p => p.code === productCode) || PRODUCTS[0];
+    const shown = category === "All articles" ? PRODUCTS : PRODUCTS.filter(p => p.category === category);
+    const catMeta = CATS.find(c => c.name === category);
+
+    const card = p => ({
+      code: p.code,
+      name: p.name,
+      category: p.category,
+      meta: p.meta,
+      slotId: "cat-" + p.code,
+      featSlotId: "feat-" + p.code,
+      relSlotId: "rel-" + p.code,
+      open: () => this.openProduct(p.code),
+      add: () => this.addItem(p.code, FINISHES[0].name, 1)
+    });
+
+    return {
+      isHome: view === "home",
+      isShop: view === "shop",
+      isProduct: view === "product",
+      isQuote: view === "quote",
+      isContact: view === "contact",
+
+      goHome: () => this.go("home"),
+      goShop: () => this.go("shop", { category: "All articles" }),
+      goQuote: () => this.go("quote", { quoteSent: false }),
+      goContact: () => this.go("contact"),
+
+      nav: [
+        { label: "Catalogue", go: () => this.go("shop", { category: "All articles" }) },
+        { label: "Flush plates", go: () => this.go("shop", { category: "Flush plates" }) },
+        { label: "Electrical", go: () => this.go("shop", { category: "Recessed sockets" }) },
+        { label: "Dealers", go: () => this.go("contact") }
+      ],
+
+      proofs: [
+        { value: "45 mm", label: "One standard recess depth across every system" },
+        { value: "5", label: "Finishes, matched across plates, sockets and holders" },
+        { value: "DWG", label: "Drawings and installation sheets per article" },
+        { value: "1 day", label: "Quotation turnaround on project lists" }
+      ],
+
+      specPoints: [
+        { num: "01", text: "Steel mounting box and plaster-in frame supplied with the article." },
+        { num: "02", text: "Tolerances allow 6–12 mm tile or 10 mm plaster build-up." },
+        { num: "03", text: "Electrical articles rated IP44 for zone 2 placement." },
+        { num: "04", text: "Finish samples sent free to trade accounts in Albania and Kosovo." }
+      ],
+
+      categories: CATS.map(c => ({
+        name: c.name,
+        blurb: c.blurb,
+        hint: c.hint,
+        slotId: "cat-tile-" + slug(c.name),
+        go: () => this.go("shop", { category: c.name })
+      })),
+
+      filterCats: [{ name: "All articles" }].concat(CATS).map(c => ({
+        name: c.name,
+        color: c.name === category ? "#1F4E8C" : "#132A45",
+        go: () => this.go("shop", { category: c.name })
+      })),
+
+      finishes: FINISHES.map(f => ({
+        name: f.name,
+        hex: f.hex,
+        color: f.name === finish ? "#1F4E8C" : "#414E5D",
+        ring: f.name === finish ? "1px solid #132A45" : "none",
+        pick: () => this.setState({ finish: f.name })
+      })),
+      featured: [PRODUCTS[0], PRODUCTS[3], PRODUCTS[9], PRODUCTS[11]].map(card),
+      products: shown.map(card),
+      productCount: shown.length,
+      activeCategory: category,
+      activeBlurb: catMeta ? catMeta.blurb : "Every recessed article, across all six systems. Filter by system or ask for the full price list.",
+
+      current: { ...current, specs: current.specs.map(pair => ({ k: pair[0], v: pair[1] })) },
+      howItWorks: HOW,
+      compatList: COMPAT[current.category] || [],
+      hasCompat: (COMPAT[current.category] || []).length > 0,
+      related: PRODUCTS.filter(p => p.code !== current.code && p.category !== current.category).slice(0, 4).map(card),
+      selectedFinish: finish,
+      finishSwatches: FINISHES.map(f => ({
+        name: f.name,
+        hex: f.hex,
+        ring: f.name === finish ? "1px solid #132A45" : "none",
+        pick: () => this.setState({ finish: f.name })
+      })),
+      qty,
+      pdpButtonLabel: this.state.pdpFlash ? "Added to list ✓" : "Add to request list",
+      incQty: () => this.setState(s => ({ qty: s.qty + 1 })),
+      decQty: () => this.setState(s => ({ qty: Math.max(1, s.qty - 1) })),
+      addCurrent: () => {
+        this.addItem(current.code, finish, qty);
+        this.setState({ pdpFlash: true });
+        setTimeout(() => this.setState({ pdpFlash: false }), 1800);
+      },
+
+      quoteCount: list.length,
+      quoteUnits: list.reduce((n, it) => n + it.qty, 0),
+      quoteEmpty: list.length === 0 && !this.state.quoteSent,
+      quoteSent: this.state.quoteSent,
+      quoteOpen: list.length > 0 && !this.state.quoteSent,
+      quoteItems: list.map(it => {
+        const p = PRODUCTS.find(x => x.code === it.code) || PRODUCTS[0];
+        return {
+          code: it.code,
+          name: p.name,
+          finish: it.finish,
+          qty: it.qty,
+          slotId: "cat-" + it.code,
+          inc: () => this.setState(s => ({ list: s.list.map(x => x.key === it.key ? { ...x, qty: x.qty + 1 } : x) })),
+          dec: () => this.setState(s => ({ list: s.list.map(x => x.key === it.key ? { ...x, qty: Math.max(1, x.qty - 1) } : x) })),
+          remove: () => this.setState(s => ({ list: s.list.filter(x => x.key !== it.key) }))
+        };
+      }),
+      quoteFields: [
+        { label: "Name", type: "text", ph: "Your name" },
+        { label: "Company", type: "text", ph: "Studio, contractor or distributor" },
+        { label: "Email", type: "email", ph: "you@company.com" },
+        { label: "Phone", type: "tel", ph: "+355 …" },
+        { label: "Project", type: "text", ph: "Project name or address" }
+      ],
+      submitQuote: e => { e.preventDefault(); this.go("quote", { quoteSent: true }); },
+
+      dealers: [
+        { name: "Flush Fit Showroom", address: "Rruga e Kavajës 132", city: "Tirana", phone: "+355 4 000 0001" },
+        { name: "Ceramica Studio", address: "Bulevardi Bajram Curri 24", city: "Tirana", phone: "+355 4 000 0002" },
+        { name: "Adriatik Banjo", address: "Rruga Aleksandër Goga 8", city: "Durrës", phone: "+355 52 000 003" },
+        { name: "Interior Vlorë", address: "Rruga Sadik Zotaj 45", city: "Vlorë", phone: "+355 33 000 004" },
+        { name: "Studio Dardania", address: "Rruga Nëna Terezë 12", city: "Prishtina", phone: "+383 38 000 005" }
+      ],
+      contactFields: [
+        { label: "Name", type: "text", ph: "Your name" },
+        { label: "Email", type: "email", ph: "you@company.com" },
+        { label: "Company", type: "text", ph: "Optional" }
+      ],
+      contactButtonLabel: this.state.contactSent ? "Message sent ✓" : "Send message",
+      submitContact: e => {
+        e.preventDefault();
+        this.setState({ contactSent: true });
+        setTimeout(() => this.setState({ contactSent: false }), 2400);
+      },
+
+      newsletterLabel: this.state.subscribed ? "Thanks ✓" : "Subscribe",
+      submitNewsletter: e => {
+        e.preventDefault();
+        this.setState({ subscribed: true });
+        setTimeout(() => this.setState({ subscribed: false }), 2400);
+      },
+
+      footerCols: [
+        { title: "Shop", links: ["Flush plates", "Recessed sockets", "Light switches", "Paper holders", "Towel systems", "Manifold cabinets"] },
+        { title: "Service", links: ["Contact", "Shipping & returns", "Installation support", "Trade accounts", "Terms of service"] }
+      ]
+    };
+  }
+}
+</script>
+</body>
+</html>

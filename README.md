@@ -29,17 +29,30 @@ The design medium is **HTML/CSS/JS** — these are prototypes, not production co
 ## Implementation
 
 `project/Flush Fit Webshop.dc.html` has been implemented as a real app in this repo, per the chat transcript's
-explicit stack call-out ("no wordpress next js and react just frontend no account"):
+explicit stack call-out ("no wordpress next js and react just frontend no account"), then evolved past the
+original prototype per the live user's own follow-up requests:
 
-- **Next.js 16 (App Router) + React 18 + TypeScript.** Frontend only — no backend, no CMS, no accounts.
-- Real routes replace the prototype's single-view state machine, for shareable URLs and SEO:
-  `/`, `/catalogue`, `/catalogue/[category]`, `/product/[code]`, `/quote`, `/contact`.
-- The request list ("cart") and selected finish are global client state (`context/AppStateContext.tsx`),
-  persisted to `localStorage` so they survive navigation and reloads.
-- All copy, products, finishes, compatibility data and dealer info are ported verbatim into `lib/data.ts`.
+- **Next.js 16 (App Router) + React 18 + TypeScript**, built as a fully **static export**
+  (`output: "export"` in `next.config.mjs`) — no backend, no CMS, no accounts, deployable to any static host.
+- **No cart / quote form.** Every "add to list" and contact touchpoint is a `wa.me` WhatsApp deep link
+  (`lib/whatsapp.ts`), prefilled with the product, finish and quantity where relevant. There is no `/quote` or
+  `/contact` route — both were removed at the user's request in favor of WhatsApp as the single enquiry channel.
+- **Fully localized (EN / SQ / IT)**, routed as `/[locale]/...` (`/en`, `/sq`, `/it`):
+  - Every piece of UI copy, product/category/finish/compatibility text lives in `content/en.json`,
+    `content/sq.json` and `content/it.json` — nothing is hardcoded in components. `lib/i18n.ts` loads the
+    right file per locale; `npm run check-content` verifies all three stay structurally identical (same keys,
+    same product/category/finish ids) so a missing translation fails loudly instead of silently.
+  - Structural data (which products/categories/finishes exist, their ids, ordering, cross-references) is
+    locale-independent and lives in `lib/data.ts`; only display text is duplicated per locale.
+  - `/` is a tiny client-side redirect to the visitor's saved-or-detected locale (static export has no server
+    to do this redirect on the backend).
+  - The Albanian and Italian copy is my own best-effort translation, not reviewed by a native speaker —
+    worth a pass before this goes live.
 - `<image-slot>` placeholders became `components/ImagePlaceholder.tsx` — a captioned placeholder box that
-  renders a real `<img>` the moment a `src` is passed in, so dropping in product/lifestyle photography later
-  needs no other code changes.
+  renders a real `<img>` the moment a `src` is passed in, so dropping in real photography later needs no other
+  code changes. **No product photography exists yet** — the competitor site referenced during design
+  (edplit.com) was intentionally *not* scraped for images (their photography, not licensed for reuse on a
+  competing site); the placeholders are still live pending real photos or generated illustrative renders.
 - Hover states that the prototype faked with a custom `style-hover` attribute are real CSS `:hover` rules in
   `app/globals.css`.
 
@@ -47,6 +60,8 @@ explicit stack call-out ("no wordpress next js and react just frontend no accoun
 
 ```bash
 npm install
-npm run dev      # http://localhost:3000
-npm run build && npm run start   # production build
+npm run dev              # http://localhost:3000/en
+npm run check-content     # verify en/sq/it content files stay in sync
+npm run build             # static export to out/
+npm run start              # serve out/ locally (next start does NOT work with static export)
 ```

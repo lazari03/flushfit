@@ -1,28 +1,33 @@
 "use client";
 
-import { useAppState } from "@/context/AppStateContext";
-import { CATEGORIES, FINISHES, PRODUCTS } from "@/lib/data";
-import { slug } from "@/lib/slug";
-import ProductCard from "./ProductCard";
 import Link from "next/link";
+import { useAppState } from "@/context/AppStateContext";
+import { CATEGORY_ORDER, FINISH_HEX, FINISH_ORDER, productsInCategory, PRODUCT_CATALOG } from "@/lib/data";
+import { format, Locale } from "@/lib/i18n";
+import { CategoryId, Messages } from "@/lib/types";
+import ProductCard from "./ProductCard";
 
-const ALL = "All articles";
-
-export default function CatalogueView({ categoryName }: { categoryName: string | null }) {
-  const { finish, setFinish } = useAppState();
-  const activeCategory = categoryName ?? ALL;
-  const catMeta = CATEGORIES.find((c) => c.name === activeCategory);
-  const shown = activeCategory === ALL ? PRODUCTS : PRODUCTS.filter((p) => p.category === activeCategory);
-  const activeBlurb = catMeta
-    ? catMeta.blurb
-    : "Every recessed article, across all six systems. Filter by system or ask for the full price list.";
+export default function CatalogueView({
+  categoryId,
+  locale,
+  messages,
+}: {
+  categoryId: CategoryId | null;
+  locale: Locale;
+  messages: Messages;
+}) {
+  const { finishId, setFinishId } = useAppState();
+  const shown = categoryId ? productsInCategory(categoryId) : PRODUCT_CATALOG;
+  const activeName = categoryId ? messages.categories[categoryId].name : messages.catalogue.allName;
+  const activeBlurb = categoryId ? messages.categories[categoryId].blurb : messages.catalogue.allBlurb;
+  const finishName = messages.finishes[finishId];
 
   return (
     <main className="container" style={{ paddingBottom: 96 }}>
       <div style={{ padding: "40px 0 30px", borderBottom: "1px solid var(--border)" }}>
-        <p className="eyebrow">Catalogue</p>
+        <p className="eyebrow">{messages.catalogue.kicker}</p>
         <h1 style={{ fontWeight: 300, fontSize: "clamp(34px, 4.4vw, 52px)", margin: "0 0 14px", letterSpacing: "-.015em" }}>
-          {activeCategory}
+          {activeName}
         </h1>
         <p style={{ fontSize: 15.5, lineHeight: 1.6, color: "var(--text-body)", maxWidth: "56ch", margin: 0 }}>{activeBlurb}</p>
       </div>
@@ -31,52 +36,52 @@ export default function CatalogueView({ categoryName }: { categoryName: string |
         <aside style={{ display: "grid", gap: 34, flex: "1 1 220px", maxWidth: 260 }}>
           <div>
             <div style={{ fontSize: 11, letterSpacing: ".18em", textTransform: "uppercase", color: "var(--text-muted)", marginBottom: 14 }}>
-              Systems
+              {messages.catalogue.systemsLabel}
             </div>
             <div style={{ display: "grid", gap: 2 }}>
               <Link
-                href="/catalogue"
+                href={`/${locale}/catalogue`}
                 className="filter-link"
-                style={{ color: activeCategory === ALL ? "var(--accent)" : "var(--ink)" }}
+                style={{ color: categoryId === null ? "var(--accent)" : "var(--ink)" }}
               >
-                {ALL}
+                {messages.catalogue.allName}
               </Link>
-              {CATEGORIES.map((c) => (
+              {CATEGORY_ORDER.map((id) => (
                 <Link
-                  key={c.name}
-                  href={`/catalogue/${slug(c.name)}`}
+                  key={id}
+                  href={`/${locale}/catalogue/${id}`}
                   className="filter-link"
-                  style={{ color: c.name === activeCategory ? "var(--accent)" : "var(--ink)" }}
+                  style={{ color: id === categoryId ? "var(--accent)" : "var(--ink)" }}
                 >
-                  {c.name}
+                  {messages.categories[id].name}
                 </Link>
               ))}
             </div>
           </div>
           <div>
             <div style={{ fontSize: 11, letterSpacing: ".18em", textTransform: "uppercase", color: "var(--text-muted)", marginBottom: 14 }}>
-              Finish
+              {messages.catalogue.finishLabel}
             </div>
             <div style={{ display: "grid", gap: 11 }}>
-              {FINISHES.map((f) => (
+              {FINISH_ORDER.map((id) => (
                 <button
-                  key={f.name}
+                  key={id}
                   type="button"
                   className="finish-link"
-                  style={{ color: f.name === finish ? "var(--accent)" : "var(--text-body)" }}
-                  onClick={() => setFinish(f.name)}
+                  style={{ color: id === finishId ? "var(--accent)" : "var(--text-body)" }}
+                  onClick={() => setFinishId(id)}
                 >
                   <span
                     className="finish-dot"
-                    style={{ background: f.hex, outline: f.name === finish ? "1px solid var(--ink)" : "none", outlineOffset: 2 }}
+                    style={{ background: FINISH_HEX[id], outline: id === finishId ? "1px solid var(--ink)" : "none", outlineOffset: 2 }}
                   />
-                  {f.name}
+                  {messages.finishes[id]}
                 </button>
               ))}
             </div>
           </div>
           <div style={{ borderTop: "1px solid var(--border)", paddingTop: 22, fontSize: 13, lineHeight: 1.55, color: "var(--text-muted)" }}>
-            Prices are issued per project. Add articles to your request list for a quotation.
+            {messages.catalogue.priceNote}
           </div>
         </aside>
 
@@ -93,14 +98,12 @@ export default function CatalogueView({ categoryName }: { categoryName: string |
               gap: 12,
             }}
           >
-            <span>
-              {shown.length} articles · shown in {finish}
-            </span>
-            <span>45 mm standard recess depth</span>
+            <span>{format(messages.catalogue.shownInPrefix, { count: shown.length, finish: finishName })}</span>
+            <span>{messages.catalogue.recessNote}</span>
           </div>
           <div className="tile-grid tile-grid--product">
             {shown.map((p) => (
-              <ProductCard key={p.code} product={p} />
+              <ProductCard key={p.code} code={p.code} categoryId={p.categoryId} locale={locale} messages={messages} />
             ))}
           </div>
         </div>

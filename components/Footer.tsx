@@ -2,10 +2,11 @@
 
 import { useState } from "react";
 import Link from "next/link";
-import { FOOTER_COLUMNS } from "@/lib/data";
+import { Messages } from "@/lib/types";
 
-export default function Footer() {
+export default function Footer({ messages }: { messages: Messages }) {
   const [subscribed, setSubscribed] = useState(false);
+  const f = messages.footer;
 
   const submitNewsletter = (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
@@ -18,13 +19,11 @@ export default function Footer() {
       <div className="footer-grid">
         <div>
           <div className="brand__name" style={{ marginBottom: 12 }}>
-            FLUSH FIT
+            {messages.brand.name}
           </div>
-          <p style={{ fontSize: 13, lineHeight: 1.6, color: "var(--text-muted)", maxWidth: "30ch" }}>
-            Recessed bathroom hardware for tiled walls. Assembled in Tirana, shipped across the Balkans and the EU.
-          </p>
+          <p style={{ fontSize: 13, lineHeight: 1.6, color: "var(--text-muted)", maxWidth: "30ch" }}>{f.brandBlurb}</p>
         </div>
-        {FOOTER_COLUMNS.map((col) => (
+        {f.columns.map((col) => (
           <div key={col.title}>
             <div className="footer-heading">{col.title}</div>
             <div className="footer-links">
@@ -37,15 +36,15 @@ export default function Footer() {
           </div>
         ))}
         <div>
-          <div className="footer-heading">Specifier notes</div>
+          <div className="footer-heading">{f.specifierNotesTitle}</div>
           <p style={{ fontSize: 13, lineHeight: 1.6, color: "var(--text-muted)", margin: "0 0 14px", maxWidth: "32ch" }}>
-            New finishes and drawing updates, a few times a year.
+            {f.specifierNotesBody}
           </p>
           <form onSubmit={submitNewsletter} style={{ display: "flex", gap: 8, flexWrap: "wrap" }}>
             <input
               type="email"
               required
-              placeholder="Email address"
+              placeholder={f.emailPlaceholder}
               style={{
                 flex: 1,
                 minWidth: 150,
@@ -57,15 +56,15 @@ export default function Footer() {
               }}
             />
             <button type="submit" className="btn btn-dark" style={{ padding: "11px 18px", fontSize: 13.5 }}>
-              {subscribed ? "Thanks ✓" : "Subscribe"}
+              {subscribed ? f.thanks : f.subscribe}
             </button>
           </form>
         </div>
       </div>
       <div className="footer-bottom">
         <div className="footer-bottom__inner">
-          <span>© 2026 Flush Fit BV</span>
-          <span>NIPT L00000000A · Rruga e Kavajës 132, Tiranë</span>
+          <span>{f.copyright}</span>
+          <span>{f.legalLine}</span>
         </div>
       </div>
     </footer>

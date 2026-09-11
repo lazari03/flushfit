@@ -2,41 +2,48 @@
 
 import { useState } from "react";
 import { useAppState } from "@/context/AppStateContext";
-import { COMPAT, FINISHES } from "@/lib/data";
-import { Product } from "@/lib/types";
+import { FINISH_HEX, FINISH_ORDER } from "@/lib/data";
+import { format } from "@/lib/i18n";
+import { whatsappLink } from "@/lib/whatsapp";
+import { CategoryId, Messages } from "@/lib/types";
 
-export default function ProductInteractive({ product }: { product: Product }) {
-  const { finish, setFinish, addItem } = useAppState();
+export default function ProductInteractive({
+  code,
+  categoryId,
+  messages,
+}: {
+  code: string;
+  categoryId: CategoryId;
+  messages: Messages;
+}) {
+  const { finishId, setFinishId } = useAppState();
   const [qty, setQty] = useState(1);
-  const [justAdded, setJustAdded] = useState(false);
 
-  const compatList = COMPAT[product.category] || [];
+  const product = messages.products[code];
+  const finishName = messages.finishes[finishId];
+  const compatList = messages.compat[categoryId] || [];
   const hasCompat = compatList.length > 0;
 
-  const handleAdd = () => {
-    addItem(product.code, finish, qty);
-    setJustAdded(true);
-    setTimeout(() => setJustAdded(false), 1800);
-  };
+  const enquiryMessage = format(messages.whatsapp.productQuote, { qty, name: product.name, code, finish: finishName });
 
   return (
     <>
       <div style={{ fontSize: 11, letterSpacing: ".18em", textTransform: "uppercase", color: "var(--text-muted)", marginBottom: 12 }}>
-        Finish — {finish}
+        {messages.product.finishLabel} — {finishName}
       </div>
       <div style={{ display: "flex", gap: 10, marginBottom: 32, flexWrap: "wrap" }}>
-        {FINISHES.map((f) => (
+        {FINISH_ORDER.map((id) => (
           <button
-            key={f.name}
+            key={id}
             type="button"
-            title={f.name}
+            title={messages.finishes[id]}
             className="finish-swatch"
             style={{
-              background: f.hex,
-              outline: f.name === finish ? "1px solid var(--ink)" : "none",
+              background: FINISH_HEX[id],
+              outline: id === finishId ? "1px solid var(--ink)" : "none",
               outlineOffset: 3,
             }}
-            onClick={() => setFinish(f.name)}
+            onClick={() => setFinishId(id)}
           />
         ))}
       </div>
@@ -51,16 +58,17 @@ export default function ProductInteractive({ product }: { product: Product }) {
             +
           </button>
         </div>
-        <button
-          type="button"
+        <a
+          href={whatsappLink(enquiryMessage)}
+          target="_blank"
+          rel="noopener noreferrer"
           className="btn btn-dark"
           style={{ flex: 1, minWidth: 190, height: 50, padding: "0 26px" }}
-          onClick={handleAdd}
         >
-          {justAdded ? "Added to list ✓" : "Add to request list"}
-        </button>
+          {messages.product.enquireWhatsapp}
+        </a>
       </div>
-      <div style={{ fontSize: 13, color: "var(--text-muted)", marginBottom: 34 }}>Quotation issued per project · drawings included</div>
+      <div style={{ fontSize: 13, color: "var(--text-muted)", marginBottom: 34 }}>{messages.product.quotationNote}</div>
 
       <div style={{ borderTop: "1px solid var(--border)" }}>
         {product.specs.map(([k, v]) => (
@@ -74,7 +82,7 @@ export default function ProductInteractive({ product }: { product: Product }) {
       {hasCompat && (
         <div style={{ marginTop: 28, border: "1px solid var(--border)", background: "var(--bg-alt)", padding: 22 }}>
           <div style={{ fontSize: 11, letterSpacing: ".18em", textTransform: "uppercase", color: "var(--text-muted)", marginBottom: 14 }}>
-            Compatible with
+            {messages.product.compatibleWith}
           </div>
           <div style={{ display: "flex", flexWrap: "wrap", gap: 8 }}>
             {compatList.map((c) => (
@@ -83,9 +91,7 @@ export default function ProductInteractive({ product }: { product: Product }) {
               </span>
             ))}
           </div>
-          <p style={{ fontSize: 12.5, lineHeight: 1.55, color: "var(--text-muted)", margin: "16px 0 0" }}>
-            Not on the list? Send the cistern or box model with your request and we confirm the fit.
-          </p>
+          <p style={{ fontSize: 12.5, lineHeight: 1.55, color: "var(--text-muted)", margin: "16px 0 0" }}>{messages.product.notOnList}</p>
         </div>
       )}
     </>

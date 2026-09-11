@@ -63,12 +63,6 @@ p {
   padding: 0 24px;
 }
 
-.container-narrow {
-  max-width: 1120px;
-  margin: 0 auto;
-  padding: 0 24px;
-}
-
 /* Top announcement bar */
 
 .topbar {
@@ -165,6 +159,11 @@ p {
   color: var(--text-muted);
 }
 
+.lang-switch a {
+  color: inherit;
+  text-decoration: none;
+}
+
 .lang-switch__item--active {
   color: var(--ink);
 }
@@ -224,8 +223,10 @@ p {
   color: var(--accent);
 }
 
-.btn-add {
+.btn-block-outline {
+  display: block;
   width: 100%;
+  text-align: center;
   background: none;
   border: 1px solid var(--border-strong);
   padding: 11px;
@@ -235,7 +236,7 @@ p {
   color: var(--ink);
 }
 
-.btn-add:hover {
+.btn-block-outline:hover {
   border-color: var(--ink);
   background: var(--ink);
   color: var(--bg);
@@ -256,37 +257,11 @@ p {
   color: #fff;
 }
 
-.btn-outline-on-dark {
-  background: none;
-  color: var(--bg);
-  border: 1px solid #414e5d;
-  padding: 15px 26px;
-  border-radius: 2px;
-  font-size: 14px;
-  cursor: pointer;
-}
-
-.btn-outline-on-dark:hover {
-  border-color: var(--bg);
-}
-
 .btn-stepper {
   background: none;
   border: 0;
   cursor: pointer;
   color: var(--text-muted);
-}
-
-.text-btn {
-  background: none;
-  border: 0;
-  cursor: pointer;
-  padding: 0;
-  color: var(--text-muted);
-}
-
-.text-btn:hover {
-  color: var(--accent);
 }
 
 .filter-link {
@@ -401,12 +376,6 @@ p {
 
 /* Image placeholders */
 
-.img-slot-wrap {
-  position: relative;
-  width: 100%;
-  height: 100%;
-}
-
 .img-slot {
   position: absolute;
   inset: 0;
@@ -427,44 +396,6 @@ p {
   width: 100%;
   height: 100%;
   object-fit: cover;
-}
-
-/* Forms */
-
-.field {
-  display: grid;
-  gap: 7px;
-  font-size: 12px;
-  letter-spacing: 0.1em;
-  text-transform: uppercase;
-  color: var(--text-muted);
-}
-
-.field input,
-.field textarea {
-  border: 1px solid var(--border-strong);
-  background: var(--bg);
-  padding: 12px 13px;
-  border-radius: 2px;
-  font-size: 15px;
-  letter-spacing: 0;
-  text-transform: none;
-}
-
-.field textarea {
-  resize: vertical;
-}
-
-.form-panel {
-  border: 1px solid var(--border);
-  padding: 30px;
-  display: grid;
-  gap: 16px;
-}
-
-.form-title {
-  font-size: 24px;
-  font-weight: 300;
 }
 
 /* Footer */

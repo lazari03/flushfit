@@ -5,8 +5,9 @@
   "scripts": {
     "dev": "next dev",
     "build": "next build",
-    "start": "next start",
-    "lint": "next lint"
+    "start": "npx serve@latest out",
+    "lint": "next lint",
+    "check-content": "node scripts/check-content.mjs"
   },
   "dependencies": {
     "next": "^16.3.4",

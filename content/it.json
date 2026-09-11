@@ -58,11 +58,7 @@
       "description": "Un comando doppio scarico senza cornice che finisce a filo con la piastrella. La placca è ricavata da acciaio inox da 3 mm e inserita in un telaio da intonaco, così l'unica linea visibile è la giunzione attorno ai due comandi a sfioramento.",
       "specs": [
         ["Materiale", "Acciaio inox 316"],
-        ["Dimensioni", "180 × 120 × 6 mm"],
-        ["Profondità di incasso", "45 mm"],
-        ["Azionamento", "Doppio scarico, meccanico"],
-        ["Compatibile con cassetta", "Geberit, Grohe, Tece"],
-        ["In dotazione", "Scatola di montaggio, telaio, DWG"]
+        ["Dimensioni", "180 × 120 × 6 mm"]
       ]
     },
     "FP-02": {
@@ -71,9 +67,7 @@
       "description": "La variante rotonda della placca 01, ricavata da un unico pezzo con due comandi a sfioramento concentrici.",
       "specs": [
         ["Materiale", "Acciaio inox 316"],
-        ["Dimensioni", "⌀ 150 × 6 mm"],
-        ["Profondità di incasso", "45 mm"],
-        ["Azionamento", "Doppio scarico, meccanico"]
+        ["Dimensioni", "⌀ 150 × 6 mm"]
       ]
     },
     "FP-03": {
@@ -82,9 +76,7 @@
       "description": "Una placca di supporto che accoglie la piastrella del progetto, così il comando scompare del tutto nel disegno della parete.",
       "specs": [
         ["Materiale", "Supporto in acciaio verniciato a polvere"],
-        ["Spessore piastrella", "6–12 mm"],
-        ["Profondità di incasso", "45 mm"],
-        ["In dotazione", "Supporto, telaio, dima di taglio"]
+        ["Spessore piastrella", "6–12 mm"]
       ]
     },
     "RS-01": {
@@ -93,10 +85,7 @@
       "description": "Una presa singola con sportello a molla che si chiude a filo con la parete quando non in uso. Classificata IP44 per la zona 2.",
       "specs": [
         ["Prese", "1 × Tipo F"],
-        ["Classificazione", "IP44 · 16 A"],
-        ["Profondità di incasso", "45 mm"],
-        ["Sportello", "Apertura a pressione, chiusura morbida"],
-        ["In dotazione", "Scatola in acciaio, telaio, DWG"]
+        ["Classificazione", "IP44 · 16 A"]
       ]
     },
     "RS-02": {
@@ -105,8 +94,7 @@
       "description": "Due prese dietro un unico sportello a scomparsa, che condividono la stessa scatola di montaggio.",
       "specs": [
         ["Prese", "2 × Tipo F"],
-        ["Classificazione", "IP44 · 16 A"],
-        ["Profondità di incasso", "45 mm"]
+        ["Classificazione", "IP44 · 16 A"]
       ]
     },
     "RS-03": {
@@ -115,8 +103,7 @@
       "description": "Solo ricarica, per specchi contenitore e nicchie del lavabo.",
       "specs": [
         ["Prese", "2 × USB-C, 30 W"],
-        ["Classificazione", "IP44"],
-        ["Profondità di incasso", "45 mm"]
+        ["Classificazione", "IP44"]
       ]
     },
     "LS-01": {
@@ -125,9 +112,7 @@
       "description": "Un campo capacitivo a filo con l'intonaco, segnato solo da una linea lavorata.",
       "specs": [
         ["Tipo", "Touch capacitivo"],
-        ["Carico", "Fino a 300 W LED"],
-        ["Profondità di incasso", "45 mm"],
-        ["Finitura", "Cinque finiture standard"]
+        ["Carico", "Fino a 300 W LED"]
       ]
     },
     "LS-02": {
@@ -136,8 +121,7 @@
       "description": "Un bilanciere meccanico incassato dietro una placca a filo.",
       "specs": [
         ["Tipo", "Unipolare a bilanciere"],
-        ["Portata", "10 A"],
-        ["Profondità di incasso", "45 mm"]
+        ["Portata", "10 A"]
       ]
     },
     "LS-03": {
@@ -146,8 +130,7 @@
       "description": "Dimmer rotativo con manopola posizionata sotto il filo della parete.",
       "specs": [
         ["Tipo", "Dimmer a taglio di coda"],
-        ["Carico", "5–150 W"],
-        ["Profondità di incasso", "45 mm"]
+        ["Carico", "5–150 W"]
       ]
     },
     "PH-01": {
@@ -156,10 +139,7 @@
       "description": "Un portarotolo a scomparsa con sportello ad apertura morbida che resta a filo con la parete. Il rotolo si carica da davanti e lo sportello funge anche da mensola quando aperto.",
       "specs": [
         ["Materiale", "Acciaio inox 316"],
-        ["Dimensioni", "155 × 155 × 45 mm"],
-        ["Profondità di incasso", "45 mm"],
-        ["Capacità", "Un rotolo, ⌀ 120 mm"],
-        ["In dotazione", "Scatola, telaio, DWG"]
+        ["Dimensioni", "155 × 155 × 45 mm"]
       ]
     },
     "PH-02": {
@@ -168,8 +148,7 @@
       "description": "Una versione a nicchia aperta senza sportello, dimensionata per il rotolo di scorta.",
       "specs": [
         ["Materiale", "Acciaio inox 316"],
-        ["Dimensioni", "155 × 155 × 45 mm"],
-        ["Profondità di incasso", "45 mm"]
+        ["Dimensioni", "155 × 155 × 45 mm"]
       ]
     },
     "TS-01": {
@@ -178,9 +157,7 @@
       "description": "Una barra inserita in una nicchia poco profonda, così gli asciugamani restano appesi contro il piano della parete anziché sporgere.",
       "specs": [
         ["Materiale", "Acciaio inox 316"],
-        ["Lunghezza", "600 mm"],
-        ["Profondità di incasso", "45 mm"],
-        ["Portata", "Fino a 12 kg"]
+        ["Lunghezza", "600 mm"]
       ]
     },
     "TS-02": {
@@ -189,8 +166,7 @@
       "description": "Una nicchia a tutta altezza con barra a scomparsa in alto, per asciugamani piegati e appesi insieme.",
       "specs": [
         ["Materiale", "Rivestimento in acciaio verniciato a polvere"],
-        ["Apertura", "300 × 900 mm"],
-        ["Profondità", "120 mm"]
+        ["Apertura", "300 × 900 mm"]
       ]
     },
     "MC-01": {
@@ -199,9 +175,7 @@
       "description": "Uno sportello di servizio ad apertura a pressione senza cornice visibile, che dà accesso al collettore dietro una superficie piastrellata o intonacata.",
       "specs": [
         ["Materiale", "Struttura in acciaio, sportello piastrellabile"],
-        ["Apertura", "500 × 500 mm"],
-        ["Profondità", "110 mm"],
-        ["Modalità di apertura", "Chiusura magnetica, apertura a pressione"]
+        ["Apertura", "500 × 500 mm"]
       ]
     },
     "MC-02": {
@@ -210,8 +184,7 @@
       "description": "La variante alta per collettori verticali e gruppi filtro.",
       "specs": [
         ["Materiale", "Struttura in acciaio, sportello piastrellabile"],
-        ["Apertura", "500 × 800 mm"],
-        ["Profondità", "110 mm"]
+        ["Apertura", "500 × 800 mm"]
       ]
     }
   },
@@ -263,6 +236,10 @@
     "altImage2Caption": "Disegno in sezione",
     "finishLabel": "Finitura",
     "quotationNote": "Preventivo rilasciato per progetto · disegni inclusi",
+    "shippingLabel": "Spedizione",
+    "shippingValue": "Spedizione in 48 h dal nostro magazzino di Tirana",
+    "warrantyLabel": "Garanzia",
+    "warrantyValue": "5 anni sui componenti meccanici ed elettrici",
     "downloadDwg": "Scarica DWG",
     "installSheet": "Scheda di installazione (PDF)",
     "compatibleWith": "Compatibile con",

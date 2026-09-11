@@ -75,6 +75,10 @@ export type Messages = {
     altImage2Caption: string;
     finishLabel: string;
     quotationNote: string;
+    shippingLabel: string;
+    shippingValue: string;
+    warrantyLabel: string;
+    warrantyValue: string;
     downloadDwg: string;
     installSheet: string;
     compatibleWith: string;

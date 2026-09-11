@@ -71,7 +71,11 @@ export default function ProductInteractive({
       <div style={{ fontSize: 13, color: "var(--text-muted)", marginBottom: 34 }}>{messages.product.quotationNote}</div>
 
       <div style={{ borderTop: "1px solid var(--border)" }}>
-        {product.specs.map(([k, v]) => (
+        {[
+          ...product.specs,
+          [messages.product.shippingLabel, messages.product.shippingValue],
+          [messages.product.warrantyLabel, messages.product.warrantyValue],
+        ].map(([k, v]) => (
           <div key={k} style={{ display: "flex", justifyContent: "space-between", gap: 24, padding: "13px 0", borderBottom: "1px solid var(--border)", fontSize: 14 }}>
             <span style={{ color: "var(--text-muted)" }}>{k}</span>
             <span style={{ textAlign: "right" }}>{v}</span>

@@ -58,11 +58,7 @@
       "description": "Një aktivizues dopio-shkarkues pa kornizë që del në nivel me pllakat. Pllaka pritet nga inoksi 3 mm dhe vendoset në një kornizë suvatimi, kështu që e vetmja linjë e dukshme është bashkimi rreth dy fushave me prekje.",
       "specs": [
         ["Materiali", "Çelik inox 316"],
-        ["Përmasat", "180 × 120 × 6 mm"],
-        ["Thellësia e montimit", "45 mm"],
-        ["Aktivizimi", "Dopio-shkarkim, mekanik"],
-        ["Përshtatet me sifon", "Geberit, Grohe, Tece"],
-        ["Përfshihen", "Kuti montimi, kornizë, DWG"]
+        ["Përmasat", "180 × 120 × 6 mm"]
       ]
     },
     "FP-02": {
@@ -71,9 +67,7 @@
       "description": "Varianti i rrumbullakët i pllakës 01, i përpunuar nga një pjesë e vetme me dy fusha prekjeje koncentrike.",
       "specs": [
         ["Materiali", "Çelik inox 316"],
-        ["Përmasat", "⌀ 150 × 6 mm"],
-        ["Thellësia e montimit", "45 mm"],
-        ["Aktivizimi", "Dopio-shkarkim, mekanik"]
+        ["Përmasat", "⌀ 150 × 6 mm"]
       ]
     },
     "FP-03": {
@@ -82,9 +76,7 @@
       "description": "Një pllakë bazament që pranon pllakën e projektit, kështu që aktivizuesi zhduket plotësisht në modelin e murit.",
       "specs": [
         ["Materiali", "Bazament çeliku me ngjyrë pluhur"],
-        ["Trashësia e pllakës", "6–12 mm"],
-        ["Thellësia e montimit", "45 mm"],
-        ["Përfshihen", "Bazament, kornizë, shabllon prerjeje"]
+        ["Trashësia e pllakës", "6–12 mm"]
       ]
     },
     "RS-01": {
@@ -93,10 +85,7 @@
       "description": "Një prizë e vetme me kapak me sustë që mbyllet në nivel me murin kur nuk përdoret. Vlerësim IP44 për zonën 2.",
       "specs": [
         ["Prizat", "1 × Tipi F"],
-        ["Vlerësimi", "IP44 · 16 A"],
-        ["Thellësia e montimit", "45 mm"],
-        ["Kapaku", "Hapet me shtypje, mbyllje e butë"],
-        ["Përfshihen", "Kuti çeliku, kornizë, DWG"]
+        ["Vlerësimi", "IP44 · 16 A"]
       ]
     },
     "RS-02": {
@@ -105,8 +94,7 @@
       "description": "Dy priza pas një kapaku të vetëm të fshehur, që ndajnë të njëjtën kuti montimi.",
       "specs": [
         ["Prizat", "2 × Tipi F"],
-        ["Vlerësimi", "IP44 · 16 A"],
-        ["Thellësia e montimit", "45 mm"]
+        ["Vlerësimi", "IP44 · 16 A"]
       ]
     },
     "RS-03": {
@@ -115,8 +103,7 @@
       "description": "Vetëm për ngarkim, për kabinete pasqyre dhe kamare lavamani.",
       "specs": [
         ["Prizat", "2 × USB-C, 30 W"],
-        ["Vlerësimi", "IP44"],
-        ["Thellësia e montimit", "45 mm"]
+        ["Vlerësimi", "IP44"]
       ]
     },
     "LS-01": {
@@ -125,9 +112,7 @@
       "description": "Një fushë kapacitive në nivel me suvanë, e shënuar vetëm me një vijë të përpunuar.",
       "specs": [
         ["Lloji", "Prekje kapacitive"],
-        ["Ngarkesa", "Deri në 300 W LED"],
-        ["Thellësia e montimit", "45 mm"],
-        ["Ngjyra", "Pesë ngjyra standarde"]
+        ["Ngarkesa", "Deri në 300 W LED"]
       ]
     },
     "LS-02": {
@@ -136,8 +121,7 @@
       "description": "Një levë mekanike e fshehur pas një kornize në nivel me murin.",
       "specs": [
         ["Lloji", "Njëpolar me levë"],
-        ["Vlerësimi", "10 A"],
-        ["Thellësia e montimit", "45 mm"]
+        ["Vlerësimi", "10 A"]
       ]
     },
     "LS-03": {
@@ -146,8 +130,7 @@
       "description": "Dimmer rrotullues me dorezën e vendosur nën nivelin e murit.",
       "specs": [
         ["Lloji", "Dimmer me prerje të vonuar"],
-        ["Ngarkesa", "5–150 W"],
-        ["Thellësia e montimit", "45 mm"]
+        ["Ngarkesa", "5–150 W"]
       ]
     },
     "PH-01": {
@@ -156,10 +139,7 @@
       "description": "Një mbajtëse letre e fshehur me kapak që mbyllet ngadalë dhe qëndron në nivel me murin. Rrotulla ngarkohet nga përpara dhe kapaku shërben edhe si raft kur hapet.",
       "specs": [
         ["Materiali", "Çelik inox 316"],
-        ["Përmasat", "155 × 155 × 45 mm"],
-        ["Thellësia e montimit", "45 mm"],
-        ["Kapaciteti", "Një rrotull, ⌀ 120 mm"],
-        ["Përfshihen", "Kuti, kornizë, DWG"]
+        ["Përmasat", "155 × 155 × 45 mm"]
       ]
     },
     "PH-02": {
@@ -168,8 +148,7 @@
       "description": "Një version kamare e hapur pa kapak, e përshtatur për rrotullën rezervë.",
       "specs": [
         ["Materiali", "Çelik inox 316"],
-        ["Përmasat", "155 × 155 × 45 mm"],
-        ["Thellësia e montimit", "45 mm"]
+        ["Përmasat", "155 × 155 × 45 mm"]
       ]
     },
     "TS-01": {
@@ -178,9 +157,7 @@
       "description": "Një shufër e vendosur në një kamare të cekët, kështu që peshqirët varen pas rrafshit të murit në vend që të dalin jashtë tij.",
       "specs": [
         ["Materiali", "Çelik inox 316"],
-        ["Gjatësia", "600 mm"],
-        ["Thellësia e montimit", "45 mm"],
-        ["Ngarkesa", "Deri në 12 kg"]
+        ["Gjatësia", "600 mm"]
       ]
     },
     "TS-02": {
@@ -189,8 +166,7 @@
       "description": "Një kamare me lartësi të plotë me një shufër të fshehur në krye, për peshqirë të palosur dhe të varur së bashku.",
       "specs": [
         ["Materiali", "Veshje çeliku me ngjyrë pluhur"],
-        ["Hapja", "300 × 900 mm"],
-        ["Thellësia", "120 mm"]
+        ["Hapja", "300 × 900 mm"]
       ]
     },
     "MC-01": {
@@ -199,9 +175,7 @@
       "description": "Një derë shërbimi që hapet me shtypje, pa kornizë të dukshme, që jep akses te kolektori pas një sipërfaqeje të pllakuar ose të suvatuar.",
       "specs": [
         ["Materiali", "Trup çeliku, derë e pllakueshme"],
-        ["Hapja", "500 × 500 mm"],
-        ["Thellësia", "110 mm"],
-        ["Mënyra e hapjes", "Mbyllje magnetike, hapet me shtypje"]
+        ["Hapja", "500 × 500 mm"]
       ]
     },
     "MC-02": {
@@ -210,8 +184,7 @@
       "description": "Varianti i lartë për kolektorë vertikalë dhe grupe filtrash.",
       "specs": [
         ["Materiali", "Trup çeliku, derë e pllakueshme"],
-        ["Hapja", "500 × 800 mm"],
-        ["Thellësia", "110 mm"]
+        ["Hapja", "500 × 800 mm"]
       ]
     }
   },
@@ -263,6 +236,10 @@
     "altImage2Caption": "Vizatim seksioni",
     "finishLabel": "Ngjyra",
     "quotationNote": "Oferta lëshohet për çdo projekt · vizatimet përfshihen",
+    "shippingLabel": "Dërgesa",
+    "shippingValue": "Dërgohet brenda 48 orëve nga magazina jonë në Tiranë",
+    "warrantyLabel": "Garancia",
+    "warrantyValue": "5 vjet garanci për komponentët mekanikë dhe elektrikë",
     "downloadDwg": "Shkarko DWG",
     "installSheet": "Fleta e montimit (PDF)",
     "compatibleWith": "Kompatibël me",

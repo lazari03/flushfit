@@ -58,11 +58,7 @@
       "description": "A frameless dual-flush actuator that finishes level with the tile. The plate is cut from 3 mm stainless and set in a plaster-in frame, so the only visible line is the joint around the two touch fields.",
       "specs": [
         ["Material", "Stainless steel 316"],
-        ["Dimensions", "180 × 120 × 6 mm"],
-        ["Recess depth", "45 mm"],
-        ["Actuation", "Dual flush, mechanical"],
-        ["Cistern fit", "Geberit, Grohe, Tece"],
-        ["Included", "Mounting box, frame, DWG"]
+        ["Dimensions", "180 × 120 × 6 mm"]
       ]
     },
     "FP-02": {
@@ -71,9 +67,7 @@
       "description": "The round variant of the 01 plate, machined from a single piece with two concentric touch fields.",
       "specs": [
         ["Material", "Stainless steel 316"],
-        ["Dimensions", "⌀ 150 × 6 mm"],
-        ["Recess depth", "45 mm"],
-        ["Actuation", "Dual flush, mechanical"]
+        ["Dimensions", "⌀ 150 × 6 mm"]
       ]
     },
     "FP-03": {
@@ -82,9 +76,7 @@
       "description": "A carrier plate that accepts the project tile, so the actuator disappears into the wall pattern entirely.",
       "specs": [
         ["Material", "Powder-coated steel carrier"],
-        ["Tile thickness", "6–12 mm"],
-        ["Recess depth", "45 mm"],
-        ["Included", "Carrier, frame, cutting template"]
+        ["Tile thickness", "6–12 mm"]
       ]
     },
     "RS-01": {
@@ -93,10 +85,7 @@
       "description": "A single outlet on a spring-loaded lid that closes flush with the wall when not in use. Rated IP44 for zone 2 placement.",
       "specs": [
         ["Outlets", "1 × Type F"],
-        ["Rating", "IP44 · 16 A"],
-        ["Recess depth", "45 mm"],
-        ["Lid", "Push-to-open, soft close"],
-        ["Included", "Steel box, frame, DWG"]
+        ["Rating", "IP44 · 16 A"]
       ]
     },
     "RS-02": {
@@ -105,8 +94,7 @@
       "description": "Two outlets behind one flush lid, sharing a single mounting box.",
       "specs": [
         ["Outlets", "2 × Type F"],
-        ["Rating", "IP44 · 16 A"],
-        ["Recess depth", "45 mm"]
+        ["Rating", "IP44 · 16 A"]
       ]
     },
     "RS-03": {
@@ -115,8 +103,7 @@
       "description": "Charging only, for mirror cabinets and vanity recesses.",
       "specs": [
         ["Outlets", "2 × USB-C, 30 W"],
-        ["Rating", "IP44"],
-        ["Recess depth", "45 mm"]
+        ["Rating", "IP44"]
       ]
     },
     "LS-01": {
@@ -125,9 +112,7 @@
       "description": "A capacitive field flush with the plaster, marked only by a machined hairline.",
       "specs": [
         ["Type", "Capacitive touch"],
-        ["Load", "Up to 300 W LED"],
-        ["Recess depth", "45 mm"],
-        ["Finish", "Five standard finishes"]
+        ["Load", "Up to 300 W LED"]
       ]
     },
     "LS-02": {
@@ -136,8 +121,7 @@
       "description": "A mechanical rocker recessed behind a flush bezel.",
       "specs": [
         ["Type", "Single pole rocker"],
-        ["Rating", "10 A"],
-        ["Recess depth", "45 mm"]
+        ["Rating", "10 A"]
       ]
     },
     "LS-03": {
@@ -146,8 +130,7 @@
       "description": "Rotary dimmer with the knob set below the wall face.",
       "specs": [
         ["Type", "Trailing edge dimmer"],
-        ["Load", "5–150 W"],
-        ["Recess depth", "45 mm"]
+        ["Load", "5–150 W"]
       ]
     },
     "PH-01": {
@@ -156,10 +139,7 @@
       "description": "A recessed paper holder with a soft-closing flap that sits level with the wall. The roll loads from the front and the flap doubles as a shelf when open.",
       "specs": [
         ["Material", "Stainless steel 316"],
-        ["Dimensions", "155 × 155 × 45 mm"],
-        ["Recess depth", "45 mm"],
-        ["Capacity", "One roll, ⌀ 120 mm"],
-        ["Included", "Box, frame, DWG"]
+        ["Dimensions", "155 × 155 × 45 mm"]
       ]
     },
     "PH-02": {
@@ -168,8 +148,7 @@
       "description": "An open niche version without a flap, sized for the spare roll.",
       "specs": [
         ["Material", "Stainless steel 316"],
-        ["Dimensions", "155 × 155 × 45 mm"],
-        ["Recess depth", "45 mm"]
+        ["Dimensions", "155 × 155 × 45 mm"]
       ]
     },
     "TS-01": {
@@ -178,9 +157,7 @@
       "description": "A bar set into a shallow niche so towels hang against the wall plane rather than off it.",
       "specs": [
         ["Material", "Stainless steel 316"],
-        ["Length", "600 mm"],
-        ["Recess depth", "45 mm"],
-        ["Load", "Up to 12 kg"]
+        ["Length", "600 mm"]
       ]
     },
     "TS-02": {
@@ -189,8 +166,7 @@
       "description": "A full-height niche with a concealed bar at the head, for stacked and hanging towels together.",
       "specs": [
         ["Material", "Powder-coated steel liner"],
-        ["Opening", "300 × 900 mm"],
-        ["Depth", "120 mm"]
+        ["Opening", "300 × 900 mm"]
       ]
     },
     "MC-01": {
@@ -199,9 +175,7 @@
       "description": "A push-to-open service door with no visible frame, giving access to the manifold behind a tiled or plastered face.",
       "specs": [
         ["Material", "Steel carcass, tileable door"],
-        ["Opening", "500 × 500 mm"],
-        ["Depth", "110 mm"],
-        ["Opening action", "Push-to-open magnet latch"]
+        ["Opening", "500 × 500 mm"]
       ]
     },
     "MC-02": {
@@ -210,8 +184,7 @@
       "description": "The tall variant for vertical manifolds and filter sets.",
       "specs": [
         ["Material", "Steel carcass, tileable door"],
-        ["Opening", "500 × 800 mm"],
-        ["Depth", "110 mm"]
+        ["Opening", "500 × 800 mm"]
       ]
     }
   },
@@ -263,6 +236,10 @@
     "altImage2Caption": "Section drawing",
     "finishLabel": "Finish",
     "quotationNote": "Quotation issued per project · drawings included",
+    "shippingLabel": "Shipping",
+    "shippingValue": "48 h dispatch from our Tirana warehouse",
+    "warrantyLabel": "Warranty",
+    "warrantyValue": "5 years on mechanical and electrical components",
     "downloadDwg": "Download DWG",
     "installSheet": "Installation sheet (PDF)",
     "compatibleWith": "Compatible with",

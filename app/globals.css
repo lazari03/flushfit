@@ -335,7 +335,7 @@ p {
   border: 0;
   padding: 0;
   cursor: pointer;
-  text-align: left;
+  text-align: center;
   display: block;
   color: inherit;
 }

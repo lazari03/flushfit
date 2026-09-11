@@ -5,6 +5,7 @@ import { useAppState } from "@/context/AppStateContext";
 import { format, Locale } from "@/lib/i18n";
 import { whatsappLink } from "@/lib/whatsapp";
 import { CategoryId, Messages } from "@/lib/types";
+import { CATEGORY_IMAGES } from "@/lib/data";
 import ImagePlaceholder from "./ImagePlaceholder";
 
 export default function ProductCard({
@@ -27,7 +28,7 @@ export default function ProductCard({
   return (
     <div className="tile-card">
       <Link href={`/${locale}/product/${code}`} className="tile">
-        <ImagePlaceholder caption={product.name} aspectRatio="1/1" />
+        <ImagePlaceholder caption={product.name} src={CATEGORY_IMAGES[categoryId]} aspectRatio="1/1" />
         <div style={{ padding: "18px 20px 8px" }}>
           <div className="tile-eyebrow">{categoryName}</div>
           <div className="tile-title">{product.name}</div>

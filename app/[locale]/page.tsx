@@ -3,7 +3,7 @@ import ImagePlaceholder from "@/components/ImagePlaceholder";
 import CategoryTile from "@/components/CategoryTile";
 import ProductCard from "@/components/ProductCard";
 import Emphasis from "@/components/Emphasis";
-import { CATEGORY_ORDER, FEATURED_CODES, HOW_IT_WORKS_ORDER, findProductMeta } from "@/lib/data";
+import { CATEGORY_ORDER, FEATURED_CODES, HERO_IMAGE, HOW_IT_WORKS_ORDER, findProductMeta } from "@/lib/data";
 import { LOCALES, Locale, getMessages } from "@/lib/i18n";
 import { whatsappLink } from "@/lib/whatsapp";
 
@@ -56,7 +56,7 @@ export default async function HomePage({ params }: { params: Promise<{ locale: L
           </div>
         </div>
         <div style={{ position: "relative", aspectRatio: "4/5", minHeight: 430 }}>
-          <ImagePlaceholder caption={messages.home.heroImageCaption} aspectRatio="4/5" minHeight={430} />
+          <ImagePlaceholder caption={messages.home.heroImageCaption} src={HERO_IMAGE} aspectRatio="4/5" minHeight={430} />
         </div>
       </section>
 

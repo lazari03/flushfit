@@ -1,6 +1,7 @@
 import Link from "next/link";
 import { Locale } from "@/lib/i18n";
 import { CategoryId, Messages } from "@/lib/types";
+import { CATEGORY_IMAGES } from "@/lib/data";
 import ImagePlaceholder from "./ImagePlaceholder";
 
 export default function RelatedTile({
@@ -18,7 +19,7 @@ export default function RelatedTile({
   const categoryName = messages.categories[categoryId].name;
   return (
     <Link href={`/${locale}/product/${code}`} className="tile">
-      <ImagePlaceholder caption={product.name} aspectRatio="4/3" />
+      <ImagePlaceholder caption={product.name} src={CATEGORY_IMAGES[categoryId]} aspectRatio="4/3" />
       <div style={{ padding: "16px 18px 22px" }}>
         <div className="tile-eyebrow" style={{ marginBottom: 8 }}>
           {categoryName}

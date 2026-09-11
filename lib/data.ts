@@ -23,6 +23,20 @@ export const FINISH_HEX: Record<FinishId, string> = {
 
 export const HOW_IT_WORKS_ORDER: HowItWorksId[] = ["how-flush", "how-electro", "how-holders", "how-cabinet"];
 
+// Stock photography standing in for real product shots, one per category.
+// Swap for studio photography once it exists — ImagePlaceholder falls back
+// to its caption automatically if a src is ever removed.
+const UNSPLASH = (id: string) => `https://images.unsplash.com/photo-${id}?w=800&q=70&auto=format&fit=crop`;
+export const CATEGORY_IMAGES: Record<CategoryId, string> = {
+  "flush-plates": UNSPLASH("1777869976475-e5e23bc6a0be"),
+  "recessed-sockets": UNSPLASH("1565049981953-379c9c2a5d48"),
+  "light-switches": UNSPLASH("1623707430101-9e74cefe05e2"),
+  "paper-holders": UNSPLASH("1584458290237-181c65bf6647"),
+  "towel-systems": UNSPLASH("1620626011761-996317b8d101"),
+  "manifold-cabinets": UNSPLASH("1558211583-03ed8a0b3d5f"),
+};
+export const HERO_IMAGE = UNSPLASH("1584622650111-993a426fbf0a");
+
 export const PRODUCT_CATALOG: ProductMeta[] = [
   { code: "FP-01", categoryId: "flush-plates" },
   { code: "FP-02", categoryId: "flush-plates" },

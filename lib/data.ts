@@ -23,13 +23,11 @@ export const FINISH_HEX: Record<FinishId, string> = {
 
 export const HOW_IT_WORKS_ORDER: HowItWorksId[] = ["how-flush", "how-electro", "how-holders", "how-cabinet"];
 
-// Product photography, one per category. Real shots for the categories we
-// have them for; stock photography fills the rest until real ones exist.
-const UNSPLASH = (id: string) => `https://images.unsplash.com/photo-${id}?w=800&q=70&auto=format&fit=crop`;
+// Product photography, one per category.
 export const CATEGORY_IMAGES: Record<CategoryId, string> = {
   "flush-plates": "/images/flush-button.jpg",
   "recessed-sockets": "/images/socket-systems.jpg",
-  "light-switches": UNSPLASH("1623707430101-9e74cefe05e2"),
+  "light-switches": "/images/light-switches.jpg",
   "paper-holders": "/images/paper-holders.jpg",
   "towel-systems": "/images/towel-systems.jpg",
   "manifold-cabinets": "/images/manifold-cabinets.jpg",

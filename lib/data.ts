@@ -27,8 +27,8 @@ export const HOW_IT_WORKS_ORDER: HowItWorksId[] = ["how-flush", "how-electro", "
 // have them for; stock photography fills the rest until real ones exist.
 const UNSPLASH = (id: string) => `https://images.unsplash.com/photo-${id}?w=800&q=70&auto=format&fit=crop`;
 export const CATEGORY_IMAGES: Record<CategoryId, string> = {
-  "flush-plates": "/images/flush-plates.jpg",
-  "recessed-sockets": UNSPLASH("1565049981953-379c9c2a5d48"),
+  "flush-plates": "/images/flush-button.jpg",
+  "recessed-sockets": "/images/socket-systems.jpg",
   "light-switches": UNSPLASH("1623707430101-9e74cefe05e2"),
   "paper-holders": "/images/paper-holders.jpg",
   "towel-systems": "/images/towel-systems.jpg",

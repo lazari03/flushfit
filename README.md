@@ -23,3 +23,30 @@ The design medium is **HTML/CSS/JS** — these are prototypes, not production co
 - `README.md` — this file
 - `chats/` — conversation transcripts (read these!)
 - `project/` — the `Hidden bathroom fixtures webshop` project files (HTML prototypes, assets, components)
+
+---
+
+## Implementation
+
+`project/Flush Fit Webshop.dc.html` has been implemented as a real app in this repo, per the chat transcript's
+explicit stack call-out ("no wordpress next js and react just frontend no account"):
+
+- **Next.js 16 (App Router) + React 18 + TypeScript.** Frontend only — no backend, no CMS, no accounts.
+- Real routes replace the prototype's single-view state machine, for shareable URLs and SEO:
+  `/`, `/catalogue`, `/catalogue/[category]`, `/product/[code]`, `/quote`, `/contact`.
+- The request list ("cart") and selected finish are global client state (`context/AppStateContext.tsx`),
+  persisted to `localStorage` so they survive navigation and reloads.
+- All copy, products, finishes, compatibility data and dealer info are ported verbatim into `lib/data.ts`.
+- `<image-slot>` placeholders became `components/ImagePlaceholder.tsx` — a captioned placeholder box that
+  renders a real `<img>` the moment a `src` is passed in, so dropping in product/lifestyle photography later
+  needs no other code changes.
+- Hover states that the prototype faked with a custom `style-hover` attribute are real CSS `:hover` rules in
+  `app/globals.css`.
+
+### Running it
+
+```bash
+npm install
+npm run dev      # http://localhost:3000
+npm run build && npm run start   # production build
+```

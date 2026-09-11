@@ -13,8 +13,7 @@
     "proofs": [
       { "icon": "shipping", "title": "Fast shipping", "label": "48-hour dispatch from our Tirana warehouse" },
       { "icon": "quality", "title": "Certified quality", "label": "CE certified components, tested to EU standard" },
-      { "icon": "warranty", "title": "5-year warranty", "label": "Warranty on mechanical and electrical components" },
-      { "icon": "drawings", "title": "Project drawings", "label": "DWG and installation sheets for every article" }
+      { "icon": "warranty", "title": "5-year warranty", "label": "Warranty on mechanical and electrical components" }
     ],
     "systemsKicker": "Systems",
     "systemsTitle": "Six systems, one recess depth",
@@ -68,11 +67,11 @@
     },
     "LS-01": {
       "name": "Switch System",
-      "meta": "Capacitive touch",
-      "description": "A capacitive field flush with the plaster, marked only by a machined hairline.",
+      "meta": "Recessed rocker switch",
+      "description": "A mechanical rocker switch recessed behind a flush plate, so the wall stays level and the switch face sits flush with the tile.",
       "specs": [
-        ["Type", "Capacitive touch"],
-        ["Load", "Up to 300 W LED"]
+        ["Type", "Single/double pole rocker"],
+        ["Rating", "10 A"]
       ]
     },
     "PH-01": {
@@ -103,13 +102,6 @@
       ]
     }
   },
-  "finishes": {
-    "brushed-stainless": "Brushed stainless",
-    "matt-white": "Matt white",
-    "matt-black": "Matt black",
-    "brushed-brass": "Brushed brass",
-    "gunmetal": "Gunmetal"
-  },
   "howItWorks": {
     "how-flush": {
       "title": "Hidden flush plate",
@@ -139,17 +131,14 @@
     "allName": "All articles",
     "allBlurb": "Every recessed article, across all six systems. Filter by system or ask for the full price list.",
     "systemsLabel": "Systems",
-    "finishLabel": "Finish",
     "priceNote": "Prices are issued per project. Message us on WhatsApp with the articles you need for a quotation.",
-    "recessNote": "45 mm standard recess depth",
-    "shownInPrefix": "{count} articles · shown in {finish}"
+    "shownInPrefix": "{count} articles"
   },
   "product": {
     "breadcrumbHome": "Home",
     "mainImageCaption": "Product photo on neutral ground",
     "altImage1Caption": "Installed detail",
     "altImage2Caption": "Section drawing",
-    "finishLabel": "Finish",
     "quotationNote": "Quotation issued per project · drawings included",
     "shippingLabel": "Shipping",
     "shippingValue": "48 h dispatch from our Tirana warehouse",
@@ -169,7 +158,7 @@
       { "title": "Service", "links": ["Shipping & returns", "Installation support", "Trade accounts", "Terms of service"] }
     ],
     "specifierNotesTitle": "Specifier notes",
-    "specifierNotesBody": "New finishes and drawing updates, a few times a year.",
+    "specifierNotesBody": "New articles and drawing updates, a few times a year.",
     "emailPlaceholder": "Email address",
     "subscribe": "Subscribe",
     "thanks": "Thanks ✓",
@@ -180,8 +169,8 @@
     "headerMessage": "Hi, I'd like to ask about your recessed bathroom hardware.",
     "heroMessage": "Hi, I'd like to talk to a specifier about recessed bathroom hardware.",
     "ctaBannerMessage": "Hi, I'm working on a project and would like pricing and drawings.",
-    "productEnquiry": "Hi, I'm interested in {name} ({code}) in {finish}.",
-    "productQuote": "Hi, I'd like a quote for {qty} × {name} ({code}) in {finish}."
+    "productEnquiry": "Hi, I'm interested in {name} ({code}).",
+    "productQuote": "Hi, I'd like a quote for {qty} × {name} ({code})."
   },
   "notFound": {
     "title": "Page not found",

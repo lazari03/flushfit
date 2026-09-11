@@ -1,8 +1,5 @@
-"use client";
-
 import Link from "next/link";
-import { useAppState } from "@/context/AppStateContext";
-import { CATEGORY_ORDER, FINISH_HEX, FINISH_ORDER, productsInCategory, PRODUCT_CATALOG } from "@/lib/data";
+import { CATEGORY_ORDER, productsInCategory, PRODUCT_CATALOG } from "@/lib/data";
 import { format, Locale } from "@/lib/i18n";
 import { CategoryId, Messages } from "@/lib/types";
 import ProductCard from "./ProductCard";
@@ -16,11 +13,9 @@ export default function CatalogueView({
   locale: Locale;
   messages: Messages;
 }) {
-  const { finishId, setFinishId } = useAppState();
   const shown = categoryId ? productsInCategory(categoryId) : PRODUCT_CATALOG;
   const activeName = categoryId ? messages.categories[categoryId].name : messages.catalogue.allName;
   const activeBlurb = categoryId ? messages.categories[categoryId].blurb : messages.catalogue.allBlurb;
-  const finishName = messages.finishes[finishId];
 
   return (
     <main className="container" style={{ paddingBottom: 96 }}>
@@ -58,28 +53,6 @@ export default function CatalogueView({
               ))}
             </div>
           </div>
-          <div>
-            <div style={{ fontSize: 11, letterSpacing: ".18em", textTransform: "uppercase", color: "var(--text-muted)", marginBottom: 14 }}>
-              {messages.catalogue.finishLabel}
-            </div>
-            <div style={{ display: "grid", gap: 11 }}>
-              {FINISH_ORDER.map((id) => (
-                <button
-                  key={id}
-                  type="button"
-                  className="finish-link"
-                  style={{ color: id === finishId ? "var(--accent)" : "var(--text-body)" }}
-                  onClick={() => setFinishId(id)}
-                >
-                  <span
-                    className="finish-dot"
-                    style={{ background: FINISH_HEX[id], outline: id === finishId ? "1px solid var(--ink)" : "none", outlineOffset: 2 }}
-                  />
-                  {messages.finishes[id]}
-                </button>
-              ))}
-            </div>
-          </div>
           <div style={{ borderTop: "1px solid var(--border)", paddingTop: 22, fontSize: 13, lineHeight: 1.55, color: "var(--text-muted)" }}>
             {messages.catalogue.priceNote}
           </div>
@@ -98,8 +71,7 @@ export default function CatalogueView({
               gap: 12,
             }}
           >
-            <span>{format(messages.catalogue.shownInPrefix, { count: shown.length, finish: finishName })}</span>
-            <span>{messages.catalogue.recessNote}</span>
+            <span>{format(messages.catalogue.shownInPrefix, { count: shown.length })}</span>
           </div>
           <div className="tile-grid tile-grid--product">
             {shown.map((p) => (

@@ -8,9 +8,6 @@ export const CATEGORY_IDS = [
 ] as const;
 export type CategoryId = (typeof CATEGORY_IDS)[number];
 
-export const FINISH_IDS = ["brushed-stainless", "matt-white", "matt-black", "brushed-brass", "gunmetal"] as const;
-export type FinishId = (typeof FINISH_IDS)[number];
-
 export const HOW_IT_WORKS_IDS = ["how-flush", "how-electro", "how-holders", "how-cabinet"] as const;
 export type HowItWorksId = (typeof HOW_IT_WORKS_IDS)[number];
 
@@ -55,7 +52,6 @@ export type Messages = {
   };
   categories: Record<CategoryId, { name: string; blurb: string; hint: string }>;
   products: Record<string, { name: string; meta: string; description: string; specs: Spec[] }>;
-  finishes: Record<FinishId, string>;
   howItWorks: Record<HowItWorksId, { title: string; text: string }>;
   compat: Partial<Record<CategoryId, string[]>>;
   catalogue: {
@@ -63,9 +59,7 @@ export type Messages = {
     allName: string;
     allBlurb: string;
     systemsLabel: string;
-    finishLabel: string;
     priceNote: string;
-    recessNote: string;
     shownInPrefix: string;
   };
   product: {
@@ -73,7 +67,6 @@ export type Messages = {
     mainImageCaption: string;
     altImage1Caption: string;
     altImage2Caption: string;
-    finishLabel: string;
     quotationNote: string;
     shippingLabel: string;
     shippingValue: string;

@@ -1,7 +1,7 @@
 #!/usr/bin/env node
 // Verifies content/en.json, sq.json and it.json share the exact same key
-// structure (and product/category/finish/how-it-works id sets), since
-// lib/i18n.ts trusts them to all match the Messages type at runtime.
+// structure (and product/category/how-it-works id sets), since lib/i18n.ts
+// trusts them to all match the Messages type at runtime.
 import { readFileSync } from "node:fs";
 import { fileURLToPath } from "node:url";
 import { dirname, join } from "node:path";
@@ -43,10 +43,9 @@ for (const a of LOCALES) {
 }
 
 // Spot-check the id-keyed dictionaries against each other's literal id sets
-// (categories, products, finishes, howItWorks) — catches typo'd keys that
-// keyShape's structural check (which only looks at the first array element)
-// can't see.
-for (const dict of ["categories", "products", "finishes", "howItWorks"]) {
+// (categories, products, howItWorks) — catches typo'd keys that keyShape's
+// structural check (which only looks at the first array element) can't see.
+for (const dict of ["categories", "products", "howItWorks"]) {
   const [first, ...rest] = LOCALES;
   const baseKeys = Object.keys(docs[first][dict]).sort();
   for (const l of rest) {

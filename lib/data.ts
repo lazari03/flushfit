@@ -1,6 +1,6 @@
 // Structural, locale-independent data: which entities exist, their ids/codes,
 // ordering, and cross-references. All display text lives in content/<locale>.json.
-import { CategoryId, FinishId, HowItWorksId, ProductMeta } from "./types";
+import { CategoryId, HowItWorksId, ProductMeta } from "./types";
 
 export const CATEGORY_ORDER: CategoryId[] = [
   "flush-plates",
@@ -10,16 +10,6 @@ export const CATEGORY_ORDER: CategoryId[] = [
   "towel-systems",
   "manifold-cabinets",
 ];
-
-export const FINISH_ORDER: FinishId[] = ["brushed-stainless", "matt-white", "matt-black", "brushed-brass", "gunmetal"];
-
-export const FINISH_HEX: Record<FinishId, string> = {
-  "brushed-stainless": "#B9B6B0",
-  "matt-white": "#EDEAE4",
-  "matt-black": "#22221F",
-  "brushed-brass": "#A98C55",
-  gunmetal: "#5A5A57",
-};
 
 export const HOW_IT_WORKS_ORDER: HowItWorksId[] = ["how-flush", "how-electro", "how-holders", "how-cabinet"];
 

@@ -34,13 +34,11 @@ export default async function LocaleLayout({
   const messages = getMessages(locale);
 
   return (
-    <AppStateProvider>
-      <div style={{ minHeight: "100vh", background: "var(--bg)" }}>
-        <TopBar lines={messages.topbar} />
-        <Header locale={locale} messages={messages} />
-        {children}
-        <Footer messages={messages} />
-      </div>
-    </AppStateProvider>
+    <div style={{ minHeight: "100vh", background: "var(--bg)" }}>
+      <TopBar lines={messages.topbar} />
+      <Header locale={locale} messages={messages} />
+      {children}
+      <Footer messages={messages} />
+    </div>
   );
 }

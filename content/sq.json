@@ -13,8 +13,7 @@
     "proofs": [
       { "icon": "shipping", "title": "Dërgesë e shpejtë", "label": "Dërgesë brenda 48 orësh nga depoja jonë në Tiranë" },
       { "icon": "quality", "title": "Cilësi e certifikuar", "label": "Komponentë të certifikuar, testuar sipas standardit të BE-së" },
-      { "icon": "warranty", "title": "5 vjet garanci", "label": "Garanci për komponentët mekanikë dhe elektrikë" },
-      { "icon": "drawings", "title": "Vizatime projekti", "label": "Vizatime dhe fletë montimi për çdo artikull" }
+      { "icon": "warranty", "title": "5 vjet garanci", "label": "Garanci për komponentët mekanikë dhe elektrikë" }
     ],
     "systemsKicker": "Sistemet",
     "systemsTitle": "Gjashtë sisteme, një thellësi montimi",
@@ -49,147 +48,59 @@
   },
   "products": {
     "FP-01": {
-      "name": "Pllaka 01 Katrore",
-      "meta": "Inox 316 · 180 × 120 mm",
+      "name": "Pllaka e Shkarkimit",
+      "meta": "Çelik inox · dopio-shkarkim",
       "description": "Një aktivizues dopio-shkarkues pa kornizë që del në nivel me pllakat. Pllaka pritet nga inoksi 3 mm dhe vendoset në një kornizë suvatimi, kështu që e vetmja linjë e dukshme është bashkimi rreth dy fushave me prekje.",
       "specs": [
         ["Materiali", "Çelik inox 316"],
-        ["Përmasat", "180 × 120 × 6 mm"]
-      ]
-    },
-    "FP-02": {
-      "name": "Pllaka 02 Rrumbullakët",
-      "meta": "Inox 316 · ⌀ 150 mm",
-      "description": "Varianti i rrumbullakët i pllakës 01, i përpunuar nga një pjesë e vetme me dy fusha prekjeje koncentrike.",
-      "specs": [
-        ["Materiali", "Çelik inox 316"],
-        ["Përmasat", "⌀ 150 × 6 mm"]
-      ]
-    },
-    "FP-03": {
-      "name": "Pllaka 03 e Pllakueshme",
-      "meta": "Bazament për pllaka 6–12 mm",
-      "description": "Një pllakë bazament që pranon pllakën e projektit, kështu që aktivizuesi zhduket plotësisht në modelin e murit.",
-      "specs": [
-        ["Materiali", "Bazament çeliku me ngjyrë pluhur"],
-        ["Trashësia e pllakës", "6–12 mm"]
+        ["Aktivizimi", "Dopio-shkarkim, mekanik"]
       ]
     },
     "RS-01": {
-      "name": "Priza 01 Njëfishe",
-      "meta": "Tipi F · IP44 · 45 mm",
-      "description": "Një prizë e vetme me kapak me sustë që mbyllet në nivel me murin kur nuk përdoret. Vlerësim IP44 për zonën 2.",
+      "name": "Sistemi i Prizave",
+      "meta": "Tipi F · IP44",
+      "description": "Një prizë e fshehur me kapak me sustë që mbyllet në nivel me murin kur nuk përdoret. Vlerësim IP44 për zonën 2.",
       "specs": [
-        ["Prizat", "1 × Tipi F"],
+        ["Prizat", "1–2 × Tipi F"],
         ["Vlerësimi", "IP44 · 16 A"]
-      ]
-    },
-    "RS-02": {
-      "name": "Priza 02 Dyfishe",
-      "meta": "Tipi F · IP44 · 45 mm",
-      "description": "Dy priza pas një kapaku të vetëm të fshehur, që ndajnë të njëjtën kuti montimi.",
-      "specs": [
-        ["Prizat", "2 × Tipi F"],
-        ["Vlerësimi", "IP44 · 16 A"]
-      ]
-    },
-    "RS-03": {
-      "name": "Priza 03 USB-C",
-      "meta": "2 × 30 W USB-C · IP44",
-      "description": "Vetëm për ngarkim, për kabinete pasqyre dhe kamare lavamani.",
-      "specs": [
-        ["Prizat", "2 × USB-C, 30 W"],
-        ["Vlerësimi", "IP44"]
       ]
     },
     "LS-01": {
-      "name": "Ndërprerësi 01 me Prekje",
-      "meta": "Kapacitiv · 45 mm",
-      "description": "Një fushë kapacitive në nivel me suvanë, e shënuar vetëm me një vijë të përpunuar.",
+      "name": "Sistemi i Ndërprerësve",
+      "meta": "Ndërprerës me levë i fshehur",
+      "description": "Një levë mekanike e fshehur pas një kornize në nivel me murin, kështu që muri qëndron rrafsh dhe ndërprerësi del në nivel me pllakat.",
       "specs": [
-        ["Lloji", "Prekje kapacitive"],
-        ["Ngarkesa", "Deri në 300 W LED"]
-      ]
-    },
-    "LS-02": {
-      "name": "Ndërprerësi 02 me Levë",
-      "meta": "Njëpolar · 45 mm",
-      "description": "Një levë mekanike e fshehur pas një kornize në nivel me murin.",
-      "specs": [
-        ["Lloji", "Njëpolar me levë"],
+        ["Lloji", "Njëpolar/dypolar me levë"],
         ["Vlerësimi", "10 A"]
       ]
     },
-    "LS-03": {
-      "name": "Ndërprerësi 03 Dimmer",
-      "meta": "Prerje e vonuar · 5–150 W",
-      "description": "Dimmer rrotullues me dorezën e vendosur nën nivelin e murit.",
-      "specs": [
-        ["Lloji", "Dimmer me prerje të vonuar"],
-        ["Ngarkesa", "5–150 W"]
-      ]
-    },
     "PH-01": {
-      "name": "Mbajtësja 01 me Kapak",
-      "meta": "Inox 316 · 155 × 155 mm",
+      "name": "Mbajtësja e Letrës",
+      "meta": "Çelik inox 316",
       "description": "Një mbajtëse letre e fshehur me kapak që mbyllet ngadalë dhe qëndron në nivel me murin. Rrotulla ngarkohet nga përpara dhe kapaku shërben edhe si raft kur hapet.",
       "specs": [
         ["Materiali", "Çelik inox 316"],
-        ["Përmasat", "155 × 155 × 45 mm"]
-      ]
-    },
-    "PH-02": {
-      "name": "Mbajtësja 02 e Hapur",
-      "meta": "Inox 316 · 155 × 155 mm",
-      "description": "Një version kamare e hapur pa kapak, e përshtatur për rrotullën rezervë.",
-      "specs": [
-        ["Materiali", "Çelik inox 316"],
-        ["Përmasat", "155 × 155 × 45 mm"]
+        ["Kapaciteti", "Një rrotull, ⌀ 120 mm"]
       ]
     },
     "TS-01": {
-      "name": "Peshqiri 01 Shufër",
-      "meta": "Shufër e fshehur · 600 mm",
+      "name": "Mbajtësja e Peshqirëve",
+      "meta": "Çelik inox 316",
       "description": "Një shufër e vendosur në një kamare të cekët, kështu që peshqirët varen pas rrafshit të murit në vend që të dalin jashtë tij.",
       "specs": [
         ["Materiali", "Çelik inox 316"],
-        ["Gjatësia", "600 mm"]
-      ]
-    },
-    "TS-02": {
-      "name": "Peshqiri 02 Kamare",
-      "meta": "Kamare · 300 × 900 mm",
-      "description": "Një kamare me lartësi të plotë me një shufër të fshehur në krye, për peshqirë të palosur dhe të varur së bashku.",
-      "specs": [
-        ["Materiali", "Veshje çeliku me ngjyrë pluhur"],
-        ["Hapja", "300 × 900 mm"]
+        ["Ngarkesa", "Deri në 12 kg"]
       ]
     },
     "MC-01": {
-      "name": "Kabineti 01 Kolektor",
-      "meta": "Derë pa kornizë · 500 × 500 mm",
+      "name": "Kabineti i Kolektorit",
+      "meta": "Pa kornizë, derë e pllakueshme",
       "description": "Një derë shërbimi që hapet me shtypje, pa kornizë të dukshme, që jep akses te kolektori pas një sipërfaqeje të pllakuar ose të suvatuar.",
       "specs": [
         ["Materiali", "Trup çeliku, derë e pllakueshme"],
-        ["Hapja", "500 × 500 mm"]
-      ]
-    },
-    "MC-02": {
-      "name": "Kabineti 02 i Lartë",
-      "meta": "Derë pa kornizë · 500 × 800 mm",
-      "description": "Varianti i lartë për kolektorë vertikalë dhe grupe filtrash.",
-      "specs": [
-        ["Materiali", "Trup çeliku, derë e pllakueshme"],
-        ["Hapja", "500 × 800 mm"]
+        ["Mënyra e hapjes", "Mbyllje magnetike, hapet me shtypje"]
       ]
     }
-  },
-  "finishes": {
-    "brushed-stainless": "Inox i furçuar",
-    "matt-white": "E bardhë mat",
-    "matt-black": "E zezë mat",
-    "brushed-brass": "Bronz i furçuar",
-    "gunmetal": "Antracit metalik"
   },
   "howItWorks": {
     "how-flush": {
@@ -220,17 +131,14 @@
     "allName": "Të gjithë artikujt",
     "allBlurb": "Çdo artikull i fshehur, në të gjashtë sistemet. Filtro sipas sistemit ose kërko listën e plotë të çmimeve.",
     "systemsLabel": "Sistemet",
-    "finishLabel": "Ngjyra",
     "priceNote": "Çmimet lëshohen për çdo projekt. Na shkruani në WhatsApp me artikujt që ju nevojiten për një ofertë.",
-    "recessNote": "Thellësi standarde montimi 45 mm",
-    "shownInPrefix": "{count} artikuj · shfaqur në {finish}"
+    "shownInPrefix": "{count} artikuj"
   },
   "product": {
     "breadcrumbHome": "Kryefaqja",
     "mainImageCaption": "Foto e produktit në sfond neutral",
     "altImage1Caption": "Detaj i montuar",
     "altImage2Caption": "Vizatim seksioni",
-    "finishLabel": "Ngjyra",
     "quotationNote": "Oferta lëshohet për çdo projekt · vizatimet përfshihen",
     "shippingLabel": "Dërgesa",
     "shippingValue": "Dërgohet brenda 48 orëve nga magazina jonë në Tiranë",
@@ -250,7 +158,7 @@
       { "title": "Shërbimi", "links": ["Transporti dhe kthimet", "Mbështetje instalimi", "Llogari tregtare", "Kushtet e shërbimit"] }
     ],
     "specifierNotesTitle": "Njoftime për specialistë",
-    "specifierNotesBody": "Ngjyra të reja dhe përditësime vizatimesh, disa herë në vit.",
+    "specifierNotesBody": "Artikuj të rinj dhe përditësime vizatimesh, disa herë në vit.",
     "emailPlaceholder": "Adresa e emailit",
     "subscribe": "Regjistrohu",
     "thanks": "Faleminderit ✓",
@@ -261,8 +169,8 @@
     "headerMessage": "Përshëndetje, dua të pyes për pajisjet tuaja të fshehura të banjos.",
     "heroMessage": "Përshëndetje, dua të flas me një specialist për pajisjet e fshehura të banjos.",
     "ctaBannerMessage": "Përshëndetje, po punoj në një projekt dhe dua çmime e vizatime.",
-    "productEnquiry": "Përshëndetje, jam i interesuar për {name} ({code}) në {finish}.",
-    "productQuote": "Përshëndetje, dua një ofertë për {qty} × {name} ({code}) në {finish}."
+    "productEnquiry": "Përshëndetje, jam i interesuar për {name} ({code}).",
+    "productQuote": "Përshëndetje, dua një ofertë për {qty} × {name} ({code})."
   },
   "notFound": {
     "title": "Faqja nuk u gjet",

@@ -1,7 +1,4 @@
-"use client";
-
 import Link from "next/link";
-import { useAppState } from "@/context/AppStateContext";
 import { format, Locale } from "@/lib/i18n";
 import { whatsappLink } from "@/lib/whatsapp";
 import { CategoryId, Messages } from "@/lib/types";
@@ -19,11 +16,9 @@ export default function ProductCard({
   locale: Locale;
   messages: Messages;
 }) {
-  const { finishId } = useAppState();
   const product = messages.products[code];
   const categoryName = messages.categories[categoryId].name;
-  const finishName = messages.finishes[finishId];
-  const enquiryMessage = format(messages.whatsapp.productEnquiry, { name: product.name, code, finish: finishName });
+  const enquiryMessage = format(messages.whatsapp.productEnquiry, { name: product.name, code });
 
   return (
     <div className="tile-card">

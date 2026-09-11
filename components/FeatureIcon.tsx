@@ -7,8 +7,6 @@ const PATHS: Record<string, string> = {
   // ribbon/badge — warranty
   warranty:
     "M12 2a5 5 0 1 1 0 10 5 5 0 0 1 0-10Zm-3 9.5L6 20l6-3 6 3-3-8.5",
-  // drawing/ruler — project drawings
-  drawings: "M3 21 15 9l3-3 3 3-3 3L6 24 3 21Zm9-13 3 3M17 4l3 3",
 };
 
 export default function FeatureIcon({ name, size = 26 }: { name: string; size?: number }) {

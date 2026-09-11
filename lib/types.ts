@@ -34,7 +34,7 @@ export type Messages = {
     ctaPrimary: string;
     ctaSecondary: string;
     heroImageCaption: string;
-    proofs: { value: string; label: string }[];
+    proofs: { icon: string; title: string; label: string }[];
     systemsKicker: string;
     systemsTitle: string;
     allArticlesLink: string;

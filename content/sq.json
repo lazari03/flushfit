@@ -11,14 +11,10 @@
     "ctaSecondary": "Flisni me një specialist",
     "heroImageCaption": "Foto ambienti — pllakë shkarkimi e montuar në murin e pllakuar",
     "proofs": [
-      { "value": "45 mm", "label": "Një thellësi standarde montimi për çdo sistem" },
-      { "value": "5", "label": "Ngjyra, të përputhura në pllaka, priza dhe mbajtëse" },
-      { "value": "DWG", "label": "Vizatime dhe fletë montimi për çdo artikull" },
-      { "value": "1 ditë", "label": "Kohë përgjigjeje për oferta projekti" },
-      { "value": "CE", "label": "Komponentë të certifikuar, testuar sipas standardit të BE-së" },
-      { "value": "100%", "label": "Kompatibël me sistemet e banjove incasso (të fshehura)" },
-      { "value": "48 orë", "label": "Dërgesë e shpejtë nga depoja jonë në Tiranë" },
-      { "value": "5 vjet", "label": "Garanci për komponentët mekanikë dhe elektrikë" }
+      { "icon": "shipping", "title": "Dërgesë e shpejtë", "label": "Dërgesë brenda 48 orësh nga depoja jonë në Tiranë" },
+      { "icon": "quality", "title": "Cilësi e certifikuar", "label": "Komponentë të certifikuar, testuar sipas standardit të BE-së" },
+      { "icon": "warranty", "title": "5 vjet garanci", "label": "Garanci për komponentët mekanikë dhe elektrikë" },
+      { "icon": "drawings", "title": "Vizatime projekti", "label": "Vizatime dhe fletë montimi për çdo artikull" }
     ],
     "systemsKicker": "Sistemet",
     "systemsTitle": "Gjashtë sisteme, një thellësi montimi",

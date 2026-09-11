@@ -11,14 +11,10 @@
     "ctaSecondary": "Talk to a specifier",
     "heroImageCaption": "Lifestyle shot — flush plate installed in a tiled wall",
     "proofs": [
-      { "value": "45 mm", "label": "One standard recess depth across every system" },
-      { "value": "5", "label": "Finishes, matched across plates, sockets and holders" },
-      { "value": "DWG", "label": "Drawings and installation sheets per article" },
-      { "value": "1 day", "label": "Quotation turnaround on project lists" },
-      { "value": "CE", "label": "Certified components, tested to EU standard" },
-      { "value": "100%", "label": "Compatible with incasso (built-in) bathroom systems" },
-      { "value": "48 h", "label": "Fast dispatch from our Tirana warehouse" },
-      { "value": "5 yr", "label": "Warranty on mechanical and electrical components" }
+      { "icon": "shipping", "title": "Fast shipping", "label": "48-hour dispatch from our Tirana warehouse" },
+      { "icon": "quality", "title": "Certified quality", "label": "CE certified components, tested to EU standard" },
+      { "icon": "warranty", "title": "5-year warranty", "label": "Warranty on mechanical and electrical components" },
+      { "icon": "drawings", "title": "Project drawings", "label": "DWG and installation sheets for every article" }
     ],
     "systemsKicker": "Systems",
     "systemsTitle": "Six systems, one recess depth",
@@ -53,138 +49,57 @@
   },
   "products": {
     "FP-01": {
-      "name": "Plate 01 Square",
-      "meta": "Stainless 316 · 180 × 120 mm",
+      "name": "Flush Plate",
+      "meta": "Stainless steel · dual flush",
       "description": "A frameless dual-flush actuator that finishes level with the tile. The plate is cut from 3 mm stainless and set in a plaster-in frame, so the only visible line is the joint around the two touch fields.",
       "specs": [
         ["Material", "Stainless steel 316"],
-        ["Dimensions", "180 × 120 × 6 mm"]
-      ]
-    },
-    "FP-02": {
-      "name": "Plate 02 Round",
-      "meta": "Stainless 316 · ⌀ 150 mm",
-      "description": "The round variant of the 01 plate, machined from a single piece with two concentric touch fields.",
-      "specs": [
-        ["Material", "Stainless steel 316"],
-        ["Dimensions", "⌀ 150 × 6 mm"]
-      ]
-    },
-    "FP-03": {
-      "name": "Plate 03 Tileable",
-      "meta": "Carrier for 6–12 mm tile",
-      "description": "A carrier plate that accepts the project tile, so the actuator disappears into the wall pattern entirely.",
-      "specs": [
-        ["Material", "Powder-coated steel carrier"],
-        ["Tile thickness", "6–12 mm"]
+        ["Actuation", "Dual flush, mechanical"]
       ]
     },
     "RS-01": {
-      "name": "Socket 01 Single",
-      "meta": "Type F · IP44 · 45 mm",
-      "description": "A single outlet on a spring-loaded lid that closes flush with the wall when not in use. Rated IP44 for zone 2 placement.",
+      "name": "Socket System",
+      "meta": "Type F · IP44",
+      "description": "A recessed outlet on a spring-loaded lid that closes flush with the wall when not in use. Rated IP44 for zone 2 placement.",
       "specs": [
-        ["Outlets", "1 × Type F"],
+        ["Outlets", "1–2 × Type F"],
         ["Rating", "IP44 · 16 A"]
-      ]
-    },
-    "RS-02": {
-      "name": "Socket 02 Double",
-      "meta": "Type F · IP44 · 45 mm",
-      "description": "Two outlets behind one flush lid, sharing a single mounting box.",
-      "specs": [
-        ["Outlets", "2 × Type F"],
-        ["Rating", "IP44 · 16 A"]
-      ]
-    },
-    "RS-03": {
-      "name": "Socket 03 USB-C",
-      "meta": "2 × 30 W USB-C · IP44",
-      "description": "Charging only, for mirror cabinets and vanity recesses.",
-      "specs": [
-        ["Outlets", "2 × USB-C, 30 W"],
-        ["Rating", "IP44"]
       ]
     },
     "LS-01": {
-      "name": "Switch 01 Touch",
-      "meta": "Capacitive · 45 mm",
+      "name": "Switch System",
+      "meta": "Capacitive touch",
       "description": "A capacitive field flush with the plaster, marked only by a machined hairline.",
       "specs": [
         ["Type", "Capacitive touch"],
         ["Load", "Up to 300 W LED"]
       ]
     },
-    "LS-02": {
-      "name": "Switch 02 Rocker",
-      "meta": "Single pole · 45 mm",
-      "description": "A mechanical rocker recessed behind a flush bezel.",
-      "specs": [
-        ["Type", "Single pole rocker"],
-        ["Rating", "10 A"]
-      ]
-    },
-    "LS-03": {
-      "name": "Switch 03 Dimmer",
-      "meta": "Trailing edge · 5–150 W",
-      "description": "Rotary dimmer with the knob set below the wall face.",
-      "specs": [
-        ["Type", "Trailing edge dimmer"],
-        ["Load", "5–150 W"]
-      ]
-    },
     "PH-01": {
-      "name": "Holder 01 Flap",
-      "meta": "Stainless 316 · 155 × 155 mm",
+      "name": "Paper Holder",
+      "meta": "Stainless steel 316",
       "description": "A recessed paper holder with a soft-closing flap that sits level with the wall. The roll loads from the front and the flap doubles as a shelf when open.",
       "specs": [
         ["Material", "Stainless steel 316"],
-        ["Dimensions", "155 × 155 × 45 mm"]
-      ]
-    },
-    "PH-02": {
-      "name": "Holder 02 Open",
-      "meta": "Stainless 316 · 155 × 155 mm",
-      "description": "An open niche version without a flap, sized for the spare roll.",
-      "specs": [
-        ["Material", "Stainless steel 316"],
-        ["Dimensions", "155 × 155 × 45 mm"]
+        ["Capacity", "One roll, ⌀ 120 mm"]
       ]
     },
     "TS-01": {
-      "name": "Towel 01 Bar",
-      "meta": "Recessed bar · 600 mm",
+      "name": "Towel Holder",
+      "meta": "Stainless steel 316",
       "description": "A bar set into a shallow niche so towels hang against the wall plane rather than off it.",
       "specs": [
         ["Material", "Stainless steel 316"],
-        ["Length", "600 mm"]
-      ]
-    },
-    "TS-02": {
-      "name": "Towel 02 Niche",
-      "meta": "Niche · 300 × 900 mm",
-      "description": "A full-height niche with a concealed bar at the head, for stacked and hanging towels together.",
-      "specs": [
-        ["Material", "Powder-coated steel liner"],
-        ["Opening", "300 × 900 mm"]
+        ["Load", "Up to 12 kg"]
       ]
     },
     "MC-01": {
-      "name": "Cabinet 01 Manifold",
-      "meta": "Frameless door · 500 × 500 mm",
+      "name": "Manifold Cabinet",
+      "meta": "Frameless, tileable door",
       "description": "A push-to-open service door with no visible frame, giving access to the manifold behind a tiled or plastered face.",
       "specs": [
         ["Material", "Steel carcass, tileable door"],
-        ["Opening", "500 × 500 mm"]
-      ]
-    },
-    "MC-02": {
-      "name": "Cabinet 02 Tall",
-      "meta": "Frameless door · 500 × 800 mm",
-      "description": "The tall variant for vertical manifolds and filter sets.",
-      "specs": [
-        ["Material", "Steel carcass, tileable door"],
-        ["Opening", "500 × 800 mm"]
+        ["Opening action", "Push-to-open magnet latch"]
       ]
     }
   },

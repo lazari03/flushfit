@@ -3,6 +3,7 @@ import ImagePlaceholder from "@/components/ImagePlaceholder";
 import CategoryTile from "@/components/CategoryTile";
 import ProductCard from "@/components/ProductCard";
 import Emphasis from "@/components/Emphasis";
+import FeatureIcon from "@/components/FeatureIcon";
 import { CATEGORY_ORDER, FEATURED_CODES, HERO_IMAGE, HOW_IT_WORKS_ORDER, findProductMeta } from "@/lib/data";
 import { LOCALES, Locale, getMessages } from "@/lib/i18n";
 import { whatsappLink } from "@/lib/whatsapp";
@@ -64,8 +65,9 @@ export default async function HomePage({ params }: { params: Promise<{ locale: L
       <section style={{ borderTop: "1px solid var(--border)", borderBottom: "1px solid var(--border)", background: "var(--bg-alt)" }}>
         <div className="container" style={{ display: "grid", gridTemplateColumns: "repeat(auto-fit, minmax(215px, 1fr))" }}>
           {messages.home.proofs.map((p) => (
-            <div key={p.label} style={{ padding: "34px 28px 34px 0" }}>
-              <div style={{ fontSize: 34, lineHeight: 1, marginBottom: 10 }}>{p.value}</div>
+            <div key={p.title} style={{ padding: "34px 28px", textAlign: "center", display: "flex", flexDirection: "column", alignItems: "center" }}>
+              <FeatureIcon name={p.icon} />
+              <div style={{ fontSize: 15, fontWeight: 500, margin: "14px 0 6px" }}>{p.title}</div>
               <div style={{ fontSize: 13, lineHeight: 1.5, color: "var(--text-muted)" }}>{p.label}</div>
             </div>
           ))}

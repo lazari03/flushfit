@@ -11,14 +11,10 @@
     "ctaSecondary": "Parla con uno specialista",
     "heroImageCaption": "Foto ambientata — placca di scarico installata su parete piastrellata",
     "proofs": [
-      { "value": "45 mm", "label": "Un'unica profondità di incasso standard per ogni sistema" },
-      { "value": "5", "label": "Finiture, abbinate tra placche, prese e portarotolo" },
-      { "value": "DWG", "label": "Disegni e schede di installazione per ogni articolo" },
-      { "value": "1 giorno", "label": "Tempo di risposta per i preventivi di progetto" },
-      { "value": "CE", "label": "Componenti certificati, testati secondo lo standard UE" },
-      { "value": "100%", "label": "Compatibile con sistemi da bagno incasso" },
-      { "value": "48 h", "label": "Spedizione rapida dal nostro magazzino di Tirana" },
-      { "value": "5 anni", "label": "Garanzia sui componenti meccanici ed elettrici" }
+      { "icon": "shipping", "title": "Spedizione rapida", "label": "Spedizione in 48 ore dal nostro magazzino di Tirana" },
+      { "icon": "quality", "title": "Qualità certificata", "label": "Componenti certificati, testati secondo lo standard UE" },
+      { "icon": "warranty", "title": "Garanzia di 5 anni", "label": "Garanzia sui componenti meccanici ed elettrici" },
+      { "icon": "drawings", "title": "Disegni di progetto", "label": "Disegni e schede di installazione per ogni articolo" }
     ],
     "systemsKicker": "Sistemi",
     "systemsTitle": "Sei sistemi, un'unica profondità di incasso",

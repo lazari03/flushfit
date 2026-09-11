@@ -34,22 +34,16 @@ export const CATEGORY_IMAGES: Record<CategoryId, string> = {
 };
 export const HERO_IMAGE = "/images/hero.jpg";
 
+// One SKU per category — one real product photo exists per category, so
+// the numbered size/finish variants (which shared that one photo and read
+// as duplicates in the catalogue) were dropped rather than faked.
 export const PRODUCT_CATALOG: ProductMeta[] = [
   { code: "FP-01", categoryId: "flush-plates" },
-  { code: "FP-02", categoryId: "flush-plates" },
-  { code: "FP-03", categoryId: "flush-plates" },
   { code: "RS-01", categoryId: "recessed-sockets" },
-  { code: "RS-02", categoryId: "recessed-sockets" },
-  { code: "RS-03", categoryId: "recessed-sockets" },
   { code: "LS-01", categoryId: "light-switches" },
-  { code: "LS-02", categoryId: "light-switches" },
-  { code: "LS-03", categoryId: "light-switches" },
   { code: "PH-01", categoryId: "paper-holders" },
-  { code: "PH-02", categoryId: "paper-holders" },
   { code: "TS-01", categoryId: "towel-systems" },
-  { code: "TS-02", categoryId: "towel-systems" },
   { code: "MC-01", categoryId: "manifold-cabinets" },
-  { code: "MC-02", categoryId: "manifold-cabinets" },
 ];
 
 export const FEATURED_CODES = ["FP-01", "RS-01", "PH-01", "TS-01"];

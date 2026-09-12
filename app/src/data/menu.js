@@ -1,0 +1,75 @@
+export const CATEGORIES = ['Draft Beer', 'Cocktails', 'Wine', 'Spirits'];
+
+export const MENU = {
+  'Draft Beer': [
+    { name: 'House Lager', price: '$7.00', tag: '16 oz', accent: 'lime' },
+    { name: 'Hazy IPA', price: '$9.00', tag: '16 oz', accent: 'lime' },
+    { name: 'Dry Stout', price: '$9.00', tag: 'Nitro', accent: 'lime' },
+    { name: 'Pilsner', price: '$8.00', tag: '16 oz', accent: 'lime' },
+    { name: 'Sour Ale', price: '$10.00', tag: '12 oz', accent: 'orange' },
+    { name: 'Amber', price: '$8.00', tag: '16 oz', accent: 'lime' },
+    { name: 'Cider', price: '$8.00', tag: 'Bottle', accent: 'orange' },
+    { name: 'N/A Wheat', price: '$6.00', tag: 'Zero', accent: 'blue' },
+    { name: 'Pitcher · Lager', price: '$24.00', tag: '60 oz', accent: 'orange' },
+    { name: 'Flight · 4', price: '$14.00', tag: 'Tasting', accent: 'blue' },
+    { name: 'Shell Pour', price: '$4.00', tag: '8 oz', accent: 'lime' },
+    { name: 'Keg Special', price: '$6.00', tag: 'H. Hour', accent: 'orange' },
+  ],
+  Cocktails: [
+    { name: 'Old Fashioned', price: '$16.00', tag: 'Stirred', accent: 'orange' },
+    { name: 'Negroni', price: '$15.00', tag: 'Stirred', accent: 'orange' },
+    { name: 'Margarita', price: '$14.00', tag: 'Shaken', accent: 'lime' },
+    { name: 'Espresso Martini', price: '$17.00', tag: 'Shaken', accent: 'orange' },
+    { name: 'Paloma', price: '$14.00', tag: 'Build', accent: 'lime' },
+    { name: 'Whiskey Sour', price: '$15.00', tag: 'Shaken', accent: 'orange' },
+    { name: 'Gin & Tonic', price: '$12.00', tag: 'Build', accent: 'blue' },
+    { name: 'Moscow Mule', price: '$13.00', tag: 'Build', accent: 'blue' },
+    { name: 'Daiquiri', price: '$14.00', tag: 'Shaken', accent: 'lime' },
+    { name: 'Manhattan', price: '$16.00', tag: 'Stirred', accent: 'orange' },
+    { name: 'Spritz', price: '$13.00', tag: 'Build', accent: 'orange' },
+    { name: 'Shift Drink', price: '$0.00', tag: 'Comp', accent: 'blue' },
+  ],
+  Wine: [
+    { name: 'Chardonnay', price: '$13.00', tag: 'Glass', accent: 'orange' },
+    { name: 'Sauv Blanc', price: '$12.00', tag: 'Glass', accent: 'lime' },
+    { name: 'Pinot Noir', price: '$15.00', tag: 'Glass', accent: 'orange' },
+    { name: 'Cabernet', price: '$16.00', tag: 'Glass', accent: 'orange' },
+    { name: 'Rosé', price: '$12.00', tag: 'Glass', accent: 'orange' },
+    { name: 'Prosecco', price: '$11.00', tag: 'Glass', accent: 'lime' },
+    { name: 'Champagne', price: '$22.00', tag: 'Glass', accent: 'blue' },
+    { name: 'Orange Wine', price: '$14.00', tag: 'Glass', accent: 'orange' },
+    { name: 'Bottle · Cab', price: '$62.00', tag: '750 ml', accent: 'blue' },
+    { name: 'Bottle · SB', price: '$48.00', tag: '750 ml', accent: 'blue' },
+    { name: 'Carafe', price: '$28.00', tag: '500 ml', accent: 'lime' },
+    { name: 'Vermouth', price: '$10.00', tag: 'Pour', accent: 'orange' },
+  ],
+  Spirits: [
+    { name: 'Well Vodka', price: '$9.00', tag: '1.5 oz', accent: 'blue' },
+    { name: 'Well Gin', price: '$9.00', tag: '1.5 oz', accent: 'blue' },
+    { name: 'Well Tequila', price: '$10.00', tag: '1.5 oz', accent: 'lime' },
+    { name: 'Reposado', price: '$14.00', tag: '1.5 oz', accent: 'orange' },
+    { name: 'Rye', price: '$13.00', tag: '1.5 oz', accent: 'orange' },
+    { name: 'Bourbon', price: '$12.00', tag: '1.5 oz', accent: 'orange' },
+    { name: 'Mezcal', price: '$15.00', tag: '1.5 oz', accent: 'lime' },
+    { name: 'Scotch', price: '$18.00', tag: '1.5 oz', accent: 'orange' },
+    { name: 'Rum', price: '$10.00', tag: '1.5 oz', accent: 'lime' },
+    { name: 'Amaro', price: '$11.00', tag: '1.5 oz', accent: 'orange' },
+    { name: 'Shot · House', price: '$8.00', tag: 'Chilled', accent: 'blue' },
+    { name: 'Round · 4 Shots', price: '$28.00', tag: 'Bundle', accent: 'blue' },
+  ],
+};
+
+export const ACCENTS = {
+  blue: { bg: '#12253F', border: '#2B4E7E', text: '#D4E6FF', dot: '#3D8BFF' },
+  orange: { bg: '#2E1809', border: '#7A3D14', text: '#FFE2CE', dot: '#FF6B1A' },
+  lime: { bg: '#1B2A0B', border: '#4E7A16', text: '#EAFFCB', dot: '#B4FF2E' },
+};
+
+export const TICKET = [
+  { qty: 2, name: 'Old Fashioned', price: '$32.00', modList: ['Rye', 'Big cube', 'Orange twist'] },
+  { qty: 1, name: 'House Lager', price: '$7.00', modList: ['16 oz'] },
+  { qty: 1, name: 'Margarita', price: '$14.00', modList: ['Mezcal float', 'Tajín rim', 'No salt'] },
+  { qty: 3, name: 'Shot · House', price: '$24.00', modList: ['Chilled', 'Lime back'] },
+  { qty: 1, name: 'Sauv Blanc', price: '$12.00', modList: ['Glass'] },
+  { qty: 1, name: 'N/A Wheat', price: '$6.00', modList: [] },
+];

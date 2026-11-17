@@ -1,8 +1,26 @@
 {
-  "nav": { "catalogue": "Catalogue", "flushPlates": "Flush plates", "electrical": "Electrical", "whatsappUs": "WhatsApp us" },
-  "lang": { "en": "EN", "sq": "SQ", "it": "IT" },
-  "topbar": ["Project pricing on request", "Free delivery in Albania over €490", "DWG drawings for every article"],
-  "brand": { "name": "FLUSH FIT", "tagline": "Recessed bathroom hardware" },
+  "nav": {
+    "catalogue": "Catalogue",
+    "flushPlates": "Flush plates",
+    "electrical": "Electrical",
+    "whatsappUs": "WhatsApp us",
+    "menu": "Menu",
+    "close": "Close"
+  },
+  "lang": {
+    "en": "EN",
+    "sq": "SQ",
+    "it": "IT"
+  },
+  "topbar": [
+    "Project pricing on request",
+    "Free delivery in Albania over €490",
+    "DWG drawings for every article"
+  ],
+  "brand": {
+    "name": "FLUSH FIT",
+    "tagline": "Recessed bathroom hardware"
+  },
   "home": {
     "kicker": "The invisible fit",
     "headline": "Hardware that sits *inside* the wall.",
@@ -11,40 +29,97 @@
     "ctaSecondary": "Talk to a specifier",
     "heroImageCaption": "Lifestyle shot — flush plate installed in a tiled wall",
     "proofs": [
-      { "icon": "shipping", "title": "Fast shipping", "label": "48-hour dispatch from our Tirana warehouse" },
-      { "icon": "quality", "title": "Certified quality", "label": "CE certified components, tested to EU standard" },
-      { "icon": "warranty", "title": "5-year warranty", "label": "Warranty on mechanical and electrical components" }
+      {
+        "icon": "shipping",
+        "title": "Fast shipping",
+        "label": "48-hour dispatch from our Tirana warehouse"
+      },
+      {
+        "icon": "quality",
+        "title": "Certified quality",
+        "label": "CE certified components, tested to EU standard"
+      },
+      {
+        "icon": "warranty",
+        "title": "5-year warranty",
+        "label": "Warranty on mechanical and electrical components"
+      }
     ],
     "systemsKicker": "Systems",
     "systemsTitle": "Six systems, one recess depth",
-    "allArticlesLink": "All articles →",
+    "allArticlesLink": "All articles",
     "featuredKicker": "Featured",
     "featuredTitle": "Specified most often",
-    "viewAllLink": "View all →",
+    "viewAllLink": "View all",
     "specKicker": "Specification",
     "specTitle": "Drawn for the installer, invisible to the client",
     "specBody": "Every article ships with a steel mounting box, a plaster-in frame and a DWG drawing. Recess depths are standardised at 45 mm so electrics, sanitary and joinery are coordinated once.",
     "specImageCaption": "Detail shot — recessed socket, flush with plaster",
     "specPoints": [
-      { "num": "01", "text": "Steel mounting box and plaster-in frame supplied with the article." },
-      { "num": "02", "text": "Tolerances allow 6–12 mm tile or 10 mm plaster build-up." },
-      { "num": "03", "text": "Electrical articles rated IP44 for zone 2 placement." },
-      { "num": "04", "text": "Finish samples sent free to trade accounts in Albania and Kosovo." }
+      {
+        "num": "01",
+        "text": "Steel mounting box and plaster-in frame supplied with the article."
+      },
+      {
+        "num": "02",
+        "text": "Tolerances allow 6–12 mm tile or 10 mm plaster build-up."
+      },
+      {
+        "num": "03",
+        "text": "Electrical articles rated IP44 for zone 2 placement."
+      },
+      {
+        "num": "04",
+        "text": "Finish samples sent free to trade accounts in Albania and Kosovo."
+      }
     ],
     "howKicker": "Installation",
     "howTitle": "How it works",
     "howIntro": "Four systems, four sequences. Each article ships as a full kit — box, frame, fixings and drawing — so the wall is cut once.",
     "ctaBannerTitle": "Working on a project?",
     "ctaBannerBody": "Message us on WhatsApp with what you need and receive article pricing, lead times and drawings within one working day.",
-    "ctaBannerButton": "WhatsApp us"
+    "ctaBannerButton": "WhatsApp us",
+    "drawing": {
+      "title": "Section through a tiled wall",
+      "tile": "Tile, 6–12 mm",
+      "plaster": "Plaster or adhesive bed",
+      "box": "Steel mounting box",
+      "plate": "Plate, level with the tile",
+      "depth": "45 mm recess",
+      "note": "Every article uses the same recess depth, so plumbing, electrics and joinery are set out once."
+    }
   },
   "categories": {
-    "flush-plates": { "name": "Flush plates", "blurb": "Frameless actuator plates for concealed cisterns.", "hint": "Flush plate, tile-flush" },
-    "recessed-sockets": { "name": "Recessed sockets", "blurb": "Power outlets that close level with the wall.", "hint": "Recessed socket" },
-    "light-switches": { "name": "Light switches", "blurb": "Touch and rocker switches set into plaster.", "hint": "Flush switch" },
-    "paper-holders": { "name": "Paper holders", "blurb": "Incasso holders with a soft-closing flap.", "hint": "Recessed paper holder" },
-    "towel-systems": { "name": "Towel systems", "blurb": "Bars and niches built into the wall face.", "hint": "Recessed towel bar" },
-    "manifold-cabinets": { "name": "Manifold cabinets", "blurb": "Service access without a visible frame.", "hint": "Manifold cabinet door" }
+    "flush-plates": {
+      "name": "Flush plates",
+      "blurb": "Frameless actuator plates for concealed cisterns.",
+      "hint": "Flush plate, tile-flush"
+    },
+    "recessed-sockets": {
+      "name": "Recessed sockets",
+      "blurb": "Power outlets that close level with the wall.",
+      "hint": "Recessed socket"
+    },
+    "light-switches": {
+      "name": "Light switches",
+      "blurb": "Touch and rocker switches set into plaster.",
+      "hint": "Flush switch"
+    },
+    "paper-holders": {
+      "name": "Paper holders",
+      "blurb": "Incasso holders with a soft-closing flap.",
+      "hint": "Recessed paper holder"
+    },
+    "towel-systems": {
+      "name": "Towel systems",
+      "blurb": "Bars and niches built into the wall face.",
+      "hint": "Recessed towel bar"
+    },
+    "manifold-cabinets": {
+      "name": "Manifold cabinets",
+      "blurb": "Service access without a visible frame.",
+      "hint": "Manifold cabinet door"
+    }
   },
   "products": {
     "FP-01": {
@@ -52,8 +127,14 @@
       "meta": "Stainless steel · dual flush",
       "description": "A frameless dual-flush actuator that finishes level with the tile. The plate is cut from 3 mm stainless and set in a plaster-in frame, so the only visible line is the joint around the two touch fields.",
       "specs": [
-        ["Material", "Stainless steel 316"],
-        ["Actuation", "Dual flush, mechanical"]
+        [
+          "Material",
+          "Stainless steel 316"
+        ],
+        [
+          "Actuation",
+          "Dual flush, mechanical"
+        ]
       ]
     },
     "RS-01": {
@@ -61,8 +142,14 @@
       "meta": "Type F · IP44",
       "description": "A recessed outlet on a spring-loaded lid that closes flush with the wall when not in use. Rated IP44 for zone 2 placement.",
       "specs": [
-        ["Outlets", "1–2 × Type F"],
-        ["Rating", "IP44 · 16 A"]
+        [
+          "Outlets",
+          "1–2 × Type F"
+        ],
+        [
+          "Rating",
+          "IP44 · 16 A"
+        ]
       ]
     },
     "LS-01": {
@@ -70,8 +157,14 @@
       "meta": "Recessed rocker switch",
       "description": "A mechanical rocker switch recessed behind a flush plate, so the wall stays level and the switch face sits flush with the tile.",
       "specs": [
-        ["Type", "Single/double pole rocker"],
-        ["Rating", "10 A"]
+        [
+          "Type",
+          "Single/double pole rocker"
+        ],
+        [
+          "Rating",
+          "10 A"
+        ]
       ]
     },
     "PH-01": {
@@ -79,8 +172,14 @@
       "meta": "Stainless steel 316",
       "description": "A recessed paper holder with a soft-closing flap that sits level with the wall. The roll loads from the front and the flap doubles as a shelf when open.",
       "specs": [
-        ["Material", "Stainless steel 316"],
-        ["Capacity", "One roll, ⌀ 120 mm"]
+        [
+          "Material",
+          "Stainless steel 316"
+        ],
+        [
+          "Capacity",
+          "One roll, ⌀ 120 mm"
+        ]
       ]
     },
     "TS-01": {
@@ -88,8 +187,14 @@
       "meta": "Stainless steel 316",
       "description": "A bar set into a shallow niche so towels hang against the wall plane rather than off it.",
       "specs": [
-        ["Material", "Stainless steel 316"],
-        ["Load", "Up to 12 kg"]
+        [
+          "Material",
+          "Stainless steel 316"
+        ],
+        [
+          "Load",
+          "Up to 12 kg"
+        ]
       ]
     },
     "MC-01": {
@@ -97,8 +202,14 @@
       "meta": "Frameless, tileable door",
       "description": "A push-to-open service door with no visible frame, giving access to the manifold behind a tiled or plastered face.",
       "specs": [
-        ["Material", "Steel carcass, tileable door"],
-        ["Opening action", "Push-to-open magnet latch"]
+        [
+          "Material",
+          "Steel carcass, tileable door"
+        ],
+        [
+          "Opening action",
+          "Push-to-open magnet latch"
+        ]
       ]
     }
   },
@@ -121,10 +232,36 @@
     }
   },
   "compat": {
-    "flush-plates": ["Geberit Sigma", "Geberit Delta", "Geberit Omega", "TECE", "Alcaplast", "Grohe", "Viega", "Oli", "Jomotech", "Cersanit", "TOTO"],
-    "recessed-sockets": ["60 mm standard box", "Type F Schuko", "35 mm deep partition wall", "Solid wall, chased"],
-    "light-switches": ["60 mm standard box", "Two-wire circuits", "LED drivers up to 300 W"],
-    "manifold-cabinets": ["Tile 6–12 mm", "Plaster finish", "Gypsum partition", "Solid brick"]
+    "flush-plates": [
+      "Geberit Sigma",
+      "Geberit Delta",
+      "Geberit Omega",
+      "TECE",
+      "Alcaplast",
+      "Grohe",
+      "Viega",
+      "Oli",
+      "Jomotech",
+      "Cersanit",
+      "TOTO"
+    ],
+    "recessed-sockets": [
+      "60 mm standard box",
+      "Type F Schuko",
+      "35 mm deep partition wall",
+      "Solid wall, chased"
+    ],
+    "light-switches": [
+      "60 mm standard box",
+      "Two-wire circuits",
+      "LED drivers up to 300 W"
+    ],
+    "manifold-cabinets": [
+      "Tile 6–12 mm",
+      "Plaster finish",
+      "Gypsum partition",
+      "Solid brick"
+    ]
   },
   "catalogue": {
     "kicker": "Catalogue",
@@ -152,8 +289,26 @@
   "footer": {
     "brandBlurb": "Recessed bathroom hardware for tiled walls. Assembled in Tirana, shipped across the Balkans and the EU.",
     "columns": [
-      { "title": "Shop", "links": ["Flush plates", "Recessed sockets", "Light switches", "Paper holders", "Towel systems", "Manifold cabinets"] },
-      { "title": "Service", "links": ["Shipping & returns", "Installation support", "Trade accounts", "Terms of service"] }
+      {
+        "title": "Shop",
+        "links": [
+          "Flush plates",
+          "Recessed sockets",
+          "Light switches",
+          "Paper holders",
+          "Towel systems",
+          "Manifold cabinets"
+        ]
+      },
+      {
+        "title": "Service",
+        "links": [
+          "Shipping & returns",
+          "Installation support",
+          "Trade accounts",
+          "Terms of service"
+        ]
+      }
     ],
     "specifierNotesTitle": "Specifier notes",
     "specifierNotesBody": "New articles and drawing updates, a few times a year.",

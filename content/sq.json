@@ -1,8 +1,26 @@
 {
-  "nav": { "catalogue": "Katalogu", "flushPlates": "Pllaka shkarkimi", "electrical": "Elektrike", "whatsappUs": "Na shkruani në WhatsApp" },
-  "lang": { "en": "EN", "sq": "SQ", "it": "IT" },
-  "topbar": ["Çmimi i projektit me kërkesë", "Transport falas në Shqipëri mbi 490 €", "Vizatime DWG për çdo artikull"],
-  "brand": { "name": "FLUSH FIT", "tagline": "Pajisje banjo të fshehura në mur" },
+  "nav": {
+    "catalogue": "Katalogu",
+    "flushPlates": "Pllaka shkarkimi",
+    "electrical": "Elektrike",
+    "whatsappUs": "Na shkruani në WhatsApp",
+    "menu": "Menu",
+    "close": "Mbyll"
+  },
+  "lang": {
+    "en": "EN",
+    "sq": "SQ",
+    "it": "IT"
+  },
+  "topbar": [
+    "Çmimi i projektit me kërkesë",
+    "Transport falas në Shqipëri mbi 490 €",
+    "Vizatime DWG për çdo artikull"
+  ],
+  "brand": {
+    "name": "FLUSH FIT",
+    "tagline": "Pajisje banjo të fshehura në mur"
+  },
   "home": {
     "kicker": "Montimi i padukshëm",
     "headline": "Pajisje që futen *brenda* murit.",
@@ -11,40 +29,97 @@
     "ctaSecondary": "Flisni me një specialist",
     "heroImageCaption": "Foto ambienti — pllakë shkarkimi e montuar në murin e pllakuar",
     "proofs": [
-      { "icon": "shipping", "title": "Dërgesë e shpejtë", "label": "Dërgesë brenda 48 orësh nga depoja jonë në Tiranë" },
-      { "icon": "quality", "title": "Cilësi e certifikuar", "label": "Komponentë të certifikuar, testuar sipas standardit të BE-së" },
-      { "icon": "warranty", "title": "5 vjet garanci", "label": "Garanci për komponentët mekanikë dhe elektrikë" }
+      {
+        "icon": "shipping",
+        "title": "Dërgesë e shpejtë",
+        "label": "Dërgesë brenda 48 orësh nga depoja jonë në Tiranë"
+      },
+      {
+        "icon": "quality",
+        "title": "Cilësi e certifikuar",
+        "label": "Komponentë të certifikuar, testuar sipas standardit të BE-së"
+      },
+      {
+        "icon": "warranty",
+        "title": "5 vjet garanci",
+        "label": "Garanci për komponentët mekanikë dhe elektrikë"
+      }
     ],
     "systemsKicker": "Sistemet",
     "systemsTitle": "Gjashtë sisteme, një thellësi montimi",
-    "allArticlesLink": "Të gjithë artikujt →",
+    "allArticlesLink": "Të gjithë artikujt",
     "featuredKicker": "Të veçantë",
     "featuredTitle": "Më të kërkuarit",
-    "viewAllLink": "Shiko të gjitha →",
+    "viewAllLink": "Shiko të gjitha",
     "specKicker": "Specifikimi",
     "specTitle": "Projektuar për instaluesin, e padukshme për klientin",
     "specBody": "Çdo artikull vjen me kuti montimi prej çeliku, kornizë për suvatim dhe një vizatim DWG. Thellësitë e montimit janë të standardizuara në 45 mm, kështu që elektrika, sanitarja dhe zdrukthëtaria koordinohen njëherë.",
     "specImageCaption": "Detaj — prizë e fshehur, në nivel me suvanë",
     "specPoints": [
-      { "num": "01", "text": "Kutia e montimit prej çeliku dhe korniza për suvatim përfshihen me artikullin." },
-      { "num": "02", "text": "Tolerancat lejojnë pllaka 6–12 mm ose shtresë suvaje 10 mm." },
-      { "num": "03", "text": "Artikujt elektrikë kanë vlerësim IP44 për zonën 2." },
-      { "num": "04", "text": "Mostra ngjyrash dërgohen falas për llogaritë tregtare në Shqipëri dhe Kosovë." }
+      {
+        "num": "01",
+        "text": "Kutia e montimit prej çeliku dhe korniza për suvatim përfshihen me artikullin."
+      },
+      {
+        "num": "02",
+        "text": "Tolerancat lejojnë pllaka 6–12 mm ose shtresë suvaje 10 mm."
+      },
+      {
+        "num": "03",
+        "text": "Artikujt elektrikë kanë vlerësim IP44 për zonën 2."
+      },
+      {
+        "num": "04",
+        "text": "Mostra ngjyrash dërgohen falas për llogaritë tregtare në Shqipëri dhe Kosovë."
+      }
     ],
     "howKicker": "Instalimi",
     "howTitle": "Si funksionon",
     "howIntro": "Katër sisteme, katër sekuenca. Çdo artikull vjen si kit i plotë — kuti, kornizë, fiksime dhe vizatim — kështu që muri pritet vetëm një herë.",
     "ctaBannerTitle": "Po punoni në një projekt?",
     "ctaBannerBody": "Na shkruani në WhatsApp për çfarë ju nevojitet dhe do të merrni çmimin, kohën e dorëzimit dhe vizatimet brenda një dite pune.",
-    "ctaBannerButton": "Na shkruani në WhatsApp"
+    "ctaBannerButton": "Na shkruani në WhatsApp",
+    "drawing": {
+      "title": "Prerje e një muri me pllaka",
+      "tile": "Pllakë, 6–12 mm",
+      "plaster": "Suva ose ngjitës",
+      "box": "Kuti montimi prej çeliku",
+      "plate": "Pllaka, në nivel me pllakën",
+      "depth": "Thellësi 45 mm",
+      "note": "Çdo artikull ka të njëjtën thellësi, ndaj hidraulika, elektrika dhe zdrukthtaria planifikohen një herë."
+    }
   },
   "categories": {
-    "flush-plates": { "name": "Pllaka shkarkimi", "blurb": "Pllaka aktivizuese pa kornizë për sifonë të fshehur.", "hint": "Pllakë shkarkimi, në nivel me pllakat" },
-    "recessed-sockets": { "name": "Priza të fshehura", "blurb": "Priza elektrike që mbyllen në nivel me murin.", "hint": "Prizë e fshehur" },
-    "light-switches": { "name": "Ndërprerës drite", "blurb": "Ndërprerës me prekje dhe me levë, të vendosur brenda suvasë.", "hint": "Ndërprerës i fshehur" },
-    "paper-holders": { "name": "Mbajtëse letre higjienike", "blurb": "Mbajtëse incasso me kapak që mbyllet ngadalë.", "hint": "Mbajtëse letre e fshehur" },
-    "towel-systems": { "name": "Sisteme peshqiri", "blurb": "Shufra dhe kamare të integruara në sipërfaqen e murit.", "hint": "Shufër peshqiri e fshehur" },
-    "manifold-cabinets": { "name": "Kabinete kolektori", "blurb": "Akses shërbimi pa kornizë të dukshme.", "hint": "Derë kabineti kolektori" }
+    "flush-plates": {
+      "name": "Pllaka shkarkimi",
+      "blurb": "Pllaka aktivizuese pa kornizë për sifonë të fshehur.",
+      "hint": "Pllakë shkarkimi, në nivel me pllakat"
+    },
+    "recessed-sockets": {
+      "name": "Priza të fshehura",
+      "blurb": "Priza elektrike që mbyllen në nivel me murin.",
+      "hint": "Prizë e fshehur"
+    },
+    "light-switches": {
+      "name": "Ndërprerës drite",
+      "blurb": "Ndërprerës me prekje dhe me levë, të vendosur brenda suvasë.",
+      "hint": "Ndërprerës i fshehur"
+    },
+    "paper-holders": {
+      "name": "Mbajtëse letre higjienike",
+      "blurb": "Mbajtëse incasso me kapak që mbyllet ngadalë.",
+      "hint": "Mbajtëse letre e fshehur"
+    },
+    "towel-systems": {
+      "name": "Sisteme peshqiri",
+      "blurb": "Shufra dhe kamare të integruara në sipërfaqen e murit.",
+      "hint": "Shufër peshqiri e fshehur"
+    },
+    "manifold-cabinets": {
+      "name": "Kabinete kolektori",
+      "blurb": "Akses shërbimi pa kornizë të dukshme.",
+      "hint": "Derë kabineti kolektori"
+    }
   },
   "products": {
     "FP-01": {
@@ -52,8 +127,14 @@
       "meta": "Çelik inox · dopio-shkarkim",
       "description": "Një aktivizues dopio-shkarkues pa kornizë që del në nivel me pllakat. Pllaka pritet nga inoksi 3 mm dhe vendoset në një kornizë suvatimi, kështu që e vetmja linjë e dukshme është bashkimi rreth dy fushave me prekje.",
       "specs": [
-        ["Materiali", "Çelik inox 316"],
-        ["Aktivizimi", "Dopio-shkarkim, mekanik"]
+        [
+          "Materiali",
+          "Çelik inox 316"
+        ],
+        [
+          "Aktivizimi",
+          "Dopio-shkarkim, mekanik"
+        ]
       ]
     },
     "RS-01": {
@@ -61,8 +142,14 @@
       "meta": "Tipi F · IP44",
       "description": "Një prizë e fshehur me kapak me sustë që mbyllet në nivel me murin kur nuk përdoret. Vlerësim IP44 për zonën 2.",
       "specs": [
-        ["Prizat", "1–2 × Tipi F"],
-        ["Vlerësimi", "IP44 · 16 A"]
+        [
+          "Prizat",
+          "1–2 × Tipi F"
+        ],
+        [
+          "Vlerësimi",
+          "IP44 · 16 A"
+        ]
       ]
     },
     "LS-01": {
@@ -70,8 +157,14 @@
       "meta": "Ndërprerës me levë i fshehur",
       "description": "Një levë mekanike e fshehur pas një kornize në nivel me murin, kështu që muri qëndron rrafsh dhe ndërprerësi del në nivel me pllakat.",
       "specs": [
-        ["Lloji", "Njëpolar/dypolar me levë"],
-        ["Vlerësimi", "10 A"]
+        [
+          "Lloji",
+          "Njëpolar/dypolar me levë"
+        ],
+        [
+          "Vlerësimi",
+          "10 A"
+        ]
       ]
     },
     "PH-01": {
@@ -79,8 +172,14 @@
       "meta": "Çelik inox 316",
       "description": "Një mbajtëse letre e fshehur me kapak që mbyllet ngadalë dhe qëndron në nivel me murin. Rrotulla ngarkohet nga përpara dhe kapaku shërben edhe si raft kur hapet.",
       "specs": [
-        ["Materiali", "Çelik inox 316"],
-        ["Kapaciteti", "Një rrotull, ⌀ 120 mm"]
+        [
+          "Materiali",
+          "Çelik inox 316"
+        ],
+        [
+          "Kapaciteti",
+          "Një rrotull, ⌀ 120 mm"
+        ]
       ]
     },
     "TS-01": {
@@ -88,8 +187,14 @@
       "meta": "Çelik inox 316",
       "description": "Një shufër e vendosur në një kamare të cekët, kështu që peshqirët varen pas rrafshit të murit në vend që të dalin jashtë tij.",
       "specs": [
-        ["Materiali", "Çelik inox 316"],
-        ["Ngarkesa", "Deri në 12 kg"]
+        [
+          "Materiali",
+          "Çelik inox 316"
+        ],
+        [
+          "Ngarkesa",
+          "Deri në 12 kg"
+        ]
       ]
     },
     "MC-01": {
@@ -97,8 +202,14 @@
       "meta": "Pa kornizë, derë e pllakueshme",
       "description": "Një derë shërbimi që hapet me shtypje, pa kornizë të dukshme, që jep akses te kolektori pas një sipërfaqeje të pllakuar ose të suvatuar.",
       "specs": [
-        ["Materiali", "Trup çeliku, derë e pllakueshme"],
-        ["Mënyra e hapjes", "Mbyllje magnetike, hapet me shtypje"]
+        [
+          "Materiali",
+          "Trup çeliku, derë e pllakueshme"
+        ],
+        [
+          "Mënyra e hapjes",
+          "Mbyllje magnetike, hapet me shtypje"
+        ]
       ]
     }
   },
@@ -121,10 +232,36 @@
     }
   },
   "compat": {
-    "flush-plates": ["Geberit Sigma", "Geberit Delta", "Geberit Omega", "TECE", "Alcaplast", "Grohe", "Viega", "Oli", "Jomotech", "Cersanit", "TOTO"],
-    "recessed-sockets": ["Kuti standarde 60 mm", "Prizë Schuko Tipi F", "Mur ndarës 35 mm i thellë", "Mur i plotë, i gërmuar"],
-    "light-switches": ["Kuti standarde 60 mm", "Qarqe me dy përçues", "Drejtues LED deri në 300 W"],
-    "manifold-cabinets": ["Pllaka 6–12 mm", "Suva finale", "Ndarje me allçi", "Tulla e plotë"]
+    "flush-plates": [
+      "Geberit Sigma",
+      "Geberit Delta",
+      "Geberit Omega",
+      "TECE",
+      "Alcaplast",
+      "Grohe",
+      "Viega",
+      "Oli",
+      "Jomotech",
+      "Cersanit",
+      "TOTO"
+    ],
+    "recessed-sockets": [
+      "Kuti standarde 60 mm",
+      "Prizë Schuko Tipi F",
+      "Mur ndarës 35 mm i thellë",
+      "Mur i plotë, i gërmuar"
+    ],
+    "light-switches": [
+      "Kuti standarde 60 mm",
+      "Qarqe me dy përçues",
+      "Drejtues LED deri në 300 W"
+    ],
+    "manifold-cabinets": [
+      "Pllaka 6–12 mm",
+      "Suva finale",
+      "Ndarje me allçi",
+      "Tulla e plotë"
+    ]
   },
   "catalogue": {
     "kicker": "Katalogu",
@@ -152,8 +289,26 @@
   "footer": {
     "brandBlurb": "Pajisje banjo të fshehura për mure të pllakuara. Montuar në Tiranë, dërguar në të gjithë Ballkanin dhe BE-në.",
     "columns": [
-      { "title": "Dyqani", "links": ["Pllaka shkarkimi", "Priza të fshehura", "Ndërprerës drite", "Mbajtëse letre higjienike", "Sisteme peshqiri", "Kabinete kolektori"] },
-      { "title": "Shërbimi", "links": ["Transporti dhe kthimet", "Mbështetje instalimi", "Llogari tregtare", "Kushtet e shërbimit"] }
+      {
+        "title": "Dyqani",
+        "links": [
+          "Pllaka shkarkimi",
+          "Priza të fshehura",
+          "Ndërprerës drite",
+          "Mbajtëse letre higjienike",
+          "Sisteme peshqiri",
+          "Kabinete kolektori"
+        ]
+      },
+      {
+        "title": "Shërbimi",
+        "links": [
+          "Transporti dhe kthimet",
+          "Mbështetje instalimi",
+          "Llogari tregtare",
+          "Kushtet e shërbimit"
+        ]
+      }
     ],
     "specifierNotesTitle": "Njoftime për specialistë",
     "specifierNotesBody": "Artikuj të rinj dhe përditësime vizatimesh, disa herë në vit.",

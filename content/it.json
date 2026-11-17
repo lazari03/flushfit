@@ -1,8 +1,26 @@
 {
-  "nav": { "catalogue": "Catalogo", "flushPlates": "Placche di scarico", "electrical": "Elettrico", "whatsappUs": "Scrivici su WhatsApp" },
-  "lang": { "en": "EN", "sq": "SQ", "it": "IT" },
-  "topbar": ["Prezzo del progetto su richiesta", "Consegna gratuita in Albania oltre 490 €", "Disegni DWG per ogni articolo"],
-  "brand": { "name": "FLUSH FIT", "tagline": "Accessori da bagno a scomparsa" },
+  "nav": {
+    "catalogue": "Catalogo",
+    "flushPlates": "Placche di scarico",
+    "electrical": "Elettrico",
+    "whatsappUs": "Scrivici su WhatsApp",
+    "menu": "Menu",
+    "close": "Chiudi"
+  },
+  "lang": {
+    "en": "EN",
+    "sq": "SQ",
+    "it": "IT"
+  },
+  "topbar": [
+    "Prezzo del progetto su richiesta",
+    "Consegna gratuita in Albania oltre 490 €",
+    "Disegni DWG per ogni articolo"
+  ],
+  "brand": {
+    "name": "FLUSH FIT",
+    "tagline": "Accessori da bagno a scomparsa"
+  },
   "home": {
     "kicker": "L'installazione invisibile",
     "headline": "Accessori che si integrano *dentro* la parete.",
@@ -11,40 +29,97 @@
     "ctaSecondary": "Parla con uno specialista",
     "heroImageCaption": "Foto ambientata — placca di scarico installata su parete piastrellata",
     "proofs": [
-      { "icon": "shipping", "title": "Spedizione rapida", "label": "Spedizione in 48 ore dal nostro magazzino di Tirana" },
-      { "icon": "quality", "title": "Qualità certificata", "label": "Componenti certificati, testati secondo lo standard UE" },
-      { "icon": "warranty", "title": "Garanzia di 5 anni", "label": "Garanzia sui componenti meccanici ed elettrici" }
+      {
+        "icon": "shipping",
+        "title": "Spedizione rapida",
+        "label": "Spedizione in 48 ore dal nostro magazzino di Tirana"
+      },
+      {
+        "icon": "quality",
+        "title": "Qualità certificata",
+        "label": "Componenti certificati, testati secondo lo standard UE"
+      },
+      {
+        "icon": "warranty",
+        "title": "Garanzia di 5 anni",
+        "label": "Garanzia sui componenti meccanici ed elettrici"
+      }
     ],
     "systemsKicker": "Sistemi",
     "systemsTitle": "Sei sistemi, un'unica profondità di incasso",
-    "allArticlesLink": "Tutti gli articoli →",
+    "allArticlesLink": "Tutti gli articoli",
     "featuredKicker": "In evidenza",
     "featuredTitle": "I più richiesti",
-    "viewAllLink": "Vedi tutti →",
+    "viewAllLink": "Vedi tutti",
     "specKicker": "Specifiche",
     "specTitle": "Pensato per l'installatore, invisibile al cliente",
     "specBody": "Ogni articolo viene fornito con scatola di montaggio in acciaio, telaio da intonaco e disegno DWG. Le profondità di incasso sono standardizzate a 45 mm, così impianti elettrici, idraulici e falegnameria si coordinano un'unica volta.",
     "specImageCaption": "Dettaglio — presa a scomparsa, a filo con l'intonaco",
     "specPoints": [
-      { "num": "01", "text": "Scatola di montaggio in acciaio e telaio da intonaco inclusi con l'articolo." },
-      { "num": "02", "text": "Le tolleranze permettono piastrelle da 6–12 mm o uno strato di intonaco da 10 mm." },
-      { "num": "03", "text": "Gli articoli elettrici sono classificati IP44 per la zona 2." },
-      { "num": "04", "text": "Campioni di finitura inviati gratuitamente ai rivenditori in Albania e Kosovo." }
+      {
+        "num": "01",
+        "text": "Scatola di montaggio in acciaio e telaio da intonaco inclusi con l'articolo."
+      },
+      {
+        "num": "02",
+        "text": "Le tolleranze permettono piastrelle da 6–12 mm o uno strato di intonaco da 10 mm."
+      },
+      {
+        "num": "03",
+        "text": "Gli articoli elettrici sono classificati IP44 per la zona 2."
+      },
+      {
+        "num": "04",
+        "text": "Campioni di finitura inviati gratuitamente ai rivenditori in Albania e Kosovo."
+      }
     ],
     "howKicker": "Installazione",
     "howTitle": "Come funziona",
     "howIntro": "Quattro sistemi, quattro sequenze. Ogni articolo viene fornito come kit completo — scatola, telaio, fissaggi e disegno — così la parete si taglia una sola volta.",
     "ctaBannerTitle": "Stai lavorando a un progetto?",
     "ctaBannerBody": "Scrivici su WhatsApp con ciò che ti serve e ricevi prezzi, tempi di consegna e disegni entro un giorno lavorativo.",
-    "ctaBannerButton": "Scrivici su WhatsApp"
+    "ctaBannerButton": "Scrivici su WhatsApp",
+    "drawing": {
+      "title": "Sezione di una parete piastrellata",
+      "tile": "Piastrella, 6–12 mm",
+      "plaster": "Intonaco o collante",
+      "box": "Scatola di montaggio in acciaio",
+      "plate": "Placca, a filo con la piastrella",
+      "depth": "Incasso 45 mm",
+      "note": "Ogni articolo usa la stessa profondità d'incasso: idraulica, impianto elettrico e falegnameria si coordinano una volta sola."
+    }
   },
   "categories": {
-    "flush-plates": { "name": "Placche di scarico", "blurb": "Placche di comando senza cornice per cassette incassate.", "hint": "Placca di scarico, a filo piastrella" },
-    "recessed-sockets": { "name": "Prese a scomparsa", "blurb": "Prese elettriche che si chiudono a filo con la parete.", "hint": "Presa a scomparsa" },
-    "light-switches": { "name": "Interruttori", "blurb": "Interruttori touch e a bilanciere incassati nell'intonaco.", "hint": "Interruttore a scomparsa" },
-    "paper-holders": { "name": "Portarotolo", "blurb": "Portarotolo a scomparsa con sportello ad apertura morbida.", "hint": "Portarotolo a scomparsa" },
-    "towel-systems": { "name": "Sistemi portasalviette", "blurb": "Barre e nicchie integrate nella superficie della parete.", "hint": "Barra portasalviette a scomparsa" },
-    "manifold-cabinets": { "name": "Cassette collettore", "blurb": "Accesso di servizio senza cornice visibile.", "hint": "Sportello cassetta collettore" }
+    "flush-plates": {
+      "name": "Placche di scarico",
+      "blurb": "Placche di comando senza cornice per cassette incassate.",
+      "hint": "Placca di scarico, a filo piastrella"
+    },
+    "recessed-sockets": {
+      "name": "Prese a scomparsa",
+      "blurb": "Prese elettriche che si chiudono a filo con la parete.",
+      "hint": "Presa a scomparsa"
+    },
+    "light-switches": {
+      "name": "Interruttori",
+      "blurb": "Interruttori touch e a bilanciere incassati nell'intonaco.",
+      "hint": "Interruttore a scomparsa"
+    },
+    "paper-holders": {
+      "name": "Portarotolo",
+      "blurb": "Portarotolo a scomparsa con sportello ad apertura morbida.",
+      "hint": "Portarotolo a scomparsa"
+    },
+    "towel-systems": {
+      "name": "Sistemi portasalviette",
+      "blurb": "Barre e nicchie integrate nella superficie della parete.",
+      "hint": "Barra portasalviette a scomparsa"
+    },
+    "manifold-cabinets": {
+      "name": "Cassette collettore",
+      "blurb": "Accesso di servizio senza cornice visibile.",
+      "hint": "Sportello cassetta collettore"
+    }
   },
   "products": {
     "FP-01": {
@@ -52,8 +127,14 @@
       "meta": "Acciaio inox · doppio scarico",
       "description": "Un comando doppio scarico senza cornice che finisce a filo con la piastrella. La placca è ricavata da acciaio inox da 3 mm e inserita in un telaio da intonaco, così l'unica linea visibile è la giunzione attorno ai due comandi a sfioramento.",
       "specs": [
-        ["Materiale", "Acciaio inox 316"],
-        ["Azionamento", "Doppio scarico, meccanico"]
+        [
+          "Materiale",
+          "Acciaio inox 316"
+        ],
+        [
+          "Azionamento",
+          "Doppio scarico, meccanico"
+        ]
       ]
     },
     "RS-01": {
@@ -61,8 +142,14 @@
       "meta": "Tipo F · IP44",
       "description": "Una presa a scomparsa con sportello a molla che si chiude a filo con la parete quando non in uso. Classificata IP44 per la zona 2.",
       "specs": [
-        ["Prese", "1–2 × Tipo F"],
-        ["Classificazione", "IP44 · 16 A"]
+        [
+          "Prese",
+          "1–2 × Tipo F"
+        ],
+        [
+          "Classificazione",
+          "IP44 · 16 A"
+        ]
       ]
     },
     "LS-01": {
@@ -70,8 +157,14 @@
       "meta": "Interruttore a bilanciere incassato",
       "description": "Un bilanciere meccanico incassato dietro una placca a filo, così la parete resta piana e l'interruttore finisce a filo con la piastrella.",
       "specs": [
-        ["Tipo", "Unipolare/bipolare a bilanciere"],
-        ["Portata", "10 A"]
+        [
+          "Tipo",
+          "Unipolare/bipolare a bilanciere"
+        ],
+        [
+          "Portata",
+          "10 A"
+        ]
       ]
     },
     "PH-01": {
@@ -79,8 +172,14 @@
       "meta": "Acciaio inox 316",
       "description": "Un portarotolo a scomparsa con sportello ad apertura morbida che resta a filo con la parete. Il rotolo si carica da davanti e lo sportello funge anche da mensola quando aperto.",
       "specs": [
-        ["Materiale", "Acciaio inox 316"],
-        ["Capacità", "Un rotolo, ⌀ 120 mm"]
+        [
+          "Materiale",
+          "Acciaio inox 316"
+        ],
+        [
+          "Capacità",
+          "Un rotolo, ⌀ 120 mm"
+        ]
       ]
     },
     "TS-01": {
@@ -88,8 +187,14 @@
       "meta": "Acciaio inox 316",
       "description": "Una barra inserita in una nicchia poco profonda, così gli asciugamani restano appesi contro il piano della parete anziché sporgere.",
       "specs": [
-        ["Materiale", "Acciaio inox 316"],
-        ["Portata", "Fino a 12 kg"]
+        [
+          "Materiale",
+          "Acciaio inox 316"
+        ],
+        [
+          "Portata",
+          "Fino a 12 kg"
+        ]
       ]
     },
     "MC-01": {
@@ -97,8 +202,14 @@
       "meta": "Senza cornice, sportello piastrellabile",
       "description": "Uno sportello di servizio ad apertura a pressione senza cornice visibile, che dà accesso al collettore dietro una superficie piastrellata o intonacata.",
       "specs": [
-        ["Materiale", "Struttura in acciaio, sportello piastrellabile"],
-        ["Modalità di apertura", "Chiusura magnetica, apertura a pressione"]
+        [
+          "Materiale",
+          "Struttura in acciaio, sportello piastrellabile"
+        ],
+        [
+          "Modalità di apertura",
+          "Chiusura magnetica, apertura a pressione"
+        ]
       ]
     }
   },
@@ -121,10 +232,36 @@
     }
   },
   "compat": {
-    "flush-plates": ["Geberit Sigma", "Geberit Delta", "Geberit Omega", "TECE", "Alcaplast", "Grohe", "Viega", "Oli", "Jomotech", "Cersanit", "TOTO"],
-    "recessed-sockets": ["Scatola standard 60 mm", "Presa Schuko Tipo F", "Parete divisoria da 35 mm", "Parete piena, tracciata"],
-    "light-switches": ["Scatola standard 60 mm", "Circuiti a due fili", "Driver LED fino a 300 W"],
-    "manifold-cabinets": ["Piastrella 6–12 mm", "Finitura a intonaco", "Parete in cartongesso", "Muratura piena"]
+    "flush-plates": [
+      "Geberit Sigma",
+      "Geberit Delta",
+      "Geberit Omega",
+      "TECE",
+      "Alcaplast",
+      "Grohe",
+      "Viega",
+      "Oli",
+      "Jomotech",
+      "Cersanit",
+      "TOTO"
+    ],
+    "recessed-sockets": [
+      "Scatola standard 60 mm",
+      "Presa Schuko Tipo F",
+      "Parete divisoria da 35 mm",
+      "Parete piena, tracciata"
+    ],
+    "light-switches": [
+      "Scatola standard 60 mm",
+      "Circuiti a due fili",
+      "Driver LED fino a 300 W"
+    ],
+    "manifold-cabinets": [
+      "Piastrella 6–12 mm",
+      "Finitura a intonaco",
+      "Parete in cartongesso",
+      "Muratura piena"
+    ]
   },
   "catalogue": {
     "kicker": "Catalogo",
@@ -152,8 +289,26 @@
   "footer": {
     "brandBlurb": "Accessori da bagno a scomparsa per pareti piastrellate. Assemblati a Tirana, spediti in tutti i Balcani e nell'UE.",
     "columns": [
-      { "title": "Negozio", "links": ["Placche di scarico", "Prese a scomparsa", "Interruttori", "Portarotolo", "Sistemi portasalviette", "Cassette collettore"] },
-      { "title": "Assistenza", "links": ["Spedizioni e resi", "Supporto all'installazione", "Account rivenditori", "Termini di servizio"] }
+      {
+        "title": "Negozio",
+        "links": [
+          "Placche di scarico",
+          "Prese a scomparsa",
+          "Interruttori",
+          "Portarotolo",
+          "Sistemi portasalviette",
+          "Cassette collettore"
+        ]
+      },
+      {
+        "title": "Assistenza",
+        "links": [
+          "Spedizioni e resi",
+          "Supporto all'installazione",
+          "Account rivenditori",
+          "Termini di servizio"
+        ]
+      }
     ],
     "specifierNotesTitle": "Note per progettisti",
     "specifierNotesBody": "Nuovi articoli e aggiornamenti dei disegni, alcune volte l'anno.",

@@ -1,9 +1,11 @@
 export default function TopBar({ lines }: { lines: string[] }) {
   return (
     <div className="topbar">
-      {lines.map((line) => (
-        <span key={line}>{line}</span>
-      ))}
+      <div className="topbar__inner">
+        {lines.map((line) => (
+          <span key={line}>{line}</span>
+        ))}
+      </div>
     </div>
   );
 }

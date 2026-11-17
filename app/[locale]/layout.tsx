@@ -34,7 +34,10 @@ export default async function LocaleLayout({
   const messages = getMessages(locale);
 
   return (
-    <div style={{ minHeight: "100vh", background: "var(--bg)" }}>
+    <div lang={locale} style={{ minHeight: "100vh" }}>
+      <a href="#main" className="skip-link">
+        {messages.home.ctaPrimary}
+      </a>
       <TopBar lines={messages.topbar} />
       <Header locale={locale} messages={messages} />
       {children}

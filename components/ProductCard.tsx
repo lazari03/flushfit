@@ -4,37 +4,24 @@ import { whatsappLink } from "@/lib/whatsapp";
 import { CategoryId, Messages } from "@/lib/types";
 import { CATEGORY_IMAGES } from "@/lib/data";
 import ImagePlaceholder from "./ImagePlaceholder";
+import WhatsAppIcon from "./WhatsAppIcon";
 
-export default function ProductCard({
-  code,
-  categoryId,
-  locale,
-  messages,
-}: {
-  code: string;
-  categoryId: CategoryId;
-  locale: Locale;
-  messages: Messages;
-}) {
+export default function ProductCard({ code, categoryId, locale, messages }: { code: string; categoryId: CategoryId; locale: Locale; messages: Messages }) {
   const product = messages.products[code];
-  const categoryName = messages.categories[categoryId].name;
-  const enquiryMessage = format(messages.whatsapp.productEnquiry, { name: product.name, code });
+  const enquiry = format(messages.whatsapp.productEnquiry, { name: product.name, code });
 
   return (
-    <div className="tile-card">
-      <Link href={`/${locale}/product/${code}`} className="tile">
-        <ImagePlaceholder caption={product.name} src={CATEGORY_IMAGES[categoryId]} aspectRatio="1/1" />
-        <div style={{ padding: "18px 20px 8px" }}>
-          <div className="tile-eyebrow">{categoryName}</div>
-          <div className="tile-title">{product.name}</div>
-          <div className="tile-meta">{product.meta}</div>
-        </div>
+    <article className="product-card">
+      <Link href={`/${locale}/product/${code}`} className="product-card__link">
+        <ImagePlaceholder caption={product.name} src={CATEGORY_IMAGES[categoryId]} sizes="(max-width: 760px) 50vw, 25vw" />
+        <div className="product-card__code">{code}</div>
+        <h3 className="product-card__name">{product.name}</h3>
+        <div className="product-card__meta">{product.meta}</div>
       </Link>
-      <div style={{ padding: "14px 20px 20px", marginTop: "auto" }}>
-        <a href={whatsappLink(enquiryMessage)} target="_blank" rel="noopener noreferrer" className="btn-block-outline">
-          {messages.product.enquireWhatsapp}
-        </a>
-      </div>
-    </div>
+      <a href={whatsappLink(enquiry)} target="_blank" rel="noopener noreferrer" className="product-card__cta">
+        <WhatsAppIcon />
+        {messages.product.enquireWhatsapp}
+      </a>
+    </article>
   );
 }

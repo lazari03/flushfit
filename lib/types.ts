@@ -20,7 +20,7 @@ export type Spec = [string, string];
 
 // Shape of the translated content in content/<locale>.json
 export type Messages = {
-  nav: { catalogue: string; flushPlates: string; electrical: string; whatsappUs: string };
+  nav: { catalogue: string; flushPlates: string; electrical: string; whatsappUs: string; menu: string; close: string };
   lang: { en: string; sq: string; it: string };
   topbar: string[];
   brand: { name: string; tagline: string };
@@ -49,6 +49,7 @@ export type Messages = {
     ctaBannerTitle: string;
     ctaBannerBody: string;
     ctaBannerButton: string;
+    drawing: { title: string; tile: string; plaster: string; box: string; plate: string; depth: string; note: string };
   };
   categories: Record<CategoryId, { name: string; blurb: string; hint: string }>;
   products: Record<string, { name: string; meta: string; description: string; specs: Spec[] }>;

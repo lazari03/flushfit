@@ -8,8 +8,8 @@ export default function NotFound() {
   return (
     <main style={{ minHeight: "100vh", display: "flex", alignItems: "center", justifyContent: "center", textAlign: "center", padding: 24 }}>
       <div>
-        <h1 style={{ fontWeight: 300, fontSize: 40, margin: "0 0 12px" }}>{messages.notFound.title}</h1>
-        <p style={{ fontSize: 15, color: "var(--text-muted)", margin: "0 0 24px", maxWidth: "40ch" }}>{messages.notFound.body}</p>
+        <h1 style={{ fontSize: 56, margin: "0 0 12px" }} className="display">{messages.notFound.title}</h1>
+        <p style={{ fontSize: 15, color: "var(--grey)", margin: "0 0 24px", maxWidth: "40ch" }}>{messages.notFound.body}</p>
         <Link href={`/${DEFAULT_LOCALE}`} className="btn btn-dark" style={{ padding: "14px 24px" }}>
           {messages.notFound.backHome}
         </Link>

@@ -1,20 +1,16 @@
 type Props = {
   caption: string;
-  src?: string;
-  aspectRatio?: string;
-  minHeight?: number | string;
+  src: string;
   className?: string;
+  priority?: boolean;
+  sizes?: string;
 };
 
-/**
- * Stands in for real photography. Drop a `src` in once product / lifestyle
- * shots exist and this renders the image instead of the caption — no other
- * change needed at call sites.
- */
-export default function ImagePlaceholder({ caption, src, aspectRatio, minHeight, className }: Props) {
+/** A product or lifestyle photo that always fills its box (see .photo). */
+export default function ImagePlaceholder({ caption, src, className, priority, sizes }: Props) {
   return (
-    <div className={className} style={{ position: "relative", aspectRatio, minHeight, width: "100%", height: aspectRatio ? undefined : "100%" }}>
-      <div className="img-slot">{src ? <img src={src} alt={caption} /> : <span>{caption}</span>}</div>
+    <div className={`photo ${className ?? ""}`}>
+      <img src={src} alt={caption} sizes={sizes} loading={priority ? "eager" : "lazy"} fetchPriority={priority ? "high" : "auto"} decoding="async" />
     </div>
   );
 }

@@ -31,46 +31,39 @@ export default async function ProductPage({ params }: Props) {
   const related = relatedProductCodes(meta.code).map((c) => findProductMeta(c)!);
 
   return (
-    <main className="container" style={{ paddingBottom: 96 }}>
-      <div style={{ padding: "26px 0", fontSize: 12.5, color: "var(--text-muted)", display: "flex", gap: 8, flexWrap: "wrap", alignItems: "center" }}>
-        <Link href={`/${locale}`} style={{ color: "var(--text-muted)", fontSize: 12.5 }}>
-          {messages.product.breadcrumbHome}
-        </Link>
-        <span>/</span>
-        <Link href={`/${locale}/catalogue/${meta.categoryId}`} style={{ color: "var(--text-muted)", fontSize: 12.5 }}>
-          {categoryName}
-        </Link>
-        <span>/</span>
-        <span style={{ color: "var(--ink)" }}>{product.name}</span>
-      </div>
+    <main id="main" className="container">
+      <nav className="breadcrumb" aria-label="Breadcrumb">
+        <Link href={`/${locale}`}>{messages.product.breadcrumbHome}</Link>
+        <span aria-hidden="true">/</span>
+        <Link href={`/${locale}/catalogue/${meta.categoryId}`}>{categoryName}</Link>
+        <span aria-hidden="true">/</span>
+        <span aria-current="page" style={{ color: "var(--ink)" }}>{product.name}</span>
+      </nav>
 
-      <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fit, minmax(320px, 1fr))", gap: 56, alignItems: "start" }}>
-        <div style={{ position: "relative", aspectRatio: "1/1", background: "var(--bg)", border: "1px solid var(--border)" }}>
-          <ImagePlaceholder caption={messages.product.mainImageCaption} src={CATEGORY_IMAGES[meta.categoryId]} aspectRatio="1/1" />
+      <div className="pdp">
+        <div className="pdp__media">
+          <ImagePlaceholder caption={`${product.name} — ${messages.product.mainImageCaption}`} src={CATEGORY_IMAGES[meta.categoryId]} priority sizes="(max-width: 860px) 100vw, 58vw" />
         </div>
-
         <div>
-          <div style={{ fontSize: 11, letterSpacing: ".14em", color: "var(--text-muted)", marginBottom: 14 }}>
-            {meta.code} · {categoryName}
+          <div className="pdp__code">
+            {meta.code} — {categoryName}
           </div>
-          <h1 style={{ fontWeight: 300, fontSize: "clamp(32px, 3.6vw, 46px)", lineHeight: 1.04, margin: "0 0 18px", letterSpacing: "-.015em" }}>
-            {product.name}
-          </h1>
-          <p style={{ fontSize: 16, lineHeight: 1.62, color: "var(--text-body)", margin: "0 0 32px", maxWidth: "48ch" }}>{product.description}</p>
-
+          <h1 className="display h1">{product.name}</h1>
+          <p className="lede">{product.description}</p>
           <ProductInteractive code={meta.code} categoryId={meta.categoryId} messages={messages} />
-
-          <div style={{ display: "flex", gap: 22, marginTop: 24, fontSize: 13.5, flexWrap: "wrap" }}>
-            <a href="#">{messages.product.downloadDwg}</a>
-            <a href="#">{messages.product.installSheet}</a>
+          <div className="doc-links">
+            <a href="#" className="text-link">{messages.product.downloadDwg}</a>
+            <a href="#" className="text-link">{messages.product.installSheet}</a>
           </div>
         </div>
       </div>
 
       {related.length > 0 && (
-        <section style={{ marginTop: 84, borderTop: "1px solid var(--border)", paddingTop: 36 }}>
-          <h2 style={{ fontWeight: 300, fontSize: 28, margin: "0 0 24px" }}>{messages.product.coordinatesWith}</h2>
-          <div className="tile-grid tile-grid--related">
+        <section className="related" aria-labelledby="related-title">
+          <h2 id="related-title" className="display h2" style={{ marginBottom: 28 }}>
+            {messages.product.coordinatesWith}
+          </h2>
+          <div className="product-row">
             {related.map((p) => (
               <RelatedTile key={p.code} code={p.code} categoryId={p.categoryId} locale={locale} messages={messages} />
             ))}

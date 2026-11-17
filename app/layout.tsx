@@ -1,11 +1,11 @@
 import type { Metadata } from "next";
-import { Jost } from "next/font/google";
+import { Hanken_Grotesk } from "next/font/google";
 import "./globals.css";
 
-const jost = Jost({
-  subsets: ["latin"],
-  weight: ["300", "400", "500", "600"],
-  variable: "--font-jost",
+// One family throughout: Hanken Grotesk (latin-ext covers Albanian ë/ç and Italian accents).
+const hanken = Hanken_Grotesk({
+  subsets: ["latin", "latin-ext"],
+  variable: "--font-hanken",
   display: "swap",
 });
 
@@ -17,8 +17,8 @@ export const metadata: Metadata = {
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
-    <html lang="en" className={jost.variable}>
-      <body style={{ fontFamily: "var(--font-jost), system-ui, sans-serif", background: "var(--bg)" }}>{children}</body>
+    <html lang="en" className={hanken.variable}>
+      <body style={{ fontFamily: "var(--font-hanken), system-ui, sans-serif" }}>{children}</body>
     </html>
   );
 }
